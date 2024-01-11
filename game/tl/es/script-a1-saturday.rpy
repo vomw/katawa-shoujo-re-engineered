@@ -1,4 +1,4 @@
-﻿#Adapted and fixed by Dr.Simp/Adaptado y corregido por Dr.Simp
+#Adapted and fixed by Dr.Simp/Adaptado y corregido por Dr.Simp
 
 # game/script-a1-saturday.rpy:17
 translate es a1_saturday_support_f2d1123c:
@@ -4015,7 +4015,7 @@ translate es a1_saturday_shanghaied_515d6aa9:
     hi "No, olvídenlo. Tendré café."
 
 # game/script-a1-saturday.rpy:2468
-translate es a1_saturday_shanghaied_1aa279ae:
+translate es a1_saturday_shanghaied_f7f4a2a1:
 
     # hi "If this is a very high class establishment, then they should have very high class coffee, right? …No one died for it, right?"
     hi "Si este es un establecimiento de muy alta clase, entonces deben tener un café de muy alta clase, ¿cierto?… Nadie murió por él, ¿cierto?"
