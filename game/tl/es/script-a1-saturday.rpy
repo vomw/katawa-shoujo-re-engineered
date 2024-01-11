@@ -4447,9 +4447,9 @@ translate es a1_saturday_shanghaied_b33ba1f7:
     shi "¡…!"
 
 # game/script-a1-saturday.rpy:2748
-translate es a1_saturday_shanghaied_0a3952d6:
+translate es a1_saturday_shanghaied_cf5bf557:
 
-    # mi "Hm… Ah, how about this, Hicchan: if you lose, you have to go to school one day without any pants on."
+    # mi "Hm… Ah, how about this, Hicchan: If you lose, you have to go to school one day without any pants on."
     mi "Hmm… Ah, qué tal esto, Hicchan: Si tú pierdes, tendrás que ir un día a la escuela sin pantalones puestos."
 
 # game/script-a1-saturday.rpy:2750
