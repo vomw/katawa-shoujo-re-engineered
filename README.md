@@ -25,6 +25,12 @@ The project offers several notable features:
 * Implementation of clean and unambiguous code, catering to fan translators.
 * Modding framework for mod developers.
 
+## Download
+
+[<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png"
+     alt="Get it on F-Droid"
+     height="80">](https://f-droid.org/packages/com.fhs.ksre/)
+
 ## License
 This project is not affiliated with Four Leaf Studios. The code is licensed under the [Mozilla Public License 2.0](https://mozilla.org/MPL/2.0/), while the assets are under by their original [CC-BY-NC-ND](https://creativecommons.org/licenses/by-nc-nd/3.0/) license.
 
