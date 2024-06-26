@@ -65,7 +65,7 @@ style say_namebox is frame:
     ysize 0.135
     xpadding 20
     top_padding 10
-    background Frame("gui/bg/namebox.png")
+    background Transform(Frame("gui/bg/namebox.png"), alpha=persistent.opacity)
 
 style say_window is frame:
     xalign 0.5
@@ -75,7 +75,13 @@ style say_window is frame:
     ysize 0.185
     xpadding 40
     top_padding 10
-    background Frame("gui/bg/saybox.png")
+    background Transform(Frame("gui/bg/saybox.png"), alpha=persistent.opacity)
+
+style nvl_window is window:
+    background Transform(Image("gui/bg/nvl.png"), alpha=persistent.opacity)
+    top_padding 60
+    left_padding 55
+    right_padding 70
 
 style say_dialogue is default:
     size 42 + (mobile_ts_add - 6) * (renpy.android or renpy.ios)
