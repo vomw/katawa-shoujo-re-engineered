@@ -241,9 +241,6 @@ translate es strings:
     # game/screens.rpy:401
     old "Are you sure you want to\nload this save?"
     new "¿Está seguro de que quiere\ncargar este estado?"
-# TODO: Translation updated at 2023-12-22 20:14
-
-translate es strings:
 
     # game/screens.rpy:172
     old "Mods"
@@ -276,4 +273,24 @@ translate es strings:
     # game/screens.rpy:1146
     old "This question will not be shown again after you start playing."
     new "Esta pregunta no se mostrará nuevamente después de que comience a jugar."
+
+    # game/screens.rpy:1067
+    old "Text Boxes"
+    new "Cajas de Texto"
+
+    # game/screens.rpy:1081
+    old "Opacity: [opacity:.0f]%"
+    new "Opacidad: [opacity:.0f]%"
+
+    # game/screens.rpy:1090
+    old "Outline: [persistent.outline]"
+    new "Contraste: [persistent.outline]"
+
+    # game/screens.rpy:1095
+    old "Mental health"
+    new "Salud mental"
+
+    # game/screens.rpy:1102
+    old "Skip hurtful adult scenes"
+    new "Omitir escenas adultas dañinas"
 
