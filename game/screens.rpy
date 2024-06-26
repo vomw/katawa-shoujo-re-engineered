@@ -36,12 +36,14 @@ screen say(who, what):
             at colorblind(persistent.colorblind)
             style_suffix "namebox"
             text who id "who":
+                outlines [ (absolute(persistent.outline), "#000", absolute(0), absolute(0)) ]
                 size 40
                 bold True
 
     frame:
         style_suffix "window"
-        text what id "what"
+        text what id "what":
+            outlines [ (absolute(persistent.outline), "#000", absolute(0), absolute(0)) ]
 
 screen doublespeak(c1, t1, c2, t2):
     style_prefix "doublespeak"
@@ -50,25 +52,29 @@ screen doublespeak(c1, t1, c2, t2):
         at colorblind(persistent.colorblind)
         style_suffix "namebox1"
         text ("{color=" + c1.who_args["color"] + "}" + renpy.translate_string(c1.name) + "{/color}") id "who1":
+            outlines [ (absolute(persistent.outline), "#000", absolute(0), absolute(0)) ]
             size 40
             bold True
 
     frame:
         at colorblind(persistent.colorblind)
         style_suffix "window1"
-        text t1 id "what1"
+        text t1 id "what1":
+            outlines [ (absolute(persistent.outline), "#000", absolute(0), absolute(0)) ]
 
     frame:
         at colorblind(persistent.colorblind)
         style_suffix "namebox2"
         text ("{color=" + c2.who_args["color"] + "}" + renpy.translate_string(c2.name) + "{/color}") id "who2":
+            outlines [ (absolute(persistent.outline), "#000", absolute(0), absolute(0)) ]
             size 40
             bold True
 
     frame:
         at colorblind(persistent.colorblind)
         style_suffix "window2"
-        text t2 id "what2"
+        text t2 id "what2":
+            outlines [ (absolute(persistent.outline), "#000", absolute(0), absolute(0)) ]
 
     use ctc
 
@@ -103,9 +109,11 @@ screen nvl(dialogue, items=None):
                 has hbox
 
                 if d.who is not None:
-                    text d.who id d.who_id
+                    text d.who id d.who_id:
+                        outlines [ (absolute(persistent.outline), "#000", absolute(0), absolute(0)) ]
 
-                text d.what id d.what_id
+                text d.what id d.what_id:
+                    outlines [ (absolute(persistent.outline), "#000", absolute(0), absolute(0)) ]
 
 screen confirm(message, yes_action, no_action=None, yes_text=None, no_text=None):
     modal True
@@ -1056,6 +1064,34 @@ screen accessibility():
 
                         text _("Volume drop")
 
+            text _("Text Boxes"):
+                bold True
+                size bold_size
+
+            vbox:
+                style_prefix "slider"
+
+                hbox:
+                    bar value FieldValue(object=persistent, field='opacity', range=1.0, max_is_zero=False, style="slider", offset=0, step=1)
+
+                    null width 15
+
+                    $ opacity = persistent.opacity * 100
+
+                    text _("Opacity: [opacity:.0f]%")
+
+                null height 3
+
+                hbox:
+                    bar value FieldValue(object=persistent, field="outline", range=5, style="slider")
+
+                    null width 15
+
+                    text _("Outline: [persistent.outline]")
+
+                null height 3
+
+
             text _("Mental health"):
                 bold True
                 size bold_size
@@ -1098,9 +1134,9 @@ screen accessibility():
 
             textbutton _("Return"):
                 style "return_button"
-                action [SetVariable("expanded", False), If(main_menu, true=Return(), false=ShowMenu("game_menu"))]
+                action [SetVariable("expanded", False), If(main_menu, true=Return(), false=ShowMenu("game_menu")), Function(UpdateWindowOpacity)]
 
-    key "game_menu" action If(main_menu, true=Return(), false=ShowMenu("game_menu"))
+    key "game_menu" action If(main_menu, true=Return(), false=ShowMenu("game_menu")), Function(UpdateWindowOpacity)
 
 screen mods():
     tag menu
