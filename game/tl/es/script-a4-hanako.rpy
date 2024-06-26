@@ -7462,6 +7462,12 @@ translate es a4_hanako_adulthood_1b02d6e2:
     # hi "Hanako…?"
     hi "¿Hanako…?"
 
+# game/script-a4-hanako.rpy:3420
+translate es a4_hanako_whispered_touch_27005eb4:
+
+    # "The following scene is disabled based on your accessibility options. By proceeding forward, you'll skip to the next day. "
+    "La siguiente escena está deshabilitada según tus opciones de accesibilidad. Al continuar, avanzarás al siguiente día. "
+
 translate es strings:
 
     # game/script-a4-hanako.rpy:837
