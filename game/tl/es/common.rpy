@@ -1285,3 +1285,99 @@ translate es strings:
     # renpy/common/00sync.rpy:634
     old "Sync Error"
     new "Error de sincronización"
+
+    # renpy/common/00accessibility.rpy:120
+    old "Accessibility Menu. Use up and down arrows to navigate, and enter to activate buttons and bars."
+    new "Accesibilidad del menú. Usa las flechas arriba y abajo para navegar, y enter para activar botones y barras."
+
+    # renpy/common/00director.rpy:1776
+    old "Customize director.transforms to add more transforms."
+    new "Personaliza director.transforms para añadir más transformaciones."
+
+    # renpy/common/00director.rpy:1821
+    old "Click to set."
+    new "Haz clic para establecer."
+
+    # renpy/common/00director.rpy:1822
+    old "Customize director.transitions to add more transitions."
+    new "Personaliza director.transitions para añadir más transiciones."
+
+    # renpy/common/00director.rpy:1845
+    old "Customize director.audio_channels to add more channels."
+    new "Personaliza director.audio_channels para añadir más canales."
+
+    # renpy/common/00gui.rpy:454
+    old "Are you sure you want to continue where you left off?"
+    new "¿Seguro que quieres continuar donde lo dejaste?"
+
+    # renpy/common/00preferences.rpy:438
+    old "self voicing enable"
+    new "Activar voz propia"
+
+    # renpy/common/00preferences.rpy:440
+    old "self voicing disable"
+    new "Desactivar voz propia"
+
+    # renpy/common/00preferences.rpy:455
+    old "clipboard voicing enable"
+    new "Activar voz de portapapeles"
+
+    # renpy/common/00preferences.rpy:457
+    old "clipboard voicing disable"
+    new "Desactivar voz de portapapeles"
+
+    # renpy/common/00preferences.rpy:464
+    old "debug voicing enable"
+    new "Activar voz de depuración"
+
+    # renpy/common/00preferences.rpy:466
+    old "debug voicing disable"
+    new "Desactivar voz de depuración"
+
+    # renpy/common/00preferences.rpy:586
+    old "restore window position"
+    new "Restaurar posición de ventana"
+
+    # renpy/common/00preferences.rpy:595
+    old "reset"
+    new "Restablecer"
+
+    # renpy/common/00speechbubble.rpy:408
+    old "(clear retained bubbles)"
+    new "(Borrar burbujas retenidas)"
+
+    # renpy/common/00updater.rpy:505
+    old "No update methods found."
+    new "No se encontraron métodos de actualización."
+
+    # renpy/common/00updater.rpy:552
+    old "Could not download file list: "
+    new "No se pudo descargar la lista de archivos:"
+
+    # renpy/common/00updater.rpy:555
+    old "File list digest does not match."
+    new "El resumen de la lista de archivos no coincide."
+
+    # renpy/common/00updater.rpy:2072
+    old "Preparing to download the game data."
+    new "Preparando para descargar los datos del juego."
+
+    # renpy/common/00updater.rpy:2074
+    old "Downloading the game data."
+    new "Descargando los datos del juego."
+
+    # renpy/common/00updater.rpy:2076
+    old "The game data has been downloaded."
+    new "Los datos del juego se han descargado."
+
+    # renpy/common/00updater.rpy:2078
+    old "An error occured when trying to download game data:"
+    new "Ocurrió un error al intentar descargar los datos del juego:"
+
+    # renpy/common/00updater.rpy:2083
+    old "This game cannot be run until the game data has been downloaded."
+    new "Este juego no puede ejecutarse hasta que se hayan descargado los datos del juego."
+
+    # renpy/common/00updater.rpy:2090
+    old "Retry"
+    new "Reintentar"
