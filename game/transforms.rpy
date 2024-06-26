@@ -32,6 +32,12 @@ init python:
     def scaled_runtime(length, expired):
         return min((float(expired) / float(length)), 1.0)
 
+    def UpdateWindowOpacity():
+        style.say_window.background = Transform(Frame("gui/bg/saybox.png"), alpha=persistent.opacity)
+        style.say_namebox.background = Transform(Frame("gui/bg/namebox.png"), alpha=persistent.opacity)
+        style.nvl_window.background = Transform(Image("gui/bg/nvl.png"), alpha=persistent.opacity)
+        style.rebuild()
+
     def tremble_general(time, xpos, ypos, xanchor, yanchor, d, st, at):
         if not time:
             n = st - int(st)
