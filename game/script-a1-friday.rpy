@@ -570,7 +570,7 @@ label a1_friday:
             if _in_replay:
                 return
 
-    if not go_through_shizu() or got_kenji():
+    if not got_kenji():
         label .no_recovery:
             scene bg school_scienceroom
             with locationskip
