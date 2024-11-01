@@ -16,7 +16,16 @@ python early:
     mods = {}
     mods_with_menus = {}
 
+    renpy_menu = menu
+
     renpy.music.register_channel("ambient", "sfx", True, tight=True)
+
+    def menu(items):
+        items = list(items)
+
+        renpy.random.shuffle(items)
+
+        return renpy_menu(items)
 
     def format_time(t):
         t = int(t)
