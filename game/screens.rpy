@@ -371,6 +371,7 @@ screen language():
             textbutton _("Russian") action Language("ru")
             textbutton _("French") action Language("fr")
             textbutton _("Spanish") action Language("es")
+            textbutton _("Português Brasileiro") action Language("pt_br")
             textbutton _("Deutsch") action Language("de")
             textbutton _("Japanese") # action Language("jp")
             textbutton _("Simplified Chinese") action Language("zh_hans")
