@@ -482,23 +482,23 @@ image ev hisao_class_move:
 
 image ev hisao_class_end = Transform("event/hisao_class.jpg", crop=(960, 0, 1920, 1080))
 
-image ev emi_knockeddown = "event/emi_knockeddown.png"
+image ev emi_knockeddown = "event/emi_knockeddown.jpg"
 
 image ev emi_knockeddown_facepullout:
-    "event/emi_knockeddown_large.png"
+    "event/emi_knockeddown_large.jpg"
     size (1920, 1080) crop (2016, 90, 1920, 1080)
     easeout 10.0 crop (2016, 90, 2112, 1188)
 
 image ev emi_knockeddown_largepullout:
-    "event/emi_knockeddown.png"
+    "event/emi_knockeddown.jpg"
     size (1920, 1080) crop (96, 54, 1728, 972)
     easein 10.0 crop (0, 0, 1920, 1080)
 
-image ev emi_knockeddown_face = Transform("event/emi_knockeddown_large.png", crop=(2016, 90, 1920, 1080))
+image ev emi_knockeddown_face = Transform("event/emi_knockeddown_large.jpg", crop=(2016, 90, 1920, 1080))
 
 image ev emi_knockeddown_legs:
     size None crop None
-    "event/emi_knockeddown_large.png"
+    "event/emi_knockeddown_large.jpg"
     xpos 4700 ypos 2020 xanchor 4800 yanchor 3600
     ease 8.0 xpos 3800 ypos 1800
 
@@ -674,10 +674,10 @@ image ev hisaobird_9 = "event/hisaobird/bird_9.png"
 image ev watch_black = "event/watch_black.png"
 image ev watch_worn = "vfx/watch_worn.png"
 image ev watch_worn_330 = night("vfx/watch_worn_330.png")
-image bg watchhallway_blur = "vfx/watchhallway_blur.png"
+image bg watchhallway_blur = "vfx/watchhallway_blur.jpg"
 
-image bg worrytree = "vfx/worrytree.png"
-image bg worrytree_ss = sunset("vfx/worrytree.png")
+image bg worrytree = "vfx/worrytree.jpg"
+image bg worrytree_ss = sunset("vfx/worrytree.jpg")
 
 image ev rin_painting_base = "event/rin_painting_base.png"
 image ev rin_painting_reply = "event/rin_painting_reply.png"
@@ -707,7 +707,7 @@ image rin relaxed_surprised_superclose = "sprites/rin/superclose/rin_relaxed_sur
 image rin negative_crying_superclose = "sprites/rin/superclose/rin_negative_crying_superclose.png"
 image rin negative_crying_superclose_ss = sunset("sprites/rin/superclose/rin_negative_crying_superclose.png")
 
-image bg gallery_atelier_close = "vfx/gallery_atelier_close.png"
+image bg gallery_atelier_close = "vfx/gallery_atelier_close.jpg"
 image rin back_cas_superclose = "sprites/rin/superclose/rin_back_cas_superclose.png"
 
 image ev rin_kiss = "event/rin_kiss.png"
@@ -720,11 +720,11 @@ image ev rin_high_open = "event/rin_high_open.png"
 image ev rin_high_sleep = "event/rin_high_sleep.png"
 image ev rin_high_smile = "event/rin_high_smile.png"
 
-image ev dandelion = "vfx/dandelion.png"
+image ev dandelion = "vfx/dandelion.jpg"
 
 image dandelion full = "vfx/dandelion_full.png"
 image dandelion gone = "vfx/dandelion_gone.png"
-image dandelionbg = "vfx/dandelionbg.png"
+image dandelionbg = "vfx/dandelionbg.jpg"
 
 image ev rin_nap_close_hand = "event/rin_nap_close_hand.png"
 image ev rin_nap_close_nohand = "event/rin_nap_close_nohand.png"
@@ -918,8 +918,8 @@ image ev lilly_touch_uni = "event/lilly_touch_uni.png"
 image ev lilly_touch_cas = sunset("event/lilly_touch_cas.png")
 image ev lilly_touch_cheong = "event/lilly_touch_cheong.png"
 
-image ev braille = "vfx/braille.png"
-image ev icecream = "vfx/icecream.png"
+image ev braille = "vfx/braille.jpg"
+image ev icecream = "vfx/icecream.jpg"
 
 image evfg lilly_sunsetwalk = sunset("event/lilly_sunsetwalk_fg.png")
 image evbg lilly_sunsetwalk = "event/lilly_sunsetwalk_bg.png"
@@ -1132,8 +1132,8 @@ image ev hanako_cry_away = "event/hanako_cry_away.png"
 
 image ev hanako_cry_closed_fb = past("event/hanako_cry_closed.png")
 
-image hanako_door_base = "vfx/hanako_door_base.png"
-image hanako_door_door = "vfx/hanako_door_door.png"
+image hanako_door_base = "vfx/hanako_door_base.jpg"
+image hanako_door_door = "vfx/hanako_door_door.jpg"
 
 image ev hanako_billiards_break = "event/hanako_billiards_break.png"
 
@@ -1181,7 +1181,7 @@ image ev hanako_dolls = "event/hanako_dolls.png"
 image ev hanako_rage = "event/hanako_rage.png"
 image ev hanako_rage_sad = "event/hanako_rage_sad.png"
 
-image ev hanako_eye = "vfx/hanako_eye.png"
+image ev hanako_eye = "vfx/hanako_eye.jpg"
 
 image ev hisao_scar_large = "event/hisao_scar_large.png"
 image ev hisao_scar = "event/hisao_scar.png"
@@ -1501,16 +1501,16 @@ image hisaowindow = "vfx/hisaowindow.png"
 image alivetext = renpy.ParameterizedText(yalign=0.5, xanchor=0, xpos = 130, style="alive_text", drop_shadow=None, color="#666666")
 image alivetext_j = renpy.ParameterizedText(yalign=0.5, xanchor=0, xpos = 70, style="alive_text", drop_shadow=None, color="#666666")
 
-image bg mural_start = "vfx/mural_start.png"
-image bg mural_unfinished = "vfx/mural_unfinished.png"
-image bg mural_part = "vfx/mural.png"
-image mural all = "vfx/mural_wide.png"
-image bg mural = "vfx/mural.png"
-image bg mural_ss = sunset("vfx/mural.png")
+image bg mural_start = "vfx/mural_start.jpg"
+image bg mural_unfinished = "vfx/mural_unfinished.jpg"
+image bg mural_part = "vfx/mural.jpg"
+image mural all = "vfx/mural_wide.jpg"
+image bg mural = "vfx/mural.jpg"
+image bg mural_ss = sunset("vfx/mural.jpg")
 
-image rin_exhibition_paintings = "vfx/rin_exhibition_paintings.png"
-image rin_exhibition_sold = "vfx/rin_exhibition_sold.png"
-image rin_exhibition_c = "vfx/rin_exhibition_c.png"
+image rin_exhibition_paintings = "vfx/rin_exhibition_paintings.jpg"
+image rin_exhibition_sold = "vfx/rin_exhibition_sold.jpg"
+image rin_exhibition_c = "vfx/rin_exhibition_c.jpg"
 
 image rin_shadow basic:
     silhouette("sprites/rin/close/rin_basic_deadpan_close.png")
@@ -1584,7 +1584,7 @@ image chessboard = "vfx/chessboard.png"
 image shangpai = "vfx/shangpai.png"
 image pills = "vfx/pills.png"
 image invite = "vfx/invite.png"
-image brailler = "vfx/brailler.png"
+image brailler = "vfx/brailler.jpg"
 image sc_comp = "vfx/sc_comp.png"
 image letter_insert = "vfx/letter_insert.png"
 image letter_open_insert = "vfx/letter_open_insert.png"
@@ -1631,7 +1631,7 @@ image hanako_fw = Composite(
 
 image ev hanako_shanghaiwindow = "event/hanako_fw.png"
 
-image bg school_library_yuuko_blurred = "vfx/school_library_yuuko_blurred.png"
+image bg school_library_yuuko_blurred = "vfx/school_library_yuuko_blurred.jpg"
 
 image phone mobile = "vfx/mobile-sprite.png"
 
@@ -1671,8 +1671,8 @@ image snow = Composite(
 image sakura = SnowBlossom(anim.Filmstrip("vfx/sakura.png", (20, 20), (2, 1), .25), xspeed=(150, 100), yspeed=(135, 270), count=80, fast=True)
 image hospitalmask = "vfx/hospitalroommask_new.png"
 
-image dandeliontbg = SnowBlossom(im.Scale("vfx/dandelion.png",13,16), count=20, border=25, xspeed=(50, 100), yspeed=(-54, -18), start=8.0, fast=False, horizontal=True)
-image dandeliontfg = SnowBlossom("vfx/dandelion.png", count=10, border=25, xspeed=(100, 200), yspeed=(-72, -27), start=8.0, fast=False, horizontal=True)
+image dandeliontbg = SnowBlossom(im.Scale("vfx/dandelion.jpg",13,16), count=20, border=25, xspeed=(50, 100), yspeed=(-54, -18), start=8.0, fast=False, horizontal=True)
+image dandeliontfg = SnowBlossom("vfx/dandelion.jpg", count=10, border=25, xspeed=(100, 200), yspeed=(-72, -27), start=8.0, fast=False, horizontal=True)
 image dandelions thin = Composite(
     (1920, 1080),
     (0, 0), "dandeliontbg",
@@ -1686,8 +1686,8 @@ image kslogo words = "gui/logo/large.png"
 
 image credits mask = "gui/bg/roll_mask.png"
 
-image dandeliondbg = SnowBlossom(im.Scale("vfx/dandelion.png", 13, 16), count=40, border=25, xspeed=(50, 100), yspeed=(-54, -18), start=8.0, fast=True, horizontal=True)
-image dandeliondfg = SnowBlossom("vfx/dandelion.png", count=20, border=25, xspeed=(100, 200), yspeed=(-72, -27), start=8.0, fast=True, horizontal=True)
+image dandeliondbg = SnowBlossom(im.Scale("vfx/dandelion.jpg", 13, 16), count=40, border=25, xspeed=(50, 100), yspeed=(-54, -18), start=8.0, fast=True, horizontal=True)
+image dandeliondfg = SnowBlossom("vfx/dandelion.jpg", count=20, border=25, xspeed=(100, 200), yspeed=(-72, -27), start=8.0, fast=True, horizontal=True)
 image dandelions dense = Composite(
     (1920, 1080),
     (0, 0), "dandeliondbg",
