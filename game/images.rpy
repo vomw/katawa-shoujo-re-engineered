@@ -67,6 +67,7 @@ init python:
 
     for file in filter(lambda el: el.startswith("bgs/"), renpy.list_files()):
         base_name = "bg " + file.rsplit("/", 1)[1].removesuffix(".png")
+        base_name = base_name.removesuffix(".jpg")
 
         renpy.image(base_name, file)
         renpy.image(base_name + "_ss", sunset(file))
