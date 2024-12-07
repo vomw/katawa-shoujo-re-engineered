@@ -1401,12 +1401,12 @@ image ev shizu_goodend_pan:
 image ev shizu_badend = "event/shizu_badend.png"
 
 image ev showdown = "event/lilly_shizu_showdown.png"
-image ev showdown_large = "event/lilly_shizu_showdown_large.png"
+image ev showdown_large = "event/lilly_shizu_showdown_large.jpg"
 image ev showdown_lilly = Transform("event/lilly_shizu_showdown_large.png", crop=(672, 240, 1920, 1080))
 image ev showdown_shizu = Transform("event/lilly_shizu_showdown_large.png", crop=(3360, 384, 1920, 1080))
 
-image showdown_lilly_slice = Transform("event/lilly_shizu_showdown_large.png", crop=(1056, 624, 1920, 540))
-image showdown_shizu_slice = Transform("event/lilly_shizu_showdown_large.png", crop=(3264, 768, 1920, 540))
+image showdown_lilly_slice = Transform("event/lilly_shizu_showdown_large.jpg", crop=(1296, 468, 1920, 538))
+image showdown_shizu_slice = Transform("event/lilly_shizu_showdown_large.jpg", crop=(2784, 576, 1920, 538))
 
 image ev kenji_rooftop = "event/kenji_rooftop.png"
 image ev kenji_rooftop_large = "event/kenji_rooftop_large.png"
