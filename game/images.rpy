@@ -1412,8 +1412,8 @@ image ev kenji_rooftop = "event/kenji_rooftop.png"
 image ev kenji_rooftop_large = "event/kenji_rooftop_large.png"
 image ev kenji_rooftop_kenji = Transform("event/kenji_rooftop_large.png", crop=(691, 602, 1920, 1080))
 
-image bg tearoom_lillyhisao_noon = "event/Lilly_supercg/tearoom_lillyhisao_noon.png"
-image bg tearoom_lillyhisao_sunset = "event/Lilly_supercg/tearoom_lillyhisao_sunset.png"
+image bg tearoom_lillyhisao_noon = "event/Lilly_supercg/tearoom_lillyhisao_noon.jpg"
+image bg tearoom_lillyhisao_sunset = "event/Lilly_supercg/tearoom_lillyhisao_sunset.jpg"
 
 image tearoom_hisao calm = "event/Lilly_supercg/tearoom_hisao_calm.png"
 image tearoom_hisao oops = "event/Lilly_supercg/tearoom_hisao_oops.png"
