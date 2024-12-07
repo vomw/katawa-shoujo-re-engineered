@@ -909,8 +909,8 @@ image rin goodend_2 = "event/rin_goodend/rin_goodend_2.png"
 image rin goodend_2_hires = "event/rin_goodend/rin_goodend_2_hires.png"
 image evfg rin_goodend = "event/rin_goodend/rin_goodend_fg.png"
 
-image ev lilly_tearoom = "event/lilly_tearoom.png"
-image ev lilly_tearoom_open = "event/lilly_tearoom_open.png"
+image ev lilly_tearoom = "event/lilly_tearoom.jpg"
+image ev lilly_tearoom_open = "event/lilly_tearoom_open.jpg"
 
 image ev lilly_crane = "event/lilly_crane.png"
 
