@@ -66,8 +66,7 @@ init python:
                 renpy.image(base_name + "_rn", sp_rain(file))
 
     for file in filter(lambda el: el.startswith("bgs/"), renpy.list_files()):
-        base_name = "bg " + file.rsplit("/", 1)[1].removesuffix(".png")
-        base_name = base_name.removesuffix(".jpg")
+        base_name = "bg " + file.rsplit("/", 1)[1].removesuffix(".jpg")
 
         renpy.image(base_name, file)
         renpy.image(base_name + "_ss", sunset(file))
@@ -460,7 +459,7 @@ image emi happybounce = At("emihappybouncecomp", fourbounce30)
 
 image emi blur = "vfx/emi_blur.png"
 
-image bg school_track_fb = past("bgs/school_track.png")
+image bg school_track_fb = past("bgs/school_track.jpg")
 image emi basic_closedhappy_gym_fb = past("sprites/emi/emi_basic_closedhappy_gym.png")
 image emi basic_grin_gym_fb = past("sprites/emi/emi_basic_grin_gym.png")
 image emi sad_grin_gym_fb = past("sprites/emi/emi_sad_grin_gym.png")
@@ -474,14 +473,14 @@ image ev other_iwanako_start:
 image ev other_iwanako = "event/other_iwanako_nosnow.png"
 image evul other_iwanako = "event/other_iwanako.png"
 
-image ev hisao_class_start = Transform("event/hisao_class.png", crop=(0, 0, 1920, 1080))
+image ev hisao_class_start = Transform("event/hisao_class.jpg", crop=(0, 0, 1920, 1080))
 
 image ev hisao_class_move:
-    "event/hisao_class.png"
+    "event/hisao_class.jpg"
     xalign 0.0
     acdc_warp 40.0 xalign 1.0
 
-image ev hisao_class_end = Transform("event/hisao_class.png", crop=(960, 0, 1920, 1080))
+image ev hisao_class_end = Transform("event/hisao_class.jpg", crop=(960, 0, 1920, 1080))
 
 image ev emi_knockeddown = "event/emi_knockeddown.png"
 
@@ -801,7 +800,7 @@ image ev rin_doodle_all:
     zoom 0.9
     easein 12.0 zoom 0.75
 
-image bg misc_sky_rays = "bgs/misc_sky_rays.png"
+image bg misc_sky_rays = "bgs/misc_sky_rays.jpg"
 
 image ev rin_trueend_gone = "event/rin_trueend/rin_trueend_gone.png"
 image ev rin_trueend_gone_ni = night("event/rin_trueend/rin_trueend_gone.png")
@@ -1024,11 +1023,11 @@ image origami_hand = night("vfx/origami_hand.png")
 image ev lilly_airport = "event/lilly_airport.png"
 image ev lilly_airport_end = "event/lilly_airport_end.png"
 
-image bg school_dormhisao_ni_fb = past("bgs/school_dormhisao_blurred_ni.png")
+image bg school_dormhisao_ni_fb = past("bgs/school_dormhisao_blurred_ni.jpg")
 image origami_fb = past_night("vfx/origami_hand.png")
-image bg shizu_houseext_lights_fb = past("bgs/shizu_houseext_lights.png")
+image bg shizu_houseext_lights_fb = past("bgs/shizu_houseext_lights.jpg")
 image hideaki serious_up_fb = past_night("sprites/hideaki/hideaki_serious_up.png")
-image bg hosp_ext_fb = past_night("bgs/hosp_ext.png")
+image bg hosp_ext_fb = past_night("bgs/hosp_ext.jpg")
 image crowd_still1_fb = past_night("vfx/crowd1.png")
 image crowd_still2_fb = past_night("vfx/crowd2.png")
 image ev lilly_airport_end_fb = past("event/lilly_airport_end.png")
@@ -1494,7 +1493,7 @@ image shizu epictransition:
     pause 0.2
     "shizuepiccomp_sil" with Dissolve(1.8)
 
-image bg school_roof_ni_crop = Transform("bgs/school_roof_ni.png", crop=(200, 0, 1920, 1080))
+image bg school_roof_ni_crop = Transform("bgs/school_roof_ni.jpg", crop=(200, 0, 1920, 1080))
 image n_vignette = "vfx/narrowvignette.png"
 
 image hisaowindow = "vfx/hisaowindow.png"
@@ -1522,7 +1521,7 @@ image rin_shadow negative:
     alpha 0.7
 
 image nightsky rotation:
-    "bgs/misc_sky_ni.png"
+    "bgs/misc_sky_ni.jpg"
     xalign 0.5 yalign 0.5 rotate 0 zoom 1.5 alpha 0.0
     parallel:
         linear 40 rotate 360
@@ -1612,13 +1611,13 @@ image lillyprop back_cane_close = "vfx/prop_lilly_back_cane_close.png"
 image lillyprop back_cane_ss = sp_sunset("vfx/prop_lilly_back_cane.png")
 image lillyprop back_cane_ni = sp_night("vfx/prop_lilly_back_cane.png")
 
-image bg gallery_atelier_bw = Transform("bgs/gallery_atelier.png", matrixcolor=SaturationMatrix(0))
-image bg school_scienceroom_bw = Transform("bgs/school_scienceroom.png", matrixcolor=SaturationMatrix(0))
-image bg school_library_bw = Transform("bgs/school_library.png", matrixcolor=SaturationMatrix(0))
-image bg city_street4_bw = Transform("bgs/city_street4.png", matrixcolor=SaturationMatrix(0))
-image bg city_street3_bw = Transform("bgs/city_street3.png", matrixcolor=SaturationMatrix(0))
-image bg school_council_bw = Transform("bgs/school_council.png", matrixcolor=SaturationMatrix(0))
-image bg school_dormhisao_bw = Transform("bgs/school_dormhisao.png", matrixcolor=SaturationMatrix(0))
+image bg gallery_atelier_bw = Transform("bgs/gallery_atelier.jpg", matrixcolor=SaturationMatrix(0))
+image bg school_scienceroom_bw = Transform("bgs/school_scienceroom.jpg", matrixcolor=SaturationMatrix(0))
+image bg school_library_bw = Transform("bgs/school_library.jpg", matrixcolor=SaturationMatrix(0))
+image bg city_street4_bw = Transform("bgs/city_street4.jpg", matrixcolor=SaturationMatrix(0))
+image bg city_street3_bw = Transform("bgs/city_street3.jpg", matrixcolor=SaturationMatrix(0))
+image bg school_council_bw = Transform("bgs/school_council.jpg", matrixcolor=SaturationMatrix(0))
+image bg school_dormhisao_bw = Transform("bgs/school_dormhisao.jpg", matrixcolor=SaturationMatrix(0))
 
 image hanako_fw = Composite(
     (1920, 1080),
