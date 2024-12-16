@@ -473,32 +473,32 @@ image ev other_iwanako_start:
 image ev other_iwanako = "event/other_iwanako_nosnow.png"
 image evul other_iwanako = "event/other_iwanako.png"
 
-image ev hisao_class_start = Transform("event/hisao_class.jpg", crop=(0, 0, 1920, 1080))
+image ev hisao_class_start = Transform("event/hisao_class.png", crop=(0, 0, 1920, 1080))
 
 image ev hisao_class_move:
-    "event/hisao_class.jpg"
+    "event/hisao_class.png"
     xalign 0.0
     acdc_warp 40.0 xalign 1.0
 
-image ev hisao_class_end = Transform("event/hisao_class.jpg", crop=(960, 0, 1920, 1080))
+image ev hisao_class_end = Transform("event/hisao_class.png", crop=(960, 0, 1920, 1080))
 
-image ev emi_knockeddown = "event/emi_knockeddown.jpg"
+image ev emi_knockeddown = "event/emi_knockeddown.png"
 
 image ev emi_knockeddown_facepullout:
-    "event/emi_knockeddown_large.jpg"
+    "event/emi_knockeddown_large.png"
     size (1920, 1080) crop (2016, 90, 1920, 1080)
     easeout 10.0 crop (2016, 90, 2112, 1188)
 
 image ev emi_knockeddown_largepullout:
-    "event/emi_knockeddown.jpg"
+    "event/emi_knockeddown.png"
     size (1920, 1080) crop (96, 54, 1728, 972)
     easein 10.0 crop (0, 0, 1920, 1080)
 
-image ev emi_knockeddown_face = Transform("event/emi_knockeddown_large.jpg", crop=(2016, 90, 1920, 1080))
+image ev emi_knockeddown_face = Transform("event/emi_knockeddown_large.png", crop=(2016, 90, 1920, 1080))
 
 image ev emi_knockeddown_legs:
     size None crop None
-    "event/emi_knockeddown_large.jpg"
+    "event/emi_knockeddown_large.png"
     xpos 4700 ypos 2020 xanchor 4800 yanchor 3600
     ease 8.0 xpos 3800 ypos 1800
 
@@ -909,8 +909,8 @@ image rin goodend_2 = "event/rin_goodend/rin_goodend_2.png"
 image rin goodend_2_hires = "event/rin_goodend/rin_goodend_2_hires.png"
 image evfg rin_goodend = "event/rin_goodend/rin_goodend_fg.png"
 
-image ev lilly_tearoom = "event/lilly_tearoom.jpg"
-image ev lilly_tearoom_open = "event/lilly_tearoom_open.jpg"
+image ev lilly_tearoom = "event/lilly_tearoom.png"
+image ev lilly_tearoom_open = "event/lilly_tearoom_open.png"
 
 image ev lilly_crane = "event/lilly_crane.png"
 
@@ -1139,34 +1139,34 @@ image ev hanako_billiards_break = "event/hanako_billiards_break.png"
 
 image ev hanako_billiards_distant:
     "event/hanako_billiards_distant.png"
-    zoom 0.8
+
 image ev hanako_billiards_distant_med:
     "event/hanako_billiards_distant.png"
-    yanchor 0.0 ypos -0.1 xalign 1.0
+    yanchor 0.0 ypos 0.0 xalign 1.0
 
 image ev hanako_billiards_serious:
     "event/hanako_billiards_serious.png"
-    zoom 0.8
+
 image ev hanako_billiards_serious_med:
     "event/hanako_billiards_serious.png"
-    yanchor 0.0 ypos -0.1 xalign 1.0
+    yanchor 0.0 ypos 0.0 xalign 1.0
 
 image ev hanako_billiards_smile:
     "event/hanako_billiards_smile.png"
-    zoom 0.8
+
 image ev hanako_billiards_smile_med:
     "event/hanako_billiards_smile.png"
-    yanchor 0.0 ypos -0.1 xalign 1.0
+    yanchor 0.0 ypos 0.0 xalign 1.0
 
 image ev hanako_billiards_smile_close:
     "event/hanako_billiards_smile_close.png"
 
 image ev hanako_billiards_timid:
     "event/hanako_billiards_timid.png"
-    zoom 0.8
+
 image ev hanako_billiards_timid_med:
     "event/hanako_billiards_timid.png"
-    yanchor 0.0 ypos -0.1 xalign 1.0
+    yanchor 0.0 ypos 0.0 xalign 1.0
 
 image evul hanako_emptyclassroom = Transform(im.Composite(
     None,
@@ -1401,19 +1401,19 @@ image ev shizu_goodend_pan:
 image ev shizu_badend = "event/shizu_badend.png"
 
 image ev showdown = "event/lilly_shizu_showdown.png"
-image ev showdown_large = "event/lilly_shizu_showdown_large.jpg"
+image ev showdown_large = "event/lilly_shizu_showdown_large.png"
 image ev showdown_lilly = Transform("event/lilly_shizu_showdown_large.png", crop=(672, 240, 1920, 1080))
 image ev showdown_shizu = Transform("event/lilly_shizu_showdown_large.png", crop=(3360, 384, 1920, 1080))
 
-image showdown_lilly_slice = Transform("event/lilly_shizu_showdown_large.jpg", crop=(1296, 468, 1920, 538))
-image showdown_shizu_slice = Transform("event/lilly_shizu_showdown_large.jpg", crop=(2784, 576, 1920, 538))
+image showdown_lilly_slice = Transform("event/lilly_shizu_showdown_large.png", crop=(1296, 468, 1920, 538))
+image showdown_shizu_slice = Transform("event/lilly_shizu_showdown_large.png", crop=(2784, 576, 1920, 538))
 
 image ev kenji_rooftop = "event/kenji_rooftop.png"
 image ev kenji_rooftop_large = "event/kenji_rooftop_large.png"
 image ev kenji_rooftop_kenji = Transform("event/kenji_rooftop_large.png", crop=(691, 602, 1920, 1080))
 
-image bg tearoom_lillyhisao_noon = "event/Lilly_supercg/tearoom_lillyhisao_noon.jpg"
-image bg tearoom_lillyhisao_sunset = "event/Lilly_supercg/tearoom_lillyhisao_sunset.jpg"
+image bg tearoom_lillyhisao_noon = "event/Lilly_supercg/tearoom_lillyhisao_noon.png"
+image bg tearoom_lillyhisao_sunset = "event/Lilly_supercg/tearoom_lillyhisao_sunset.png"
 
 image tearoom_hisao calm = "event/Lilly_supercg/tearoom_hisao_calm.png"
 image tearoom_hisao oops = "event/Lilly_supercg/tearoom_hisao_oops.png"

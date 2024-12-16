@@ -269,7 +269,7 @@ transform hanako_fw_constructor(in_r, in_g, in_b):
         parallel:
             "fw_flash" with fw_dis_fast
             0.05
-            Transform("event/hanako_fw_flash.jpg", matrixcolor=TintMatrix((in_r, in_g, in_b))) with fw_dis_medium
+            Transform("event/hanako_fw_flash.png", matrixcolor=TintMatrix((in_r, in_g, in_b))) with fw_dis_medium
             8.0
     repeat
 
