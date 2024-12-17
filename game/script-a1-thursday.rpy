@@ -1086,6 +1086,7 @@ label a1_thursday:
         with Fade(0.2, 0.0, 1.5, color="#FFF")
 
         window show
+        window auto True
 
         "The air between them ripples with the heat of their enmity. Well, not really. They can't disguise it any more, though. Even Misha looks like she's beginning to understand the real nature of this conversation."
 
