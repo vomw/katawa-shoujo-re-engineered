@@ -234,7 +234,7 @@ init python:
         return im.Composite(
             None,
             (0, 0), "event/lilly_train/lilly_trainride_ni_norm.png",
-            (770, 276), comppath)
+            (0, 0), comppath)
 
     def silhouette(disp, color=0):
         return im.Map(disp, rmap=im.ramp(color, color), gmap=im.ramp(color, color), bmap=im.ramp(color, color))
