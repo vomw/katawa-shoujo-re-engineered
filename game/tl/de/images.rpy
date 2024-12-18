@@ -59,8 +59,8 @@ translate de strings:
     new "Community-Mitwirkende"
 
     # game/images.rpy:374
-    old "Whizvox\nCloneWith\nBridgetSystems\nDracoctix\nLuK1337\nykhima\nDrSimp\nZenMaruki\n"
-    new "Whizvox\nCloneWith\nBridgetSystems\nDracoctix\nLuK1337\nykhima\nDrSimp\nZenMaruki\n"
+    old "whizvox\nCloneWith\nBridgetSystems\nDracoctix\nLuK1337\nykhima\nDrSimp\nZenMaruki\n"
+    new "whizvox\nCloneWith\nBridgetSystems\nDracoctix\nLuK1337\nykhima\nDrSimp\nZenMaruki\n"
 
     # game/images.rpy:359
     old "‎"

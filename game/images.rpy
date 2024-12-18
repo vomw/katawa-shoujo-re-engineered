@@ -360,7 +360,7 @@ levev
 """)
 
 define credits_fhs_community_contributors_header = _("Community Contributors")
-define credits_fhs_community_contributors = _("""Whizvox
+define credits_fhs_community_contributors = _("""whizvox
 CloneWith
 BridgetSystems
 Dracoctix
