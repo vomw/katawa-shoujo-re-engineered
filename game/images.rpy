@@ -251,64 +251,57 @@ image config_bg = Frame("gui/bg/config.png")
 image logo_credo = Composite((1920, 1080), (685, 340), "gui/logo/credo.png")
 image logo_4ls = Composite((1920, 1080), (781, 432), "gui/logo/4ls-small.png")
 
-define credits_flourish_left = "{image=gui/icons/flourish_left.png}"
-define credits_flourish_right = "{image=gui/icons/flourish_right.png}"
-define credits_flourish_center = "{image=gui/icons/flourish_center.png}"
-define credits_writing_header = _("Writing")
-define credits_writing = ("""Anonymous22
+image credits_text = Text(_("""
+{image=gui/icons/flourish_left.png} {b}Writing{/b} {image=gui/icons/flourish_right.png}
+Anonymous22
 Aura
 cpl_crud
 Suriko
 TheHivemind
-""")
 
-define credits_editing_header = _("Editing")
-define credits_editing = ("""Kagami
+{image=gui/icons/flourish_left.png} {b}Editing{/b} {image=gui/icons/flourish_right.png}
+Kagami
 Losstarot
 Silentcook
-""")
 
-define credits_music_header = _("Music")
-define credits_music = ("""Blue123
+{image=gui/icons/flourish_left.png} {b}Music{/b} {image=gui/icons/flourish_right.png}
+Blue123
 NicolArmarfi
-""")
 
-define credits_art_header = _("Art")
-define credits_art = ("""gebyy-terar
+{image=gui/icons/flourish_left.png} {b}Art{/b} {image=gui/icons/flourish_right.png}
+gebyy-terar
 Kamifish
 moekki
 pimmy
 raemz
 Raide
-""")
 
-define credits_additional_art_header = _("Additional Art")
-define credits_additional_art = ("""climatic
+{image=gui/icons/flourish_left.png} {b}Additional Art{/b} {image=gui/icons/flourish_right.png}
+climatic
 Doomfest
 yujovi
-""")
 
-define credits_fmv_animation_header = _("FMV Animation")
-define credits_fmv_animation = ("Mike Inel\n")
+{image=gui/icons/flourish_left.png} {b}FMV Animation{/b} {image=gui/icons/flourish_right.png}
+Mike Inel
 
-define credits_directing_header = _("Directing")
-define credits_directing = ("""delta
+{image=gui/icons/flourish_left.png} {b}Directing{/b} {image=gui/icons/flourish_right.png}
+delta
 Raide
 yujovi
-""")
 
-define credits_engineering_header = _("Engineering")
-define credits_engineering = ("delta\n") ## it's not like we remade the whole work from scratch anyway...
-## but thanks delta :3
-## ...we will remember imachine.rpy forever
+{image=gui/icons/flourish_left.png} {b}Engineering{/b} {image=gui/icons/flourish_right.png}
+delta
 
-define credits_production_header = _("Production")
-define credits_production = ("""cpl_crud
+{image=gui/icons/flourish_left.png} {b}Production{/b} {image=gui/icons/flourish_right.png}
+cpl_crud
 Suriko
-""")
 
-define credits_thanks_header = _("Thanks")
-define credits_thanks = ("""Ambi07
+
+{image=gui/icons/flourish_center.png}
+
+
+{image=gui/icons/flourish_left.png} {b}Thanks{/b} {image=gui/icons/flourish_right.png}
+Ambi07
 abscess
 Anonymous
 Celiest
@@ -334,22 +327,15 @@ Syureria
 TcDohl
 tottori
 VCR
-""")
 
-define credits_special_thanks_header = _("Special Thanks")
-define credits_special_thanks = ("""hir
+{image=gui/icons/flourish_left.png} {b}Special Thanks{/b} {image=gui/icons/flourish_right.png}
+hir
 PyTom
 RAITA
 replicated
-""")
 
-## this is a somewhat dirty hack to make translation teams
-## appear in credits: Ren'Py didn't allow me to just "translate"
-## the empty string, so I'm having an invisible symbol here.
-define credits_localization_part = _("‎")
-
-define credits_fhs_staff_header = _("Fleeting Heartbeat Studios")
-define credits_fhs_staff = _("""Ikariya Biorante
+{image=gui/icons/flourish_left.png} {b}Fleeting Heartbeat Studios{/b} {image=gui/icons/flourish_right.png}
+Ikariya Biorante
 LocalManLLC
 Tovarish1
 XPND.Dev
@@ -357,10 +343,9 @@ Tibix
 Niomesan
 hdkv
 levev
-""")
 
-define credits_fhs_community_contributors_header = _("Community Contributors")
-define credits_fhs_community_contributors = _("""whizvox
+{image=gui/icons/flourish_left.png} {b}Community Contributors{/b} {image=gui/icons/flourish_right.png}
+whizvox
 CloneWith
 BridgetSystems
 Dracoctix
@@ -368,43 +353,7 @@ LuK1337
 ykhima
 DrSimp
 ZenMaruki
-""")
-
-
-define credits_text_body = """
-[credits_flourish_left] {b}[credits_writing_header!t]{/b} [credits_flourish_right]
-[credits_writing]
-[credits_flourish_left] {b}[credits_editing_header!t]{/b} [credits_flourish_right]
-[credits_editing]
-[credits_flourish_left] {b}[credits_music_header!t]{/b} [credits_flourish_right]
-[credits_music]
-[credits_flourish_left] {b}[credits_art_header!t]{/b} [credits_flourish_right]
-[credits_art]
-[credits_flourish_left] {b}[credits_additional_art_header!t]{/b} [credits_flourish_right]
-[credits_additional_art]
-[credits_flourish_left] {b}[credits_fmv_animation_header!t]{/b} [credits_flourish_right]
-[credits_fmv_animation]
-[credits_flourish_left] {b}[credits_directing_header!t]{/b} [credits_flourish_right]
-[credits_directing]
-[credits_flourish_left] {b}[credits_engineering_header!t]{/b} [credits_flourish_right]
-[credits_engineering]
-[credits_flourish_left] {b}[credits_production_header!t]{/b} [credits_flourish_right]
-[credits_production]
-
-[credits_flourish_center]
-
-[credits_flourish_left] {b}[credits_thanks_header!t]{/b} [credits_flourish_right]
-[credits_thanks]
-[credits_flourish_left] {b}[credits_special_thanks_header!t]{/b} [credits_flourish_right]
-[credits_special_thanks]
-[credits_localization_part!t]
-[credits_flourish_left] {b}[credits_fhs_staff_header!t]{/b} [credits_flourish_right]
-[credits_fhs_staff!t]
-[credits_flourish_left] {b}[credits_fhs_community_contributors_header!t]{/b} [credits_flourish_right]
-[credits_fhs_community_contributors!t]
-"""
-
-image credits_text = Text(credits_text_body, color="#ffffff", text_align=0.5, size=47, xalign=0.5)
+"""), color="#ffffff", text_align=0.5, size=47, xalign=0.5)
 
 image credits_final = VBox("logo_credo", "credits_text", "logo_4ls")
 
