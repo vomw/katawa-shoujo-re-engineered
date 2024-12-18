@@ -250,7 +250,170 @@ image config_bg = Frame("gui/bg/config.png")
 
 image logo_credo = Composite((1920, 1080), (685, 340), "gui/logo/credo.png")
 image logo_4ls = Composite((1920, 1080), (781, 432), "gui/logo/4ls-small.png")
-image credits_text = Text(_("""
+
+define credits_flourish_left = "{image=gui/icons/flourish_left.png}"
+define credits_flourish_right = "{image=gui/icons/flourish_right.png}"
+define credits_flourish_center = "{image=gui/icons/flourish_center.png}"
+define credits_writing_header = _("Writing")
+define credits_writing = _("""
+Anonymous22
+Aura
+cpl_crud
+Suriko
+TheHivemind
+""")
+
+define credits_editing_header = _("Editing")
+define credits_editing = _("""
+Kagami
+Losstarot
+Silentcook
+""")
+
+define credits_music_header = _("Music")
+define credits_music = _("""
+Blue123
+NicolArmarfi
+""")
+
+define credits_art_header = _("Art")
+define credits_art = _("""
+gebyy-terar
+Kamifish
+moekki
+pimmy
+raemz
+Raide
+""")
+
+define credits_additional_art_header = _("Additional Art")
+define credits_additional_art = _("""
+climatic
+Doomfest
+yujovi
+""")
+
+define credits_fmv_animation_header = _("FMV Animation")
+define credits_fmv_animation = _("""
+Mike Inel
+""")
+
+define credits_directing_header = _("Directing")
+define credits_directing = _("""
+delta
+Raide
+yujovi
+""")
+
+define credits_engineering_header = _("Engineering")
+define credits_engineering = _("""
+delta
+""") ## it's not like we remade the whole work from scratch anyway...
+## but thanks delta :3
+## ...we will remember imachine.rpy forever
+
+define credits_production_header = _("Production")
+define credits_production = _("""
+cpl_crud
+Suriko
+""")
+
+define credits_thanks_header = _("Thanks")
+define credits_thanks = _("""
+Ambi07
+abscess
+Anonymous
+Celiest
+ContinualNaba
+Dark_Mercury
+DuaneMoody
+Fink
+frumplstlskn
+Ismuth
+Japesland
+Juno
+kekekeke
+konflikti
+Magaran
+Mirage_GSM
+OverCoat
+Peorth
+Petaru
+silentkyon
+skim
+stirfriedweasel
+Syureria
+TcDohl
+tottori
+VCR
+""")
+
+define credits_special_thanks_header = _("Special Thanks")
+define credits_special_thanks = _("""
+hir
+PyTom
+RAITA
+replicated
+""")
+
+define credits_localization_part = _("")
+
+define credits_fhs_staff_header = _("Fleeting Heartbeat Studios")
+define credits_fhs_staff = _("""
+Ikariya Biorante
+LocalManLLC
+Tovarish1
+XPND.Dev
+Tibix
+Niomesan
+hdkv
+levev
+""")
+
+define credits_fhs_community_contributors_header = _("Community Contributors")
+define credits_fhs_community_contributors = _("""
+Whizvox
+CloneWith
+BridgetSystems
+Dracoctix
+LuK1337
+ykhima
+DrSimp
+ZenMaruki
+""")
+
+
+image credits_text = Text(
+    credits_flourish_left + " {b}" + credits_writing_header + "{/b} " + credits_flourish_right + "\n" +
+    credits_writing + "\n" +
+    credits_flourish_left + " {b}" + credits_editing_header + "{/b} " + credits_flourish_right + "\n" +
+    credits_editing + "\n" +
+    credits_flourish_left + " {b}" + credits_music_header + "{/b} " + credits_flourish_right + "\n" +
+    credits_music + "\n" +
+    credits_flourish_left + " {b}" + credits_art_header + "{/b} " + credits_flourish_right + "\n" +
+    credits_art + "\n" +
+    credits_flourish_left + " {b}" + credits_additional_art_header + "{/b} " + credits_flourish_right + "\n" +
+    credits_additional_art + "\n" +
+    credits_flourish_left + " {b}" + credits_fmv_animation_header + "{/b} " + credits_flourish_right + "\n" +
+    credits_fmv_animation + "\n" +
+    credits_flourish_left + " {b}" + credits_directing_header + "{/b} " + credits_flourish_right + "\n" +
+    credits_directing + "\n" +
+    credits_flourish_left + " {b}" + credits_engineering_header + "{/b} " + credits_flourish_right + "\n" +
+    credits_engineering + "\n" +
+    credits_flourish_left + " {b}" + credits_production_header + "{/b} " + credits_flourish_right + "\n" +
+    credits_production + "\n\n\n" + credits_flourish_center + "\n\n\n" +
+    credits_flourish_left + " {b}" + credits_thanks_header + "{/b} " + credits_flourish_right + "\n" +
+    credits_thanks + "\n" +
+    credits_flourish_left + " {b}" + credits_special_thanks_header + "{/b} " + credits_flourish_right + "\n" +
+    credits_special_thanks + "\n" +
+    credits_localization_part + "\n" +
+    credits_flourish_left + " {b}" + credits_fhs_staff_header + "{/b} " + credits_flourish_right + "\n" +
+    credits_fhs_staff + "\n" +
+    credits_flourish_left + " {b}" + credits_fhs_community_contributors_header + "{/b} " + credits_flourish_right + "\n" +
+    credits_fhs_community_contributors + "\n"
+    )
+
+image credits_text_old = Text(_("""
 {image=gui/icons/flourish_left.png} {b}Writing{/b} {image=gui/icons/flourish_right.png}
 Anonymous22
 Aura
@@ -338,14 +501,20 @@ Ikariya Biorante
 LocalManLLC
 Tovarish1
 Tibix
+Niomesan
 XPND.Dev
 hdkv
 levev
 
 {image=gui/icons/flourish_left.png} {b}Community Contributors{/b} {image=gui/icons/flourish_right.png}
+Whizvox
+CloneWith
+BridgetSystems
 Dracoctix
 LuK1337
-Niomesan
+ykhima
+DrSimp
+ZenMaruki
 """), color="#ffffff", text_align=0.5, size=47, xalign=0.5)
 image credits_final = VBox("logo_credo", "credits_text", "logo_4ls")
 
