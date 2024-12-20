@@ -2824,6 +2824,7 @@ label a4_rin:
             "The scent of her hair is that of rain and paint thinner. Her body feels as cold as always. Her breathing against my neck is as hot as always."
 
             "It's funny how all of those feel so familiar even though Rin, as a whole, does not."
+
             scene ev rin_trueend_hugclosed
             with locationchange
 
