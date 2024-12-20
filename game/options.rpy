@@ -6,6 +6,7 @@ init python:
     build.directory_name = "KSRE"
     build.executable_name = "Katawa Shoujo Re-Engineered"
 
+
     build.archive("scripts", "all")
     build.archive("images", "all")
     build.archive("videos", "all")

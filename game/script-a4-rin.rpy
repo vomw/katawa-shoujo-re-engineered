@@ -2824,7 +2824,7 @@ label a4_rin:
             "The scent of her hair is that of rain and paint thinner. Her body feels as cold as always. Her breathing against my neck is as hot as always."
 
             "It's funny how all of those feel so familiar even though Rin, as a whole, does not."
-
+              
             scene ev rin_trueend_hugclosed
             with locationchange
 
@@ -2938,6 +2938,8 @@ label a4_rin:
             "The ripples on the puddles she stepped on expanded until they met the limits of their tiny existence and disappeared without a trace."
 
             "Her words stayed frozen deep inside my heart."
+
+            $ ach("rinneutral_achieve")
 
             if _in_replay:
                 return
@@ -6345,6 +6347,8 @@ label a4_rin:
             hi "What is it?"
 
             rin "What's the word for when it feels inside your heart that everything in the world is all right?"
+
+            $ ach("ringood_achieve")
 
             stop music fadeout 4.0
             stop ambient fadeout 4.0
