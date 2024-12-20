@@ -11,7 +11,6 @@ define config.window = "auto"
 define config.name = "Katawa Shoujo: Re-Engineered"
 define config.version = "1.4.9"
 
-
 define config.save_directory = config.name
 
 define config.end_splash_transition = dotwipe_up
