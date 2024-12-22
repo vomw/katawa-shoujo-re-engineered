@@ -1803,7 +1803,7 @@ label a1_sunday:
             "Rin's face twitches and her eyelids shut tighter, as if to resist against waking up."
 
             show rin basic_deadpanupset_close_ni
-            with charachange
+            with charachangealways
 
             "She gradually opens her eyes but keeps them half-closed, letting the light from the fireworks sneak just past her eyelashes so that her green irises mirror the bright flashes of the explosions, then looks up at me and frowns."
 
@@ -1817,7 +1817,7 @@ label a1_sunday:
             "It seems she is not entirely aware of the situation."
 
             show rin basic_lucid_close_ni
-            with charachange
+            with charachangealways
 
             "Rin's head drops back on my shoulder as she leans against me with all her weight."
 
@@ -1871,9 +1871,8 @@ label a1_sunday:
 
             "It's a lie, she weighs next to nothing, but I have to get a jab back at her, even if it's under the belt. My mock protest fails to draw any reaction as Rin's attention is drawn upwards, to the flashes of the fireworks."
 
-            show rin negative_spaciness_close_ni:
-                xpos 0.9 xanchor 0.5 xpos 1.0 yanchor 1.0
-            with charachange
+            show rin negative_spaciness_close_ni
+            with charachangealways
 
             "She seems hypnotized by the colorful play of the explosions."
 
@@ -1959,7 +1958,7 @@ label a1_sunday:
             with Dissolve(1.0)
 
             show rin basic_absent_ni at tworight
-            with charachange
+            with charachangealways
 
             "Rin stands up as well and turns to face me, with an expectant gaze on her tired features."
 
