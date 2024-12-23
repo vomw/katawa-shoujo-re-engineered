@@ -86,21 +86,21 @@ label a3_rin:
         "The teacher encourages us to gather around the preferred motif, emphasizing perspective, texture and lighting as the key points of this exercise."
 
         show rin basic_deadpancontemplation_close
-        with charachange
+        with charachangealways
 
         "I look at Rin to see if she prefers one of the subjects over the other, but she just tilts her head, signifying nothing."
 
         "The club members quickly shuffle their chairs around the classroom to get closer to either the vase or the clutter. Rin and I both pick the flower vase, but only one of us seems to do any work."
 
         show rin basic_awayabsent_close
-        with charachange
+        with charachangealways
 
         "She's ignoring Nomiya's assignment just like she's suddenly started ignoring me, and has begun doodling something idly with her foot, not really even looking at what she's drawing."
 
         "I try to catch her gaze, but she's looking out the window. It's making me uneasy."
 
         show rin basic_lucid_close
-        with charachange
+        with charachangealways
 
         "Rin almost looks like she's asleep with the way she's leaning back against the chair with her legs resting easily on the desk. She's now completely given up on the drawing."
 
@@ -391,7 +391,7 @@ label a3_rin:
         "She takes her time, slowly going over the paintings in order without uttering a single word."
 
         show nomiya serious
-        with charachange
+        with charachangealways
 
         "Even the teacher looks very nervous. He tries to point out certain details and other things about Rin's work, but it seems like she's not listening."
 
@@ -845,13 +845,18 @@ label a3_rin:
 
         "Her bag is lying at her feet like a forgotten rag doll. A few books and pens have fallen out of it near her seat. The scene makes me smile a little."
 
+        window hide
+
         show ev rin_nap_close_nohand:
             ease 1.0 yalign 0.0
+        with None
 
-        scene ev rin_nap_close_hand:
+        show ev rin_nap_close_hand:
             yalign 1.0
             ease 1.0 yalign 0.0
         with Dissolve(1.0)
+
+        window auto True
 
         "I touch Rin's head lightly, sweeping a few stray hairs off her ear. Her hair feels warm against my palm."
 
@@ -979,7 +984,7 @@ label a3_rin:
         rin "Ah."
 
         show rin relaxed_nonchalant_close_ss
-        with charachange
+        with charachangealways
 
         "She notices my presence, but her reaction is more like the lack of any reacting at all. It's just an acknowledgment; no startled gasp or anything."
 
@@ -1031,7 +1036,7 @@ label a3_rin:
         rin "Thanks."
 
         show rin relaxed_boredom_close_ss
-        with charachange
+        with charachangealways
 
         "Rin yawns again and blinks a few times."
 
