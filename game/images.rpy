@@ -1304,22 +1304,22 @@ image ev shizu_roof_smile = im.Composite(
 image ev shizu_roof2 = im.Composite(
     None,
     (0, 0), "event/shizu_roof/shizu_roof.png",
-    (1442, 345), "event/shizu_roof/shizu_roof_hisao2.png")
+    (0, 0), "event/shizu_roof/shizu_roof_hisao2.png")
 image ev shizu_roof2_towardsangry = im.Composite(
     None,
     (0, 0), "event/shizu_roof/shizu_roof.png",
-    (1442, 345), "event/shizu_roof/shizu_roof_hisao2.png",
-    (718, 297), "event/shizu_roof/shizu_roof_towardsangry.png")
+    (0, 0), "event/shizu_roof/shizu_roof_hisao2.png",
+    (0, 0), "event/shizu_roof/shizu_roof_towardsangry.png")
 image ev shizu_roof2_towardsnormal = im.Composite(
     None,
     (0,0),  "event/shizu_roof/shizu_roof.png",
-    (1442, 345), "event/shizu_roof/shizu_roof_hisao2.png",
-    (718, 297), "event/shizu_roof/shizu_roof_towardsnormal.png")
+    (0, 0), "event/shizu_roof/shizu_roof_hisao2.png",
+    (0, 0), "event/shizu_roof/shizu_roof_towardsnormal.png")
 image ev shizu_roof2_smile = im.Composite(
     None,
     (0,0), "event/shizu_roof/shizu_roof.png",
-    (1442, 345), "event/shizu_roof/shizu_roof_hisao2.png",
-    (718, 297), "event/shizu_roof/shizu_roof_smile.png")
+    (0, 0), "event/shizu_roof/shizu_roof_hisao2.png",
+    (0, 0), "event/shizu_roof/shizu_roof_smile.png")
 
 image evh shizune_hcg_tied_blush_small = adult("event/shizune_hcg_tied/shizune_hcg_tied_blush_small.png")
 image evh shizune_hcg_tied_blush = adult("event/shizune_hcg_tied/shizune_hcg_tied_blush.png")

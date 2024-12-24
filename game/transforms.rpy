@@ -146,7 +146,7 @@ init python:
         trans.xalign = 0.5
         trans.yalign = 1.0
         n = scaled_runtime(60.0, at)
-        trans.zoom = 0.8 + (acdc_warp(n) * 0.2)
+        trans.zoom = 1.0 + (acdc_warp(n) * 0.2)
         return 0
 
     def tf_parallax(tf, st, tb):
