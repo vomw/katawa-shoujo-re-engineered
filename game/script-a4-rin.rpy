@@ -336,7 +336,8 @@ label a4_rin:
 
         play sound sfx_dooropen
 
-        scene bg school_dormhisao
+        scene bg school_dormhisao:
+            yalign 0.5 zoom 1.02
         with locationchange
 
         "When I walk into my room, I hear her footsteps following me in."
@@ -347,32 +348,30 @@ label a4_rin:
             center
             alpha 0.0
             ease 0.5 ypos 1.15 alpha 1.0
-
-        pause 0.5
-
-        show rin:
             parallel:
                 ease 0.3 center
             parallel:
                 "rin basic_absent" with Dissolve(0.3)
+        with Pause(0.5)
 
         stop music fadeout 6.0
 
         "She claims my bed without asking permission, making me wish that I had taken the time to make it before I left in the morning, then stands up again as though she sat on hot coals."
 
-        show rin basic_absent at center
+        show rin basic_absent at center:
+            alpha 1.0
 
         "I half-lean against the single corner of my desktop that isn't cluttered with stuff, to rest my legs at least a little bit."
 
         show rin basic_awayabsent
-        with charachange
+        with charachangealways
 
         "Rin spends a few moments glancing curiously around my room. It makes me realize that she's never seen it before."
 
         "For a moment, she actually looks like she's concentrating. Trying to get everything. This must be the eye for detail that makes her an artist."
 
         show rin basic_absent
-        with charachange
+        with charachangealways
 
         "Since the room is small, she quickly runs out of things to look at, but nothing else transpires, allowing the uncomfortable silence to take over the atmosphere."
 
@@ -400,12 +399,16 @@ label a4_rin:
 
         "And so, Rin simply takes a few steps to close the distance between us and rises on the tips of her toes to even out the height difference…"
 
+        window hide
+
         show rin basic_lucid_superclose
-        with charachange
+        with characlose
 
         centered "'It was a bad idea.'"
 
         centered "'Maybe you should forget about it, and I will too.'"
+
+        window auto True
 
         "It's a reflex, and almost as an afterthought, the words 'no,' 'yes' and 'maybe' simultaneously surface inside my mind."
 
@@ -414,7 +417,7 @@ label a4_rin:
         "Her breath feels warm against my fingers. The scent of her skin lingers about, the mysterious indescribable sensation that captures me and draws my eyes deep into hers."
 
         show rin basic_surprised_close
-        with charachange
+        with charachangealways
 
         play music music_moonlight fadein 0.5
 
@@ -436,7 +439,8 @@ label a4_rin:
 
         "The words come from her throat as a coarse whisper meant only for me, bypassing her tongue and teeth without giving them any chance to interrupt."
 
-        show rin negative_angry
+        show rin negative_angry:
+            ypos 1.02
         with Dissolve(0.15)
         with vpunch
 
@@ -621,7 +625,7 @@ label a4_rin:
         "The blunt, hollow remark is a fitting conclusion for this unpleasant discussion that became an even more unpleasant and very one-sided yelling match."
 
         show rin basic_lucid
-        with charachange
+        with charachangealways
 
         "After a moment of collecting herself Rin just gives up, I can see it from the way she slumps her shoulders, and walks out."
 
@@ -793,9 +797,12 @@ label a4_rin:
 
         "Damn, it sounds like I do the things I do because some kind of instinctual properness compels me to, not because it would be sensible (or not)."
 
-        scene bg gallery_int at right
-        show sae smile at center
-        show crowd at right
+        scene bg gallery_int at right:
+            yalign 0.5 zoom 1.02
+        show sae smile at center:
+            ypos 1.02
+        show crowd at right:
+            ypos 1.02
         with locationchange
 
         "I sneak closer to Sae to wait for a lull in the conversation so I can chat her up too."
@@ -822,22 +829,26 @@ label a4_rin:
         $ renpy.music.set_volume(0.5, 1.0, channel="ambient")
 
         show emicas happy:
-            center xpos 0.15 alpha 0.0
-            ease 1.0 center alpha 1.0
-
-        show emicas
+            center
+            ypos 1.02 xpos 0.15 alpha 0.0
+            ease 1.0 xalign 0.5 alpha 1.0
 
         show sae:
             ease 1.0 xpos 0.75 alpha 0.0
         with None
 
-        show bg at left
-        show crowd at left
+        show bg at left:
+            yalign 0.5
+        show crowd at left:
+            ypos 1.02
         with charamovefaster
 
         hide sae
 
         emi "Hi! Are you like, a representative of the art club or something? I don't see anyone else from the school here…"
+
+        show emicas:
+            xalign 0.5 alpha 1.0
 
         hi "Umm… I don't know, really. I guess I am if that's the case."
 
@@ -901,24 +912,29 @@ label a4_rin:
         emi "Come on!"
 
         show nomiya smile behind emicas:
-            center xpos 0.8 alpha 0.0
+            center
+            xpos 0.8 alpha 0.0
             ease 1.0 xpos 0.55 alpha 1.0
         show rin basic_awayabsent:
-            center xpos 1.1 alpha 0.0
+            center
+            xpos 1.1 alpha 0.0
             ease 1.0 xpos 0.85 alpha 1.0
         show emicas neutral_close:
             ease 1.0 xpos 0.15
         with None
-
-        show nomiya
-        show rin
-        show emicas
 
         show bg at center
         show crowd at center
         with charamovefaster
 
         "Before she has a chance to forcefully drag me to Rin, Nomiya appears behind her with Rin in his tow."
+
+        show nomiya:
+            xpos 0.55 alpha 1.0
+        show rin:
+            xpos 0.85 alpha 1.0
+        show emicas:
+            xpos 0.15 alpha 1.0
 
         "She's not dressed for the occasion, instead opting for the usual school uniform and unkempt hair."
 
@@ -1005,7 +1021,8 @@ label a4_rin:
         $ renpy.music.set_volume(1.0, 3.0, channel="ambient")
 
         show sae neutral behind rin:
-            center xpos 1.25 alpha 0.0
+            center
+            xpos 1.25 alpha 0.0
             ease 1.0 xpos 0.8 alpha 1.0
         show emicas:
             ease 1.0 xpos -0.35 alpha 0.0
@@ -1133,10 +1150,6 @@ label a4_rin:
             center
             xpos 0.8
         with locationchange
-
-        show rin:
-            center
-            xpos 0.55
 
         "Seeing that nobody does anything, I force myself to step to Rin and lift her up from the floor, letting her lean against me to keep standing."
 
@@ -3049,7 +3062,9 @@ label a4_rin:
 
             "I don't know what the teacher wants from me, but I can guess it probably is not detention and also that it probably has something to do with Rin again."
 
-            scene bg school_hallway3
+            scene bg school_hallway3:
+                truecenter
+                zoom 1.02
             with locationchange
 
             play sound sfx_doorslam
@@ -3303,7 +3318,7 @@ label a4_rin:
             "The abruptly-ended greetings give me the chance to close the door behind me and sit down on a dust-covered desktop."
 
             show rin basic_absent
-            with charachange
+            with charachangealways
 
             "Rin stays standing, but at least she turns around."
 
@@ -3732,7 +3747,7 @@ label a4_rin:
             hi "And I'm pretty sure nobody really can."
 
             show rin relaxed_doubt
-            with charachange
+            with charachangealways
 
             "This seems to worry her slightly."
 
@@ -3750,7 +3765,7 @@ label a4_rin:
             hi "Does it make you feel sad for yourself?"
 
             show rin basic_lucid
-            with charachange
+            with charachangealways
 
             "Rin thinks about this for a while, and then shakes her head surprisingly vehemently."
 
@@ -3780,7 +3795,8 @@ label a4_rin:
                 return
 
         label .measuring_shadows:
-            scene bg school_hallway3
+            scene bg school_hallway3:
+                truecenter zoom 1.02
             with locationchange
 
             "The hallway is empty, almost intimidating."
@@ -3801,12 +3817,11 @@ label a4_rin:
 
             pause 0.2
 
-            show rin:
-                ease 1.0 tworight alpha 0.0
-
-            pause 1.0
-
+            show rin at tworight:
+                ease 1.0 alpha 0.0
+            with charamove
             hide rin
+            with None
 
             "Nodding barely noticeably, Rin strides in without stopping, and naturally, without knocking."
 
@@ -3822,7 +3837,8 @@ label a4_rin:
 
             "…"
 
-            show bg at right
+            show bg at right:
+                yalign 0.5 zoom 1.02
             with charamove
 
             "Manners lose to curiosity, and so I stay close enough to listen in."
@@ -4070,7 +4086,7 @@ label a4_rin:
             rin "People are doing things I don't ask for and don't want and everyone keeps getting angry at me, I have no idea what is going on any more and can't stop feeling like I want to run away from everything…"
 
             show rin basic_lucid_close
-            with charachange
+            with charachangealways
 
             "She shuts her eyes tight and breathes out deeply, calmly."
 
@@ -4109,7 +4125,7 @@ label a4_rin:
             "As the wetness gathers into the corners of her eyes, they are still wide with the shock of rejection."
 
             show rin basic_crying_close
-            with charachange
+            with charachangealways
 
             "As the tears start rolling down her pale cheeks, she does nothing to stop them."
 
@@ -4119,7 +4135,12 @@ label a4_rin:
 
             "But reality catches up."
 
-            show rin negative_crying_superclose
+            show bg:
+                truecenter
+                zoom 1.02
+            show rin negative_crying_superclose:
+                truecenter
+                zoom 1.02
             with vpunch
 
             "Rin slumps forward as if she was deflating, and buries her face as deep in my shirt as she can."
@@ -4178,14 +4199,14 @@ label a4_rin:
             nvl clear
 
             show rin basic_crying_superclose_ss
-            with charachange
+            with charachangealways
 
             "Eventually Rin stirs a little and still smothering herself against my chest, mutters into my shirt."
 
             rin "Let me be here for a while."
 
             show rin negative_crying_superclose_ss
-            with charachange
+            with charachangealways
 
             rin "Please, Hisao."
 
@@ -4273,7 +4294,7 @@ label a4_rin:
             "Rin's bitter tears have dried up, and she looks a little more like herself again."
 
             show rin basic_sad_close_ss
-            with charachange
+            with charachangealways
 
             "The lost look in her eyes is still there though. Her gaze wanders around restlessly before stopping at me."
 
@@ -4418,7 +4439,7 @@ label a4_rin:
             "…"
 
             show rin negative_worried_close_ss
-            with charachange
+            with charachangealways
 
             "She makes a difficult face, carefully trying to pick the words she wants to say."
 
@@ -4467,7 +4488,7 @@ label a4_rin:
             "Like we have some weird, wordless connection that would hold even so."
 
             show rin relaxed_nonchalant_close_ss
-            with charachange
+            with charachangealways
 
             "Rin keeps shifting her weight from one foot to the other restlessly, looking everywhere around the room except at me."
 
@@ -4640,7 +4661,7 @@ label a4_rin:
             play music music_dreamy fadein 2.0
 
             scene bg school_dormhisao_rn
-            with charachange
+            with locationchange
 
             $ renpy.music.set_volume(0.4, 0.0, channel="ambient")
             play ambient sfx_rain fadein 1.0
@@ -4669,7 +4690,7 @@ label a4_rin:
             $ renpy.music.set_volume(0.4, 1.0, channel="ambient")
 
             scene bg school_dormhisao_rn
-            with charachange
+            with locationchange
 
             "So I've been half-assedly cleaning up in between half-assedly reading a book, packing my stuff on the side when I get bored of the first two."
 
@@ -4880,7 +4901,7 @@ label a4_rin:
 
             "No, it's less than the bare minimum, I think with a passing pang of sadness and some guilt for thinking like that."
 
-            scene ev rin_wet_arms:
+            show ev rin_wet_arms:
                 center
                 xalign 0.0
                 linear 20.0 xalign 1.0
@@ -4898,7 +4919,7 @@ label a4_rin:
 
             "I feel like asking, and almost do, but Rin's miserable state requires a higher priority of my attention."
 
-            scene ev rin_wet_face_down:
+            show ev rin_wet_face_down:
                 center
                 yalign 0.0
             with flash
@@ -4907,12 +4928,12 @@ label a4_rin:
 
             "I guess there is no need for chitchat then."
 
-            scene ev rin_wet_towel_down
+            show ev rin_wet_towel_down
             with charachangeev
 
             "I pick up the towel from the bed and wrap it around her head, rumpling it all over her hair until most of the rainwater is hopefully soaked into the fabric."
 
-            scene ev rin_wet_towel_up
+            show ev rin_wet_towel_up
             with charachangeev
 
             "She peeks from below the towel at me, looking up with impassive eyes."
@@ -4935,7 +4956,7 @@ label a4_rin:
 
             "The contact is electric, a jolt of current surging through me."
 
-            scene ev rin_wet_towel_touch
+            show ev rin_wet_towel_touch
             with charachangeev
 
             "Whether she seeks comfort, warmth or just my touch I wouldn't know, but I can't help touching her back, caressing her soft cheek with my hand."
@@ -4974,7 +4995,7 @@ label a4_rin:
             nvl hide dissolve
             nvl clear
 
-            scene ev rin_wet_face_up
+            show ev rin_wet_face_up
             with charachangeev
 
             "I pet her head, trying to sort out the hair that refuses to be sorted out even when wet."
@@ -4983,7 +5004,7 @@ label a4_rin:
 
             hi "Pants too?"
 
-            scene ev rin_wet_face_down
+            show ev rin_wet_face_down
             with charachangeev
 
             "She nods an answer, leans back and spreads her legs, with a grotesquely inviting gesture that makes a nasty feeling crawl up and down my spine like a bad premonition."
@@ -5000,6 +5021,7 @@ label a4_rin:
 
             scene evh rin_h2_pan_surprise:
                 xalign 0.5 yalign 0.0
+                ease 10.0 yalign 0.15
             with whiteout
 
             "I kneel down uncomfortably and titillatingly between her legs so I can quickly dry her bare feet, remembering that they are as important to her as hands are to me."
@@ -5029,7 +5051,7 @@ label a4_rin:
             "…Is that what you want too? Would it be all right now? To take this step?"
 
             show evh:
-                acdc_warp 8.0 yalign 1.0
+                acdc_warp 8.0 yalign 0.8
 
             "…What if? Maybe if…"
 
@@ -5040,7 +5062,7 @@ label a4_rin:
             "But that's all right. It seems thinking is not something we need right now."
 
             show evh rin_h2_nopan_closed:
-                yalign 1.0
+                yalign 0.8
             with Dissolvemove(0.5)
 
             $ renpy.music.play(music_heart, fadein=0.5, if_changed=True)
@@ -5085,7 +5107,7 @@ label a4_rin:
             "My every action is met with a different reaction, but all of those are out of pure lust."
 
             show evh rin_h2_hisao_closed:
-                acdc_warp 16.0 yalign 0.0
+                acdc_warp 16.0 yalign 0.15
 
             "Rin is lost in desire, willing to let anything happen to her if I do it right now."
 
@@ -5117,7 +5139,7 @@ label a4_rin:
             "It makes me feel anxious, nervous. Bothered."
 
             show evh rin_h2_hisao_away:
-                yalign 0.0
+                yalign 0.15
             with Dissolvemove(0.5)
 
             "As her body relaxes, I try to kiss her down there again, but it startles her, causing her to jump."
@@ -5200,7 +5222,7 @@ label a4_rin:
 
             play sound sfx_rustling
 
-            scene ev rin_pair_base
+            show ev rin_pair_base
             with charachangeev
 
             "I comply, standing back to open the buttons of my shirt, much more quickly than when I undid Rin's buttons."
@@ -5346,7 +5368,7 @@ label a4_rin:
 
             "Yes."
 
-            scene evh rin_h_left
+            show evh rin_h_left
             with charachangeev
 
             rin "You should forget about stuff like future and past, it's not like you can change those kinds of things."
@@ -5361,14 +5383,14 @@ label a4_rin:
 
             hi "I am here."
 
-            scene evh rin_h_normal
+            show evh rin_h_normal
             with charachangeev
 
             rin "Come closer."
 
             "My entire body is thinking only in positives now so I do, hugging her more tightly."
 
-            scene evh rin_h_right
+            show evh rin_h_right
             with charachangeev
 
             rin "Closer."
@@ -5377,7 +5399,7 @@ label a4_rin:
 
             "She tenses a little. Just a little."
 
-            scene evh rin_h_closed_close
+            show evh rin_h_closed_close
             with characlose
 
             rin "Closer."
@@ -5388,12 +5410,12 @@ label a4_rin:
 
             "I reach down between us and guide myself, sinking myself into her."
 
-            scene evh rin_h_strain_close
+            show evh rin_h_strain_close
             with charachangeev
 
             "Every muscle in Rin's body stiffens at the same time."
 
-            scene evh rin_h_strain
+            show evh rin_h_strain
             with charadistant
 
             "She doesn't say anything, or wince, so I push deeper, eventually moving out."
@@ -5420,7 +5442,7 @@ label a4_rin:
 
             "That feeling is—{w=0.7}{nw}"
 
-            scene evh rin_h_normal_close
+            show evh rin_h_normal_close
             with characlose
 
             rin "Wait…"
@@ -5429,7 +5451,7 @@ label a4_rin:
 
             "Maybe it hurts, or…"
 
-            scene evh rin_h_right_close
+            show evh rin_h_right_close
             with charachangeev
 
             "She looks at me in a way that I can't really begin to interpret."
@@ -5440,7 +5462,7 @@ label a4_rin:
 
             rin "You said I don't have to be alone."
 
-            scene evh rin_h_left_close
+            show evh rin_h_left_close
             with charachangeev
 
             "Her eyes are full of an innocent, fuzzyheaded confusion that makes me chuckle a little and pet the back of her head."
@@ -5453,7 +5475,7 @@ label a4_rin:
 
             hi "If there is such a person for you."
 
-            scene evh rin_h_closed_close
+            show evh rin_h_closed_close
             with charachangeev
 
             "She answers with a kiss, reminding me that we have stopped moving for no real reason."
@@ -5462,9 +5484,9 @@ label a4_rin:
 
             "I move faster, faster in and out of her, my sweat mixing with hers, glistening on our shared skin like diamonds and pearls."
 
-            scene evh rin_h_strain:
+            show evh rin_h_strain:
                 truecenter
-                zoom 1.2
+                zoom 1.2 subpixel True
                 easein 20.0 zoom 1.0
             with charadistant
 
@@ -5497,6 +5519,7 @@ label a4_rin:
             $ renpy.music.set_volume(0.1, 0.0, channel="music")
             play music music_timeskip fadein 4.0
 
+            window hide
             centered_b "Present{fast}" with Dissolve(4.0)
 
             nvl clear
@@ -5517,12 +5540,10 @@ label a4_rin:
 
             nvl clear
 
-            centered_alive "That way… you can confirm that you are, in fact…"
+            centered_b "That way… you can confirm that you are, in fact… {color=#fff}alive.{/color}"
 
-            show alivetext _("That way… you can confirm that you are, in fact…")
-            with Dissolve(3.0)
-
-            pause
+            show alivetext _("That way… you can confirm that you are, in fact… {color=#fff}alive.{/color}")
+            with None
 
             show alivetext _("That way… you can confirm that you are, in fact… alive.")
             with Dissolve(3.0)
@@ -5536,6 +5557,8 @@ label a4_rin:
 
             $ renpy.music.set_volume(1.0, 0.0, channel="music")
             play music music_dreamy fadein 4.0
+
+            window auto True
 
             "I am pretty sure that the girl who is standing there half-naked, staring out of the window of my room, has a much better grasp of 'present' than I do."
 
@@ -5809,7 +5832,7 @@ label a4_rin:
             "…"
 
             show rin basic_awayabsent
-            with charachange
+            with charachangealways
 
             rin "Hisao."
 
@@ -5857,7 +5880,7 @@ label a4_rin:
             hi "…It's fine, isn't it?"
 
             show rin basic_lucid
-            with charachange
+            with charachangealways
 
             "'How should I know?', the shrug of her shoulders seems to say, hesitating to give a firmer answer."
 
@@ -5935,7 +5958,7 @@ label a4_rin:
             "Until I realize what they were fighting against."
 
             show rin basic_crying
-            with charachange
+            with charachangealways
 
             "It's those weird tears again, not associated with sadness or happiness, not pitiable sobbing nor laughter of joy."
 
@@ -5956,7 +5979,7 @@ label a4_rin:
             rin "I…"
 
             show rin negative_crying
-            with charachange
+            with charachangealways
 
             "She shakes her head in confusion, stumbling to get the words out of her mouth."
 
@@ -6020,7 +6043,7 @@ label a4_rin:
             hi "What are you afraid of? I never thought I was scary."
 
             show rin negative_confused
-            with charachange
+            with charachangealways
 
             "Rin shakes her head desperately, as if knowing that the tangle inside her mind won't be undone with just that."
 
@@ -6051,7 +6074,7 @@ label a4_rin:
 
             "…"
 
-            show rin basic_upset_close
+            show rin basic_upset_close zorder 1
             with characlose
 
             hi "You are so stupid."
@@ -6062,7 +6085,7 @@ label a4_rin:
             "Rin's lips taste salty and scared against mine."
 
             play sound sfx_heartslow
-            show heartattack alpha
+            show heartattack alpha zorder 2
             with Dissolve (0.1)
 
             hide heartattack
@@ -6071,7 +6094,7 @@ label a4_rin:
             "As I grasp her into an embrace, I feel my heart thumping in my chest painfully."
 
             play sound sfx_heartslow
-            show heartattack alpha
+            show heartattack alpha zorder 2
             with Dissolve (0.1)
 
             hide heartattack
@@ -6133,7 +6156,7 @@ label a4_rin:
             hi "Is it bad? Even if you are afraid?"
 
             show rin basic_lucid_close
-            with charachange
+            with charachangealways
 
             "She thinks about this for a while, furrowing her brow as though this was some kind of hard math problem."
 
@@ -6148,7 +6171,8 @@ label a4_rin:
 
             "This time my smile is genuine."
 
-            show rin basic_deadpanamused
+            $ renpy.change_zorder("master", "dandelionsfg", 1)
+            show rin basic_deadpanamused zorder 0
             with charadistant
 
             "Rin steps back, still smiling gently at me like I do at her."
@@ -6200,12 +6224,12 @@ label a4_rin:
             hi "What about you? Did you become a true artist? Or did you not, because you ran away?"
 
             show rin basic_deadpancontemplation
-            with charachange
+            with charachangealways
 
             "She pauses for a while to ponder my question…"
 
             show rin relaxed_nonchalant
-            with charachange
+            with charachangealways
 
             "…and shrugs her shoulders."
 
@@ -6229,20 +6253,19 @@ label a4_rin:
 
             play music music_twinkle fadein 2.0
 
-            scene evbg rin_goodend_base:
+            show evbg rin_goodend_base zorder -1:
                 xalign 0.0
                 1.0
                 easein 20.0 xalign 1.0
-            show dandelionsbg dense
             show rin goodend_1:
                 xalign -0.5
                 1.0
                 easein 20.0 xalign 1.0
-            show dandelionsfg dense
             show evfg rin_goodend:
                 xalign -1.0
                 1.0
                 easein 20.0 xalign 1.0
+            hide bg
             with whiteout
 
             "She takes five steps to climb on a large rock so she can rise as high as it's possible here, and stands on tiptoes."
@@ -6323,7 +6346,7 @@ label a4_rin:
             "To me it seems like the entire world really could fit there, between those small arms of hers, inside of her all-encompassing embrace."
 
             show rin goodend_2
-            with charachange
+            with charachangeev
 
             rin "Hisao?"
 
@@ -6333,10 +6356,10 @@ label a4_rin:
                 acdc_warp 12.0 zoom 1.15
             show rin goodend_2_hires:
                 zoom 0.769
-                acdc_warp 12.0 zoom 1.0
+                acdc_warp 12.0 yalign 0.0 zoom 1.0
             show evfg:
-                acdc_warp 12.0 zoom 1.45
-            with charachangealways
+                acdc_warp 12.0 yalign 0.0 zoom 1.45
+            with None
 
             "I gaze into those mysterious, dark eyes that are curiously twinkling from below her auburn hair."
 
@@ -6518,7 +6541,7 @@ label a4rc1o2:
     hi "Do you really think that it would be some kind of be-all, end-all thing, star-crossed lovers and happily ever after?"
 
     show rin basic_absent_close_ni
-    with charachange
+    with charachangealways
 
     "My question is met with a blank stare, the darkness in her eyes unfazed by the thinly veiled bitterness."
 
@@ -6682,12 +6705,12 @@ label a4rc1o2:
     no "The guests will be fine, but we are missing on opportunities here! Networking, making contacts and acquaintances!"
 
     show emicas frown_close:
-        center xpos -0.35 alpha 0.0
-        ease 1.0 xpos 0.15 alpha 1.0
+        center
+        xpos -0.35 alpha 0.0
     with None
 
-    show emicas
-
+    show emicas:
+        xpos 0.15 alpha 1.0
     show bg gallery_int at left
     show crowd at left
     show nomiya serious:
@@ -6798,7 +6821,7 @@ label a4rc1o2:
     "After a minute of the mismatched staring contest, she sighs and shakes her head in defeat."
 
     show emicas closedsmile_ni
-    with charachange
+    with charachangealways
 
     emi "You are too nice, Hisao."
 

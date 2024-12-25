@@ -250,8 +250,8 @@ label replay_start:
     return
 
 label credits:
-    stop music
-    stop ambient
+    stop music fadeout 4.0
+    stop ambient fadeout 4.0
 
     $ config.skipping = False
     $ config.allow_skipping = False

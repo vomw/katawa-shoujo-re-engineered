@@ -652,7 +652,6 @@ define rinbabble = Character(kind=n, what_prefix="{color=#FF8D7C}{b}" + _("Rin")
 define nb = Character(kind=nvl, what_color="#666666", window_top_padding=210, window_xpadding=100)
 define centered = Character(None, screen=None, what_style="centered_text", window_style="centered_window", what_prefix="", what_suffix="")
 define centered_b = Character(None, kind=centered, what_color="#666666", what_drop_shadow=None, what_style="alive_text")
-define centered_alive = Character(None, kind=centered_b, window_xpos=130, window_xanchor=0, window_xpadding=0)
 
 define _current_replay = None
 

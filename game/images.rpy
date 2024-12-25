@@ -1506,8 +1506,9 @@ image n_vignette = "vfx/narrowvignette.png"
 
 image hisaowindow = "vfx/hisaowindow.png"
 
-image alivetext = renpy.ParameterizedText(yalign=0.5, xanchor=0, xpos = 130, style="alive_text", drop_shadow=None, color="#666666")
-image alivetext_j = renpy.ParameterizedText(yalign=0.5, xanchor=0, xpos = 70, style="alive_text", drop_shadow=None, color="#666666")
+# same as style.say_dialogue.size and style.alive_text.size
+image alivetext = renpy.ParameterizedText(xalign=0.5, yalign=0.5, size=42+(mobile_ts_add-6)*(renpy.android or renpy.ios), style="alive_text", drop_shadow=None, color="#666666")
+image alivetext_j = renpy.ParameterizedText(xalign=0.5, yalign=0.5, size=42+(mobile_ts_add-6)*(renpy.android or renpy.ios), style="alive_text", drop_shadow=None, color="#666666")
 
 image bg mural_start = "vfx/mural_start.jpg"
 image bg mural_unfinished = "vfx/mural_unfinished.jpg"
@@ -1679,8 +1680,8 @@ image snow = Composite(
 image sakura = SnowBlossom(anim.Filmstrip("vfx/sakura.png", (20, 20), (2, 1), .25), xspeed=(150, 100), yspeed=(135, 270), count=80, fast=True)
 image hospitalmask = "vfx/hospitalroommask_new.png"
 
-image dandeliontbg = SnowBlossom(im.Scale("vfx/dandelion.jpg",13,16), count=20, border=25, xspeed=(50, 100), yspeed=(-54, -18), start=8.0, fast=False, horizontal=True)
-image dandeliontfg = SnowBlossom("vfx/dandelion.jpg", count=10, border=25, xspeed=(100, 200), yspeed=(-72, -27), start=8.0, fast=False, horizontal=True)
+image dandeliontbg = SnowBlossom(im.Scale("vfx/dandelion.png",13,16), count=20, border=25, xspeed=(50, 100), yspeed=(-54, -18), start=8.0, fast=False, horizontal=True)
+image dandeliontfg = SnowBlossom("vfx/dandelion.png", count=10, border=25, xspeed=(100, 200), yspeed=(-72, -27), start=8.0, fast=False, horizontal=True)
 image dandelions thin = Composite(
     (1920, 1080),
     (0, 0), "dandeliontbg",
@@ -1694,8 +1695,8 @@ image kslogo words = "gui/logo/large.png"
 
 image credits mask = "gui/bg/roll_mask.png"
 
-image dandeliondbg = SnowBlossom(im.Scale("vfx/dandelion.jpg", 13, 16), count=40, border=25, xspeed=(50, 100), yspeed=(-54, -18), start=8.0, fast=True, horizontal=True)
-image dandeliondfg = SnowBlossom("vfx/dandelion.jpg", count=20, border=25, xspeed=(100, 200), yspeed=(-72, -27), start=8.0, fast=True, horizontal=True)
+image dandeliondbg = SnowBlossom(im.Scale("vfx/dandelion.png", 13, 16), count=40, border=25, xspeed=(50, 100), yspeed=(-54, -18), start=8.0, fast=True, horizontal=True)
+image dandeliondfg = SnowBlossom("vfx/dandelion.png", count=20, border=25, xspeed=(100, 200), yspeed=(-72, -27), start=8.0, fast=True, horizontal=True)
 image dandelions dense = Composite(
     (1920, 1080),
     (0, 0), "dandeliondbg",

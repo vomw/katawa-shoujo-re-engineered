@@ -313,4 +313,5 @@ style centered_text:
     outlines [ (1,"#000C") ]
 
 style alive_text:
+    size 42 + (mobile_ts_add - 6) * (renpy.android or renpy.ios)
     outlines []
