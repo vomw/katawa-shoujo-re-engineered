@@ -1571,7 +1571,8 @@ label a2_rin:
 
         pause 0.5
 
-        show ev hisaobird_2 at center
+        show ev hisaobird_2 at center:
+            alpha 1.0
         with charachangeev
 
         "Conjuring up the image of a bird in my mind's eye, I turn my gaze back to the notebook and deliberately draw a thick line across the paper to get started."
@@ -2735,7 +2736,7 @@ label a2_rin:
 
         "I can see that she's actually like a coiled spring."
 
-        scene ev emitrack_blocks_close_grin
+        show ev emitrack_blocks_close_grin
         with locationchange
 
         "As the starter tells everyone to get set, her head snaps up, and her eyes narrow slightly."
@@ -5748,7 +5749,8 @@ label a2_rin:
 
         hi "Don't you want to be connected to other people?"
 
-        show ev rin_rain_away
+        show ev rin_rain_away:
+            zoom 1.0
         show ovl rin_rain_hisaotowards behind rain at right
         with charachangeev
 
@@ -7004,11 +7006,9 @@ label a2_rin:
 
         "She repeats the word melancholically, then flops lying down on her bed and nuzzles her head against her pillow, shutting her eyes."
 
-        window auto False
-
         rin "Enough. Tired. You should go. I'm going to sleep again."
 
-        scene ev rin_high_oneeye
+        show ev rin_high_oneeye
         with locationchange
 
         "She opens one of her eyes to look at me."
@@ -7017,7 +7017,7 @@ label a2_rin:
 
         rin "Maybe there were many of those."
 
-        scene ev rin_high_frown
+        show ev rin_high_frown
         with locationchange
 
         rin "I can't remember."
@@ -7044,23 +7044,19 @@ label a2_rin:
 
         "I look over my shoulder at the girl lying on her bed, again with the strangest kind of smile on her features."
 
-        window auto False
-
         "She should smile more often."
 
         rin "I can walk you to the door."
 
-        scene ev rin_high_grinwide
+        show ev rin_high_grinwide
         with locationchange
 
         rin "It's the least a gentleman can do."
 
-        scene ev rin_high_smile
+        show ev rin_high_smile
         with locationchange
 
         "Rin giggles like a little kid, making me beyond absolutely certain that she took far too much of her cold medication today."
-
-        window auto True
 
         rin "I have always wanted to say that."
 
@@ -7146,7 +7142,7 @@ label a2_rin:
 
         "Fool's luck."
 
-        scene ev rin_high_sleep
+        show ev rin_high_sleep
         with locationchange
 
         "I tuck Rin in, covering her with the sheets as well as I can."
@@ -7155,6 +7151,7 @@ label a2_rin:
 
         show ev rin_high_sleep:
             right
+            subpixel True yalign 0.0
             ease 10.0 zoom 1.1
 
         "I stand up to look at her, the oval-shaped face, the dark eyelashes shut against the feverish cheeks, the slender body covered with the pale sheets."

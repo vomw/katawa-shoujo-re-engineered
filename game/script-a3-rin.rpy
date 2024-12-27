@@ -398,11 +398,13 @@ label a3_rin:
         "While Nomiya and I keep looking at Sae, trying to look for some hint of a reaction on the gallery owner's face, Rin lets her gaze wander around the gallery space. Suddenly, she pipes up."
 
         show nomiya at center
-        show sae at right
+        show sae:
+            xalign 0.85
         show bg at bgright
         with charamove
 
-        show rin relaxed_nonchalant at left
+        show rin relaxed_nonchalant:
+            xalign 0.15
         with charaenter
 
         rin "Is this really the twenty-second corner?"
@@ -571,7 +573,8 @@ label a3_rin:
         "Once they're done discussing whatever they had to discuss, they give one another a serious look. I feel something that goes beyond mere words transpiring there."
 
         show nomiya smile at center
-        show sae doubt at right
+        show sae doubt:
+            xalign 0.85
         with charaenter
 
         "They walk back to us. Sae looks seriously at Rin, her left hand reaching as if instinctively towards a pack of cigarettes that's lying on the table."
@@ -833,7 +836,7 @@ label a3_rin:
 
         "My mouth is suddenly so dry that the word comes out as a tiny whisper."
 
-        scene ev rin_nap_close_nohand:
+        show ev rin_nap_close_nohand:
             yalign 1.0
         with locationchange
 
@@ -845,8 +848,6 @@ label a3_rin:
 
         "Her bag is lying at her feet like a forgotten rag doll. A few books and pens have fallen out of it near her seat. The scene makes me smile a little."
 
-        window hide
-
         show ev rin_nap_close_nohand:
             ease 1.0 yalign 0.0
         with None
@@ -856,11 +857,9 @@ label a3_rin:
             ease 1.0 yalign 0.0
         with Dissolve(1.0)
 
-        window auto True
-
         "I touch Rin's head lightly, sweeping a few stray hairs off her ear. Her hair feels warm against my palm."
 
-        scene ev rin_nap_close_nohand:
+        show ev rin_nap_close_nohand:
             yalign 0.0
         with locationchange
 
@@ -873,12 +872,12 @@ label a3_rin:
 
         "She looks so vulnerable, like any sleeping person. It's impossible not to feel fondness towards her."
 
-        scene ev rin_nap_total
+        show ev rin_nap_total
         with locationchange
 
         "I sit on the desktop of whoever is in front of Rin, then draw the window slightly open to get some fresh air in. Hopefully, it will wake her up and I won't need to resort to cruder methods."
 
-        scene ev rin_nap_total_awind
+        show ev rin_nap_total_awind
         with locationchange
 
         "She doesn't wake up, but I didn't really expect her to."
@@ -899,7 +898,7 @@ label a3_rin:
 
         "The realization hits my consciousness without warning."
 
-        scene ev rin_nap_close_awind:
+        show ev rin_nap_close_awind:
             truecenter
             ease 20.0 zoom 1.05
         with locationchange
@@ -920,7 +919,7 @@ label a3_rin:
 
         "I choose the latter."
 
-        scene ev rin_nap_total_awind
+        show ev rin_nap_total_awind
         with locationchange
 
         "Waiting is something I am good at. I found that out during my hospitalization. But even the hospital ward was more lively than the school after classes are over."
@@ -945,12 +944,12 @@ label a3_rin:
 
         play music music_innocence
 
-        scene ev rin_nap_total_awind_tears
+        show ev rin_nap_total_awind_tears
         with locationchange
 
         "A single tear worms down from the corner of her eye, slowly making its way across her face before it falls onto the desk."
 
-        scene ev rin_nap_close_awind_tears
+        show ev rin_nap_close_awind_tears
         with locationchange
 
         "It's tiny, barely a droplet, but it captivates me."
@@ -2523,10 +2522,11 @@ label a3_rin:
 
         "Rin chews the slice carefully, savoring it as much as possible."
 
-        scene ev rin_orange_large:
+        show ev rin_orange_large:
             center
+            subpixel True
             acdc_warp 10.0 top
-        with flash
+        with charachangeev
 
         "I become fixated on the movements of her jaw, the trickle of juice glistening on her lip, the way her throat moves when she swallows the orange slice."
 
@@ -4336,7 +4336,7 @@ label a3_rin:
 
         "I realize I've been holding my own breath, and let it go in a long stream of air out of my nostrils and into her hair."
 
-        scene evh rin_relief_down
+        show evh rin_relief_down
         with dissolve
 
         rin "Don't tickle me."
@@ -4351,7 +4351,7 @@ label a3_rin:
 
         rin "It's okay. I don't know what I'm doing either."
 
-        scene evh rin_relief_down_large at center
+        show evh rin_relief_down_large at center
         with dissolve
 
         "I enter her, moving my fingers up and down, in and out, touching her from everywhere, first slowly, then faster."
@@ -4362,7 +4362,7 @@ label a3_rin:
 
         "Rin's hips start moving in the same rhythm as me, guiding me deeper."
 
-        scene evh rin_relief_down
+        show evh rin_relief_down
         with dissolve
 
         "She turns her head, looking at me from the corner of her eye."
@@ -4373,7 +4373,7 @@ label a3_rin:
 
         "I kiss her gently on the cheek, right above the bone. My lips are coarse and dry."
 
-        scene evh rin_relief_up
+        show evh rin_relief_up
         with dissolve
 
         "My right hand moves upwards of its own accord, under the white cotton of her shirt, to caress the underside of her soft breast."
@@ -4394,7 +4394,7 @@ label a3_rin:
 
         "All these feelings unravel into their basic components, her softness, her wetness, her hotness, her sadness are the only things that I think, the only things I can think."
 
-        scene evh rin_relief_up
+        show evh rin_relief_up
         with flash
 
         rin "Ah…"

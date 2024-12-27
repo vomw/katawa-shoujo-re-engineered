@@ -1320,7 +1320,8 @@ label a4_rin:
             "The biggest groan comes from the desk to my side."
 
             show misha perky_sad_close:
-                center xpos -0.2 ypos 1.13 alpha 0.0
+                center
+                xpos -0.2 ypos 1.13 alpha 0.0
                 ease 1.0 xpos 0.15 alpha 1.0
             with None
 
@@ -1564,20 +1565,19 @@ label a4_rin:
 
             "As expected, mom calls me and I end up promising to see if I can get a train ticket for tomorrow, or failing that, the day after."
 
+            window hide
             nvl clear
 
             show phone mobile:
                 easeout 1.0 ypos 0.7 alpha 0.0
-
-            scene bg school_dormhisao_ss
-            show phone mobile:
-                truecenter
-                easeout 1.0 ypos 0.7 alpha 0.0
+            with None
+            show bg school_dormhisao_ss
             with locationchange
 
             pause 0.5
 
             hide phone
+            with None
 
             $ renpy.music.set_volume(0.5, 1.0, channel="music")
 
@@ -1599,31 +1599,44 @@ label a4_rin:
 
             nvl hide dissolve
             nvl clear
+            window auto True
 
             scene bg school_dormhisao_ni
             with shorttimeskip
 
             "By eleven, the darkness bids me to sleep."
 
-            show pills:
+            window hide
+
+            show pills_ni:
                 truecenter
-                ypos 0.7 alpha 1.0
-                easein 1.0 truecenter alpha 1.0
+                ypos 0.7 alpha 0.0
+                easein 1.0 ypos 0.5 alpha 1.0
 
             pause 1.0
 
-            show pills at truecenter
+            show pills_ni:
+                truecenter
+                alpha 1.0
+            with None
+
+            window auto True
 
             "The medication bottles are innocuously arranged on my night table, not at all beckoning, rather pointedly reminding me of the reality instead."
 
             "It's evening so I have to open three bottles, extract one large oval-shaped one, two small round ones and one large flat that has to be cut into half, close the bottles and chug down the medications with a chaser of fresh tap water."
 
-            show pills:
+            window hide
+
+            show pills_ni:
                 easeout 1.0 ypos 0.7 alpha 0.0
 
             pause 1.0
 
-            hide pills
+            hide pills_ni
+            with None
+
+            window auto True
 
             "The water tastes metallic on my tongue."
 
@@ -1850,7 +1863,7 @@ label a4_rin:
             "I wonder whether I manage to fool even myself."
 
             show emicas evil
-            with charachange
+            with charachangealways
 
             "At least Emi is waggling her eyebrows dangerously, with a nasty smirk on her lips."
 
@@ -2036,7 +2049,7 @@ label a4_rin:
 
             hide rin_exhibition_sold
             show nomiya talk
-            with charachange
+            with locationchange
 
             no "It was lucky that she was all right despite that dizzy spell."
 
@@ -2427,9 +2440,10 @@ label a4_rin:
 
             "It might be better to lose that illusion."
 
-            show ev rin_rain_away_close at topleft
+            show ev rin_rain_away_close at topleft:
+                yalign 0.0
             show ovl rin_rain_hisaotowards_close behind rain at topright
-            with charachange
+            with charachangeev
 
             hi "I'll be going back home for some time so I thought I'd come to see you before that."
 
@@ -2532,7 +2546,7 @@ label a4_rin:
 
             "Even though I want to say I'm sorry, even though I don't want us to break apart, I can't bring myself to say either of these things."
 
-            scene bg misc_sky_rn
+            show bg misc_sky_rn
             hide rin
             with locationchange
 
@@ -2581,19 +2595,19 @@ label a4_rin:
 
             hi "Yeah… but why is it so important?"
 
-            scene ev rin_trueend_sad at truecenter
+            show ev rin_trueend_sad at truecenter
             with locationchange
 
             rin "Because otherwise… I don't know if I can bear this."
 
             "I was still in the middle of folding my umbrella so I just answered something to get the conversation going, but what she says now freezes my blood."
 
-            scene ev rin_trueend_closed
+            show ev rin_trueend_closed
             with locationchange
 
             rin "If someone says a joke and laughs, you laugh with them, right? Because a joy doubled is a joy tripled, right?"
 
-            scene ev rin_trueend_smile
+            show ev rin_trueend_smile
             with locationchange
 
             rin "If someone is hurt and sad, you comfort and hug them, right? Because that way—"
@@ -2602,7 +2616,7 @@ label a4_rin:
 
             "She pauses, her mouth still halfway open, then remembers to close it."
 
-            scene ev rin_trueend_normal
+            show ev rin_trueend_normal
             with locationchange
 
             "A gloom sets on her face and simultaneously on my heart."
@@ -2649,7 +2663,7 @@ label a4_rin:
 
             "It feels like she articulated my thoughts in clear, simple words and that stupid story about Picasso."
 
-            scene ev rin_trueend_closed
+            show ev rin_trueend_closed
             with locationchange
 
             "Rin droops her head like a withering flower, letting her bangs fall in front of her eyes so that I can't see them."
@@ -2660,7 +2674,7 @@ label a4_rin:
 
             "The shaky voice that says those words does not belong to Rin."
 
-            scene ev rin_trueend_sad
+            show ev rin_trueend_sad
             with locationchange
 
             rin "I really thought you could be different. That I wouldn't have to be alone."
@@ -2681,7 +2695,7 @@ label a4_rin:
 
             hi "I say that, because saying otherwise would feel like lying."
 
-            scene ev rin_trueend_normal
+            show ev rin_trueend_normal
             with locationchange
 
             rin "Why?"
@@ -2700,12 +2714,12 @@ label a4_rin:
 
             rin "I just paint because it makes me feel like I can really feel something."
 
-            scene ev rin_trueend_weaksmile
+            show ev rin_trueend_weaksmile
             with locationchange
 
             "She holds her breath for a while before releasing it in a long, sigh-like flow."
 
-            scene ev rin_trueend_closed
+            show ev rin_trueend_closed
             with locationchange
 
             rin "That's why I'll do it."
@@ -2716,7 +2730,7 @@ label a4_rin:
 
             "Rin starting a little shows that she had regressed into talking to herself again, but I'm glad I can snap her back even now."
 
-            scene ev rin_trueend_normal
+            show ev rin_trueend_normal
             with locationchange
 
             rin "Teacher and Sae have talked with someone who is a very important person. I got a scholarship for a big art school in Tokyo."
@@ -2729,7 +2743,7 @@ label a4_rin:
 
             hi "Hold on, what? Why didn't you tell?"
 
-            scene ev rin_trueend_smile
+            show ev rin_trueend_smile
             with locationchange
 
             rin "I just did. You are the first one I told because I decided it just now."
@@ -2776,7 +2790,7 @@ label a4_rin:
 
             "Rin is so frustratingly absolute in her own judgment that it might make me hate her if I didn't love her, even though I don't know which way I am feeling any more."
 
-            scene ev rin_trueend_normal
+            show ev rin_trueend_normal
             with locationchange
 
             rin "Maybe I am that kind of a person. The kind that belongs only to herself."
@@ -2801,7 +2815,7 @@ label a4_rin:
 
             "I realize I would have the disadvantage because the sun is behind Rin, stinging my eyes."
 
-            scene ev rin_trueend_sad
+            show ev rin_trueend_sad
             with locationchange
 
             rin "Do you hate me?"
@@ -2820,12 +2834,12 @@ label a4_rin:
 
             hi "I think that is the most important thing. We could try to—"
 
-            scene ev rin_trueend_normal
+            show ev rin_trueend_normal
             with locationchange
 
             rin "Don't say it."
 
-            scene ev rin_trueend_hug
+            show ev rin_trueend_hug
             with locationchange
 
             play music music_friendship fadein 4.0
@@ -2838,7 +2852,7 @@ label a4_rin:
 
             "It's funny how all of those feel so familiar even though Rin, as a whole, does not."
 
-            scene ev rin_trueend_hugclosed
+            show ev rin_trueend_hugclosed
             with locationchange
 
             rin "Are you sure you can't hate me?"
@@ -2851,7 +2865,7 @@ label a4_rin:
 
             hi "Dunno. It's pretty hard when you are hugging me like that."
 
-            scene ev rin_trueend_sad
+            show ev rin_trueend_sad
             with locationchange
 
             "I wonder if it's because of my sullen voice, but she takes a step back, looking wistfully at her short arms."
@@ -2862,7 +2876,7 @@ label a4_rin:
 
             rin "I'm a bad person like that."
 
-            scene ev rin_trueend_normal
+            show ev rin_trueend_normal
             with locationchange
 
             rin "That's why I have to go."
@@ -2871,7 +2885,7 @@ label a4_rin:
 
             "And since I can't, Rin is free to continue as she wills, shifting her weight from one foot to the other before she does."
 
-            scene ev rin_trueend_smile
+            show ev rin_trueend_smile
             with locationchange
 
             rin "I will learn to hug people in my own way."
@@ -2890,7 +2904,7 @@ label a4_rin:
 
             rin "I'm sure that—{w=0.5}{nw}"
 
-            scene ev rin_trueend_sad
+            show ev rin_trueend_sad
             with locationchange
 
             "She chokes in the middle of saying something I would never come to hear."
@@ -2907,7 +2921,7 @@ label a4_rin:
 
             hi "How can you say such a thing?"
 
-            scene ev rin_trueend_normal
+            show ev rin_trueend_normal
             with locationchange
 
             "Rin raises her eyes to meet mine, they are serious and deep, a perfect image of the uncharted territory I always thought they were."
@@ -2932,7 +2946,7 @@ label a4_rin:
 
             stop music fadeout 12.0
 
-            scene ev rin_trueend_gone
+            show ev rin_trueend_gone
             with locationchange
 
             "She turned around and walked off without looking back."

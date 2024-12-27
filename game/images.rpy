@@ -216,9 +216,9 @@ init python:
 
     def rin_trueend_comp(list_in):
         baselist = [None, (0, 0), "event/rin_trueend/rin_trueend_gone.png"]
-        for offset, item in list_in:
-            baselist.append(offset)
-            baselist.append("event/rin_trueend/rin_trueend_"+item+".png")
+        for item in list_in:
+            baselist.append((0, 0))
+            baselist.append("event/rin_trueend/rin_trueend_" + item + ".png")
         return im.Composite(*baselist)
 
     def rin_h_comp(im_in, is_close=False):
@@ -812,13 +812,13 @@ image bg misc_sky_rays = "bgs/misc_sky_rays.jpg"
 
 image ev rin_trueend_gone = "event/rin_trueend/rin_trueend_gone.png"
 image ev rin_trueend_gone_ni = night("event/rin_trueend/rin_trueend_gone.png")
-image ev rin_trueend_normal = rin_trueend_comp([((271, 118),"normal")])
-image ev rin_trueend_closed = rin_trueend_comp([((271, 118),"normal"), ((425, 130),"closed")])
-image ev rin_trueend_sad = rin_trueend_comp([((271, 118),"normal"), ((425, 130),"sad")])
-image ev rin_trueend_smile = rin_trueend_comp([((271, 118),"normal"), ((425, 130),"smile")])
-image ev rin_trueend_weaksmile = rin_trueend_comp([((271, 118),"normal"), ((425, 130),"weaksmile")])
-image ev rin_trueend_hug = rin_trueend_comp([((804, -57),"hug")])
-image ev rin_trueend_hugclosed = rin_trueend_comp([((804, -57),"hug"), ((1161, 190), "hugclosed")])
+image ev rin_trueend_normal = rin_trueend_comp(["normal"])
+image ev rin_trueend_closed = rin_trueend_comp(["normal", "closed"])
+image ev rin_trueend_sad = rin_trueend_comp(["normal", "sad"])
+image ev rin_trueend_smile = rin_trueend_comp(["normal", "smile"])
+image ev rin_trueend_weaksmile = rin_trueend_comp(["normal", "weaksmile"])
+image ev rin_trueend_hug = rin_trueend_comp(["hug"])
+image ev rin_trueend_hugclosed = rin_trueend_comp(["hug", "hugclosed"])
 
 image ev rin_wet_pan_down = "event/rin_wet/rin_wet_pan_down.png"
 image ev rin_wet_arms = "event/rin_wet/rin_wet_arms.png"
@@ -1592,6 +1592,7 @@ image stuffedcat = "vfx/stuffedcat.png"
 image chessboard = "vfx/chessboard.png"
 image shangpai = "vfx/shangpai.png"
 image pills = "vfx/pills.png"
+image pills_ni = sp_night("vfx/pills.png")
 image invite = "vfx/invite.png"
 image brailler = "vfx/brailler.jpg"
 image sc_comp = "vfx/sc_comp.png"
