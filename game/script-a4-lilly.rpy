@@ -4894,7 +4894,6 @@ label a4_lilly:
         stop ambient fadeout 14.0
         show ev hisao_teacup:
             truecenter
-            zoom 0.85
             acdc_warp 15.0 zoom 0.8
         with locationchange
 
