@@ -80,7 +80,7 @@ init python:
 
         n = scaled_runtime(20.0, at)
 
-        trans.zoom = (-acdc_warp(n) + 1.0) * 0.266 + 0.834
+        trans.zoom = (-acdc_warp(n) + 1.0) * 0.266 + 1.0
 
         return 0
 
