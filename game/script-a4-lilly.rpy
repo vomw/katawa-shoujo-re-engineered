@@ -4894,7 +4894,8 @@ label a4_lilly:
         stop ambient fadeout 14.0
         show ev hisao_teacup:
             truecenter
-            acdc_warp 15.0 zoom 0.8
+            zoom 1.05
+            acdc_warp 15.0 zoom 1.0
         with locationchange
 
         "I look down, seeing my face reflected in the by now lukewarm cup of neglected tea sitting in front of me."
