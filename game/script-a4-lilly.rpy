@@ -4155,7 +4155,7 @@ label a4_lilly:
 
         scene ev akira_park:
             right
-            acdc_warp 15.0 zoom 0.8
+            acdc_warp 15.0
         with whiteout
 
         play music music_night
