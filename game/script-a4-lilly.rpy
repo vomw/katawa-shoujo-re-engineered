@@ -6899,7 +6899,7 @@ label a4_lilly:
 
         "For minutes I just lay where I am, mindlessly staring ahead while my scattered thoughts coalesce in my slowly waking mind."
 
-        scene bg hosp_ceiling:
+        show bg hosp_ceiling:
             alpha 0.0
             linear 5.0 alpha 1.0
 
