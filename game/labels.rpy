@@ -275,7 +275,7 @@ label credits:
         xalign 0.5 yalign 0.0
         acdc20_warp 60.0 yalign 1.0
 
-    pause 60.0
+    $ renpy.pause(60.0, hard=True)
 
     show expression Text("©MMXXV Four Leaf Studios, Fleeting Heartbeat Studios", text_align=0.5, size=29) zorder 999 at Transform(xalign=0.5, yalign=0.605)
     with Dissolve(2.0)
