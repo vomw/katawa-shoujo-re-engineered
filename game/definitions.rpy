@@ -657,7 +657,7 @@ define _current_replay = None
 
 define current_scene = ""
 
-default credits_vid = None
+default credits_good_end = None
 
 # Act 1
 

@@ -155,7 +155,7 @@ label start:
         if have_a_minute and talk_to_her_mom or let_misha_know:
             call act_op("tc_act4_emi.mkv")
             call a4_emi
-            $ credits_vid = "video/credits_emi.mkv"
+            $ credits_good_end = "emi"
             # good ending
         else:
             # bad ending
@@ -172,7 +172,7 @@ label start:
 
         if go_to_the_city and agree_with_lilly:
             # good ending
-            $ credits_vid = "video/credits_hanako.mkv"
+            $ credits_good_end = "hanako"
         elif go_to_the_city:
             # sad ending
             pass
@@ -191,7 +191,7 @@ label start:
 
         if want_true and address_it and mention_the_letter:
             # good ending
-            $ credits_vid = "video/credits_lilly.mkv"
+            $ credits_good_end = "lilly"
         else:
             # bad ending
             pass
@@ -211,7 +211,7 @@ label start:
                 pass
             else:
                 # good ending
-                $ credits_vid = "video/credits_rin.mkv"
+                $ credits_good_end = "rin"
         else:
             # bad ending
             pass
@@ -227,7 +227,7 @@ label start:
 
         if refuse_misha:
             # good ending
-            $ credits_vid = "video/credits_shizune.mkv"
+            $ credits_good_end = "shizune"
         else:
             # bad ending
             pass
@@ -260,22 +260,44 @@ label credits:
     show credits mask
     with Dissolve(2.0)
 
-    if credits_vid:
+    if credits_good_end:
         play music music_credits noloop
-        $ renpy.movie_cutscene(credits_vid, stop_music=False)
+        show credits_final_good behind credits at Transform(xalign=0.5, yalign=0.0)
+        with Dissolve(2.0)
     else:
         play music music_musicbox volume 0.25 noloop
-
-    show credits_final behind credits at Transform(xalign=0.5, yalign=0.0)
-    with Dissolve(2.0)
+        show credits_final behind credits at Transform(xalign=0.5, yalign=0.0)
+        with Dissolve(2.0)
 
     pause 1.0
 
-    show credits_final behind credits:
-        xalign 0.5 yalign 0.0
-        acdc20_warp 60.0 yalign 1.0
+    if credits_good_end:
+        show credits_final_good behind credits:
+            xalign 0.5 yalign 0.0
+            acdc20_warp 60.0 yalign 1.0
+    else:
+        show credits_final behind credits:
+            xalign 0.5 yalign 0.0
+            acdc20_warp 60.0 yalign 1.0
 
-    $ renpy.pause(60.0, hard=True)
+    $ renpy.pause(6.0, hard=True)
+
+    if credits_good_end == "emi":
+        show emi credits behind credits_final_good at Transform(xalign=0.0, yalign=0.5, zoom=0.7)
+
+    if credits_good_end == "hanako":
+        show hanako credits behind credits_final_good at Transform(xalign=0.0, yalign=0.5, zoom=0.7)
+
+    if credits_good_end == "lilly":
+        show lilly credits behind credits_final_good at Transform(xalign=0.0, yalign=0.5, zoom=0.7)
+
+    if credits_good_end == "shizune":
+        show shizune credits behind credits_final_good at Transform(xalign=0.0, yalign=0.5, zoom=0.7)
+
+    if credits_good_end == "rin":
+        show rin credits behind credits_final_good at Transform(xalign=0.0, yalign=0.5, zoom=0.7)
+
+    $ renpy.pause(54.0, hard=True)
 
     show expression Text("©MMXXV Four Leaf Studios, Fleeting Heartbeat Studios", text_align=0.5, size=29) zorder 999 at Transform(xalign=0.5, yalign=0.605)
     with Dissolve(2.0)
