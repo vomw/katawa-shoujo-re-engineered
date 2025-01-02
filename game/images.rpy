@@ -1529,7 +1529,7 @@ image showdown_shizu_slice = Transform("event/lilly_shizu_showdown_large.png", c
 
 image ev kenji_rooftop = "event/kenji_rooftop.png"
 image ev kenji_rooftop_large = "event/kenji_rooftop_large.png"
-image ev kenji_rooftop_kenji = Transform("event/kenji_rooftop_large.png", crop=(691, 602, 1920, 1080))
+image ev kenji_rooftop_kenji = Transform("event/kenji_rooftop_large.png", crop=(430, 350, 1920, 1080))
 
 image bg tearoom_lillyhisao_noon = "event/Lilly_supercg/tearoom_lillyhisao_noon.png"
 image bg tearoom_lillyhisao_sunset = "event/Lilly_supercg/tearoom_lillyhisao_sunset.png"

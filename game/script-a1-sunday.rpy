@@ -5477,7 +5477,8 @@ label a1_sunday:
 
             ke "I'm telling it as I see it!"
 
-            scene ev kenji_rooftop_kenji
+            scene ev kenji_rooftop_kenji:
+                zoom 1.4
             with flash
 
             ke "Think about it. When did housing and land start becoming more and more expensive? When women began entering the work force, because it created two-income nuclear families."
@@ -5485,8 +5486,9 @@ label a1_sunday:
             ke "Yeah I forgot my graphs, but, and you'll just have to take my word for it, women are connected to the decay of all society."
 
             show ev kenji_rooftop_large:
-                crop (691, 602, 1920, 1080)
-                ease 1.0 crop (2458, 416, 1920, 1080)
+                zoom 1.4
+                crop (430, 350, 1920, 1080)
+                ease 1.0 zoom 1.4 crop (1180, 290, 1920, 1080)
 
             hi "I see. That is kind of hard to believe."
 
@@ -5495,29 +5497,29 @@ label a1_sunday:
             "It all fits together but I don't know if it's because he can explain things more clearly when drunk, or because I understand everything better when drunk."
 
             show ev kenji_rooftop_large:
-                ease 1.0 crop (691, 602, 1920, 1080)
+                ease 1.0 zoom 1.4 crop (430, 350, 1920, 1080)
 
             ke "No man, think. Think! Think of the deeper implications!"
 
             ke "People could afford to start saying 'Oh well, since two members of the family are now earning money as opposed to one, they can surely afford something like rising costs of ownership.'"
 
             show ev kenji_rooftop_large:
-                ease 1.0 crop (2458, 416, 1920, 1080)
+                ease 1.0 zoom 1.4 crop (1180, 290, 1920, 1080)
 
             hi "I see your point. But land in Japan has always been expensive."
 
             show ev kenji_rooftop_large:
-                ease 1.0 crop (691, 602, 1920, 1080)
+                ease 1.0 zoom 1.4 crop (430, 350, 1920, 1080)
 
             ke "…And the price of land generally goes up when a country starts undergoing industrialization. …But no! It's because of women! Correlation equals causation, you know."
 
             show ev kenji_rooftop_large:
-                ease 1.0 crop (2458, 416, 1920, 1080)
+                ease 1.0 zoom 1.4 crop (1180, 290, 1920, 1080)
 
             hi "I thought correlation didn't equal causation. Well, whatever, maybe you're right."
 
             show ev kenji_rooftop_large:
-                ease 1.0 crop (691, 602, 1920, 1080)
+                ease 1.0 zoom 1.4 crop (430, 350, 1920, 1080)
 
             ke "I am always right. Yeah, I bet women created industrialization, too, to cover their tracks."
 
