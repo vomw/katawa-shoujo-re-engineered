@@ -353,6 +353,7 @@ LuK1337
 ykhima
 DrSimp
 ZenMaruki
+Valdemar «Vavan» Andrade
 """), color="#ffffff", text_align=0.5, size=47, xalign=0.8)
 
 image credits_text = Text(_("""
