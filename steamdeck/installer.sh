@@ -24,6 +24,12 @@ if [[ "${installType}" == "separate" ]]; then
     qdbus $installProgress Set "" value 1
     qdbus $installProgress setLabelText "Installing Katawa Shoujo: Re-Engineered from Flathub..."
     flatpak install --user --assumeyes sh.fhs.KatawaShoujoReEngineered || true
+    if ! flatpak info "sh.fhs.KatawaShoujoReEngineeredd" >/dev/null 2>&1; then
+        qdbus $installProgress close
+        kdialog --title="${title}" --sorry "Installation failed."
+
+        exit 1
+    fi
     qdbus $installProgress Set "" value 80
     qdbus $installProgress setLabelText "Adding KS:RE as non-Steam game to Steam..."
     # Add-to-Steam shortcut (works only on Steam OS!)
