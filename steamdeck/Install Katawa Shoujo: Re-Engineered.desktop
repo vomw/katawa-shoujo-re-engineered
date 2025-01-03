@@ -1,0 +1,13 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Exec=sh -c '/usr/bin/curl -L "https://codeberg.org/fhs/katawa-shoujo-re-engineered/raw/branch/hdkv/steam_deck_installer/steamdeck/install.sh" | bash'
+Name[en]=Install Katawa Shoujo: Re-Engineered
+Name=Install Katawa Shoujo: Re-Engineered
+StartupNotify=false
+Terminal=true
+TerminalOptions=
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=

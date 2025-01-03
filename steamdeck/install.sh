@@ -2,6 +2,21 @@
 # Copyright (c) 2024 Fleeting Heartbeat Studios
 # Licensed under MPL 2.0 license.
 
+KDIALOG=$(which kdialog)
+CURL=$(which curl)
+
+if [ ! -f ${KDIALOG} ]; then
+    echo "This script requires kdialog. Please install it."
+    
+    exit 1
+fi
+
+if [ ! -f ${CURL} ]; then
+    echo "This script requires curl. Please install it."
+    
+    exit 1
+fi
+
 title="Katawa Shoujo: Re-Engineered"
 
 # Asking user to continue.
