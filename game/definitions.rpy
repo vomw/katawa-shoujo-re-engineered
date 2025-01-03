@@ -15,6 +15,7 @@ python early:
     
     mods = {}
     mods_with_menus = {}
+    scene_names = {}
 
     renpy.music.register_channel("ambient", "sfx", True, tight=True)
 
@@ -102,19 +103,11 @@ python early:
             return renpy.seen_image(img)
 
     def get_scene_name(name=None):
-        global replays
-
         if not name:
             name = current_scene
 
-        for replay_pack in replays:
-            for replay_stack in replay_pack[1]:
-                for replay in replay_stack[1]:
-                    if replay[1] == name:
-                        if _in_replay:
-                            return __(replay[0]) + __(" (replay)")
-                        else:
-                            return __(replay[0])
+        if name in scene_names:
+            return __(scene_names[name]) + (__(" (replay)") if _in_replay else "")
 
         return __("No scene")
 
@@ -124,7 +117,7 @@ python early:
         return (_thread_tracks or _tracks).get(track or renpy.music.get_playing()) or __("Nothing")
 
     def set_current_scene(name, jumped):
-        if not jumped and name.startswith("a") and "." in name:
+        if not jumped and name in scene_names:
             store.current_scene = name
 
         if not renpy.emscripten:
@@ -489,6 +482,12 @@ define replays = [
     ])
 ]
 
+init 1 python:
+    for route in replays:
+        for act in route[1]:
+            for scene in act[1]:
+                scene_names[scene[1]] = scene[0]
+
 define _gallery_images = (
     ("thumb/other_iwanako.jpg", Trigger("ev other_iwanako_start", "evul other_iwanako")),
     ("thumb/hisao_class.jpg", "ev hisao_class_start", "ev hisao_class_move", "ev hisao_class_end"),
@@ -599,6 +598,7 @@ define _gallery_images = (
 )
 
 define adv = ADVCharacter(ctc="ctc", ctc_position="fixed", what_prefix=_("“"), what_suffix=_("”"))
+define name_only = Character(kind=adv, who_color="#FFFFFF")
 define narrator = Character(what_prefix="", what_suffix="")
 
 define hi  = Character(_("Hisao"),    who_color="#629276")

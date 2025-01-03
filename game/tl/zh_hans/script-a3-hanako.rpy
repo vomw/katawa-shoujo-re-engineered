@@ -295,9 +295,9 @@ translate zh_hans a3_hanako_invitation_1876c501:
     "她没有像通常那样盯着地板躲在她的同伴后面试图忘掉周围世界的存在。她只是目光稍低的帮着莉莉的忙。"
 
 # game/script-a3-hanako.rpy:221
-translate zh_hans a3_hanako_invitation_896db8ef:
+translate zh_hans a3_hanako_invitation_c8fe2480:
 
-    # hi "Are you you okay, Lilly? You look tired."
+    # hi "Are you okay, Lilly? You look tired."
     hi "莉莉你还好吗？你看起来很累了。"
 
 # game/script-a3-hanako.rpy:226
@@ -6004,7 +6004,7 @@ translate zh_hans a3_hanako_one_more_year_a058667e:
 translate zh_hans a3_hanako_one_more_year_aebab56c:
 
     # hi "Sure. I'll get some—{w=0.3}{nw}"
-    hi "当然。我去拿几个——{w=0。3}{nw}"
+    hi "当然。我去拿几个——{w=0.3}{nw}"
 
 # game/script-a3-hanako.rpy:3875
 translate zh_hans a3_hanako_one_more_year_a0ed183d:
@@ -8434,7 +8434,7 @@ translate zh_hans a3_hanako_stripes_and_solids_caf60be3:
 translate zh_hans a3_hanako_stripes_and_solids_3df5dac8:
 
     # li "May I have a glass of cham—{w=0.5}{nw}"
-    li "可否给我一杯香……"
+    li "可否给我一杯香……{w=0.5}{nw}"
 
 # game/script-a3-hanako.rpy:5576
 translate zh_hans a3_hanako_stripes_and_solids_89dc587b:
