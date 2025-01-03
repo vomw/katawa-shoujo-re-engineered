@@ -5298,7 +5298,8 @@ label a1_sunday:
 
             "Don't mind if I don't."
 
-            scene bg school_roof at bgright
+            scene bg school_roof at bgright:
+                yalign 0.5 zoom 1.02
             with locationchange
 
             "The festival noise is surprisingly muted up here, and the rooftop looks deserted, as expected."
@@ -5327,7 +5328,8 @@ label a1_sunday:
 
             play music music_comedy fadein 2.0
 
-            show kenji rage at center
+            show kenji rage at center:
+                alpha 1.0
             with charadistant
 
             "Startled, I jump back."
@@ -5400,14 +5402,16 @@ label a1_sunday:
             hide kenji
             with charaexit
 
-            show bg at center
+            show bg at center:
+                yalign 0.5
             with charamove_accel
 
             show kenji happy_close at offscreenleft
             with None
 
             show kenji at twoleft
-            show bg at bgleft
+            show bg at bgleft:
+                yalign 0.5
             with charamove_decel
 
             "We sit down on the pile of blankets Kenji apparently dragged up here."
@@ -5477,8 +5481,7 @@ label a1_sunday:
 
             ke "I'm telling it as I see it!"
 
-            scene ev kenji_rooftop_kenji:
-                zoom 1.4
+            scene ev kenji_rooftop_kenji
             with flash
 
             ke "Think about it. When did housing and land start becoming more and more expensive? When women began entering the work force, because it created two-income nuclear families."
@@ -5486,9 +5489,8 @@ label a1_sunday:
             ke "Yeah I forgot my graphs, but, and you'll just have to take my word for it, women are connected to the decay of all society."
 
             show ev kenji_rooftop_large:
-                zoom 1.4
-                crop (430, 350, 1920, 1080)
-                ease 1.0 zoom 1.4 crop (1180, 290, 1920, 1080)
+                subpixel True crop (1058, 677, 1920, 1080)
+                ease 1.0 crop (2383, 468, 1920, 1080)
 
             hi "I see. That is kind of hard to believe."
 
@@ -5497,29 +5499,29 @@ label a1_sunday:
             "It all fits together but I don't know if it's because he can explain things more clearly when drunk, or because I understand everything better when drunk."
 
             show ev kenji_rooftop_large:
-                ease 1.0 zoom 1.4 crop (430, 350, 1920, 1080)
+                ease 1.0 crop (1058, 677, 1920, 1080)
 
             ke "No man, think. Think! Think of the deeper implications!"
 
             ke "People could afford to start saying 'Oh well, since two members of the family are now earning money as opposed to one, they can surely afford something like rising costs of ownership.'"
 
             show ev kenji_rooftop_large:
-                ease 1.0 zoom 1.4 crop (1180, 290, 1920, 1080)
+                ease 1.0 crop (2383, 468, 1920, 1080)
 
             hi "I see your point. But land in Japan has always been expensive."
 
             show ev kenji_rooftop_large:
-                ease 1.0 zoom 1.4 crop (430, 350, 1920, 1080)
+                ease 1.0 crop (1058, 677, 1920, 1080)
 
             ke "…And the price of land generally goes up when a country starts undergoing industrialization. …But no! It's because of women! Correlation equals causation, you know."
 
             show ev kenji_rooftop_large:
-                ease 1.0 zoom 1.4 crop (1180, 290, 1920, 1080)
+                ease 1.0 crop (2383, 468, 1920, 1080)
 
             hi "I thought correlation didn't equal causation. Well, whatever, maybe you're right."
 
             show ev kenji_rooftop_large:
-                ease 1.0 zoom 1.4 crop (430, 350, 1920, 1080)
+                ease 1.0 crop (1058, 677, 1920, 1080)
 
             ke "I am always right. Yeah, I bet women created industrialization, too, to cover their tracks."
 
@@ -5527,15 +5529,18 @@ label a1_sunday:
 
             ke "So yeah, everyone can go fuck themselves!"
 
-            scene bg school_roof_ni
+            hide ev
+            show bg school_roof_ni:
+                yalign 0.5 zoom 1.02
             show kenji rage_ni:
                 xpos 0.5 ypos 1.0 xanchor 0.5 yanchor 0.9
-                easein 1.0 center
+                easein 1.0 ypos 1.02 yanchor 1.0
             with locationchange
 
-            show kenji at center
-
             "He stands up, impressing me because I'm fairly sure I couldn't even if I wanted. He yells extremely loudly as if he's lost the concept of volume. I wince and almost want to cover my ears."
+
+            show kenji at center:
+                ypos 1.02
 
             stop music fadeout 2.0
 
@@ -5584,8 +5589,10 @@ label a1_sunday:
 
             ke "It was pretty okay, but then immediately following the event that is the point of all such things, something strange and scary happened."
 
-            show kenji at tworight
-            show bg at bgleft
+            show kenji at tworight:
+                ypos 1.02
+            show bg at bgleft:
+                yalign 0.5
             with charamove
 
             "He throws himself up against the fence, leaning on it, his eyes narrowed."
@@ -5732,7 +5739,7 @@ label a1_sunday:
             "He's gesturing wildly. Madly, even."
 
             show bg:
-                yalign 0.75
+                xalign 0.75
             show kenji neutral_ni:
                 xpos 0.3
             with Dissolvemove(0.5)
