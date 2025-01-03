@@ -4,15 +4,6 @@
 
 title="Katawa Shoujo: Re-Engineered"
 
-# Asking user to continue.
-if !(kdialog --title="${title}" --yesno \
-    "Welcome to the Katawa Shoujo: Re-Engineered Steam Deck installer!\nAre you ready to install the game?")
-then
-    kdialog --title="${title}" --sorry "Installation aborted."
-
-    exit
-fi
-
 installTypeHelp="You have two options to install the game:
 
 1) Install the game with replacing existing Katawa Shoujo installation.
