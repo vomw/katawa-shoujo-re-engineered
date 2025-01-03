@@ -38,14 +38,16 @@ init python:
     def past_night(image):
         return Transform(image, matrixcolor=TintMatrix(Color(rgb=(0.6, 0.6, 0.7))) * TintMatrix(Color(rgb=(1.0, 0.94, 0.76))) * SaturationMatrix(0.6) * SaturationMatrix(0.15))
 
-    def adult(image, use_null=False):
-        if use_null:
-            null = "null"
+    def adult(image, use_null=False, sfw_alt=None):
+        if sfw_alt is not None:
+            alt = sfw_alt
+        elif use_null:
+            alt = "null"
         else:
-            null = "black"
+            alt = "black"
 
         return ConditionSwitch(
-            "persistent.hdisabled", null,
+            "persistent.hdisabled", alt,
             "True", image)
 
     def make_sprites(char, nude_if=None):
@@ -55,10 +57,10 @@ init python:
             base_name = file.rsplit("/", 1)[1].replace("_", " ", 1).removesuffix(".png")
 
             if nude_if and nude_if(base_name):
-                renpy.image(base_name, adult(file, True))
-                renpy.image(base_name + "_ss", adult(sp_sunset(file), True))
-                renpy.image(base_name + "_ni", adult(sp_night(file), True))
-                renpy.image(base_name + "_rn", adult(sp_rain(file), True))
+                renpy.image(base_name, adult(file, use_null=True))
+                renpy.image(base_name + "_ss", adult(sp_sunset(file), use_null=True))
+                renpy.image(base_name + "_ni", adult(sp_night(file), use_null=True))
+                renpy.image(base_name + "_rn", adult(sp_rain(file), use_null=True))
             else:
                 renpy.image(base_name, file)
                 renpy.image(base_name + "_ss", sp_sunset(file))
@@ -658,9 +660,9 @@ image ev emi_sleep_weep = "event/emi_sleep_weep.png"
 image ev emi_parkback = "event/emi_parkback.png"
 image ev emi_parkback_frown = "event/emi_parkback_frown.png"
 
-image ev emi_ending_smile = "event/emi_ending_smile.png"
-image ev emi_ending_serious = "event/emi_ending_serious.png"
-image ev emi_ending_glad = "event/emi_ending_glad.png"
+image ev emi_ending_smile = adult("event/emi_ending_smile.png", sfw_alt="event/sfw/emi_ending_smile.png")
+image ev emi_ending_serious = adult("event/emi_ending_serious.png", sfw_alt="event/sfw/emi_ending_serious.png")
+image ev emi_ending_glad = adult("event/emi_ending_glad.png", sfw_alt="event/sfw/emi_ending_glad.png")
 
 image ev picnic_normal:
     "event/picnic_normal.png"
@@ -832,13 +834,13 @@ image rin back_cas_superclose = "sprites/rin/superclose/rin_back_cas_superclose.
 
 image ev rin_kiss = "event/rin_kiss.png"
 
-image ev rin_high_frown = "event/rin_high_frown.png"
-image ev rin_high_grin = "event/rin_high_grin.png"
-image ev rin_high_grinwide = "event/rin_high_grinwide.png"
-image ev rin_high_oneeye = "event/rin_high_oneeye.png"
-image ev rin_high_open = "event/rin_high_open.png"
+image ev rin_high_frown = adult("event/rin_high_frown.png", sfw_alt="event/sfw/rin_high_frown.png")
+image ev rin_high_grin = adult("event/rin_high_grin.png", sfw_alt="event/sfw/rin_high_grin.png")
+image ev rin_high_grinwide = adult("event/rin_high_grinwide.png", sfw_alt="event/sfw/rin_high_grinwide.png")
+image ev rin_high_oneeye = adult("event/rin_high_oneeye.png", sfw_alt="event/sfw/rin_high_oneeye.png")
+image ev rin_high_open = adult("event/rin_high_open.png", sfw_alt="event/sfw/rin_high_open.png")
 image ev rin_high_sleep = "event/rin_high_sleep.png"
-image ev rin_high_smile = "event/rin_high_smile.png"
+image ev rin_high_smile = adult("event/rin_high_smile.png", sfw_alt="event/sfw/rin_high_smile.png")
 
 image ev dandelion = "vfx/dandelion.jpg"
 
