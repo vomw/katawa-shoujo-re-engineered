@@ -33,7 +33,7 @@ if [[ "${installType}" == "separate" ]]; then
     qdbus $installProgress Set "" value 80
     qdbus $installProgress setLabelText "Adding KS:RE as non-Steam game to Steam..."
     # Add-to-Steam shortcut (works only on Steam OS!)
-    steamos-add-to-steam /var/lib/flatpak/app/sh.fhs.KatawaShoujoReEngineered/current/active/export/share/applications/sh.fhs.KatawaShoujoReEngineered.desktop
+    steamos-add-to-steam ~/.local/share/flatpak/exports/share/applications/sh.fhs.KatawaShoujoReEngineered.desktop
     sleep 10
     qdbus $installProgress Set "" value 100
     qdbus $installProgress close
