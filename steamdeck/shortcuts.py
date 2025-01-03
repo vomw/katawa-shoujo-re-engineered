@@ -26,4 +26,5 @@ def get_non_steam_games(steam_config_path) -> List[Tuple[str, str, str, str]]:
     return games
 
 for id, dir in enumerate(sys.argv[1:]):
-    print(get_non_steam_games(Path(dir)))
+    for game in get_non_steam_games(Path(dir)):
+        print(game)
