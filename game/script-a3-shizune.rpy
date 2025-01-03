@@ -2917,7 +2917,7 @@ label a3_shizune:
 
         scene evh shizune_hcg_tied_stare:
             yalign 0.0 xalign 1.0
-            easein 6.0 xalign 0.7 zoom 0.5 yalign 0.345
+            easein 6.0 xalign 0.7 yalign 0.345
             truecenter
             zoom 1.0
             "evh shizune_hcg_tied_stare_small"

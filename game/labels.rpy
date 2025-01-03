@@ -330,6 +330,7 @@ label credits:
 
     pause 1.0
 
+    $ config.skipping = True
     $ config.allow_skipping = True
 
     return
