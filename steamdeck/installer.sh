@@ -4,32 +4,41 @@
 
 title="Katawa Shoujo: Re-Engineered"
 
-installTypeHelp="You have two options to install the game:
+installType=`kdialog --title "Installation Options" --radiolist "<div style='padding:20px; text-align:left'>
+<font style='color:white'>Select your preferred installation method:</font><br><br>
 
-1) Install the game with replacing existing Katawa Shoujo installation.
-It will have achievements support, but will not auto-update. 
-You won't be able to play vanilla Steam release of the game on this device after that, unless you restore original game files using Steam settings.
-2) Install the game as a separate entity from Flathub. 
-It will auto-update, but won't integrate with Steam achievements. 
-You will be able to play vanilla Steam release and KS:RE separately
-"
+<span style='font-size:14px; font-weight:bold'>1) Install with replacing existing Katawa Shoujo installation:</span><br>
+<div style='padding-left:20px'>
+    - It will have achievements support<br>
+    - Will not auto-update<br>
+    - You won't be able to play vanilla Steam release unless restored via Steam settings
+</div><br>
 
-installType=`kdialog --title="${title}" --radiolist "${installTypeHelp}" \
-"replace" "Replace current KS installation" off \
-"separate" "Install KS:RE separately" off`
+<span style='font-size:14px; font-weight:bold'>2) Install as separate entity from FlatHub:</span><br>
+<div style='padding-left:20px'>
+    - It will auto-update<br>
+    - Won't integrate with Steam achievements<br>
+    - You will be able to play vanilla Steam release and KS:RE separately
+</div></div>" \
+"replace" "Install with replacing existing Katawa Shoujo installation" off \
+"separate" "Install as separate entity from FlatHub" off \
+--geometry 600x500+200+200`
 
 if [[ "${installType}" == "separate" ]]; then
     # User agreed to installation separately.
     installProgress=`kdialog --title="${title}" --progressbar "${title}"`
     qdbus $installProgress Set "" value 1
+
     qdbus $installProgress setLabelText "Installing Katawa Shoujo: Re-Engineered from Flathub..."
     flatpak install --user --assumeyes sh.fhs.KatawaShoujoReEngineered || true
-    if ! flatpak info "sh.fhs.KatawaShoujoReEngineeredd" >/dev/null 2>&1; then
+
+    if ! flatpak info "sh.fhs.KatawaShoujoReEngineered" >/dev/null 2>&1; then
         qdbus $installProgress close
         kdialog --title="${title}" --sorry "Installation failed."
 
         exit 1
     fi
+
     qdbus $installProgress Set "" value 80
     qdbus $installProgress setLabelText "Adding KS:RE as non-Steam game to Steam..."
     # Add-to-Steam shortcut (works only on Steam OS!)
