@@ -56,8 +56,7 @@ elif [[ "${installType}" == "replace" ]]; then
         exit
     fi
 
-    ksreVersion="1.4.9"
-    ksreReleaseURL="https://github.com/fleetingheart/ksre/releases/download/v${ksreVersion}/KSRE-linux.tar.bz2"
+    ksreReleaseURL="https://github.com/fleetingheart/ksre/releases/latest/download/KSRE-linux.tar.bz2"
 
     # User agreed to installation in-place.
     installProgress=`kdialog --title="${title}" --progressbar "${title}"`
