@@ -118,7 +118,7 @@ qdbus $artworkProgress setLabelText "Downloading artwork..."
 curl -o "${steamGameID}p.png" "https://cdn2.steamgriddb.com/grid/e0bef5004dd56c6dd7b6019af66f2638.png"
 qdbus $artworkProgress Set "" value 20
 
-curl -o "${steamGameID}_logo.png" "https://codeberg.org/fhs/katawa-shoujo-re-engineered/raw/branch/master/ios-icon.png"
+curl -o "${steamGameID}_logo.png" "https://codeberg.org/fhs/katawa-shoujo-re-engineered/raw/branch/master/game/gui/logo/large-heartonly.png"
 qdbus $artworkProgress Set "" value 30
 
 curl -o "${steamGameID}_hero.png" "https://cdn2.steamgriddb.com/hero/55e875a41fe6ef14540212235cf7d507.png"
