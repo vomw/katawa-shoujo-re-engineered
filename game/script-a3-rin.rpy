@@ -4981,6 +4981,8 @@ label a3_rin:
 
             "I take off my watch and lay it down on the table."
 
+            $ ach("rinbad_achieve")
+
             if _in_replay:
                 return
 

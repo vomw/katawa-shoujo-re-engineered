@@ -2966,6 +2966,8 @@ label a4_rin:
 
             "Her words stayed frozen deep inside my heart."
 
+            $ ach("rinneutral_achieve")
+
             if _in_replay:
                 return
     else:
@@ -6382,6 +6384,8 @@ label a4_rin:
             hi "What is it?"
 
             rin "What's the word for when it feels inside your heart that everything in the world is all right?"
+
+            $ ach("ringood_achieve")
 
             stop music fadeout 4.0
             stop ambient fadeout 4.0
