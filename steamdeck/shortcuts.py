@@ -1,3 +1,7 @@
+#!/usr/bin/env python3
+# https://stackoverflow.com/a/79296718
+# Licensed under CC-BY-SA 4.0
+
 import re
 import sys
 from pathlib import Path

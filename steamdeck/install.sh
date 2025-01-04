@@ -1,5 +1,5 @@
 #!/bin/bash
-# Copyright (c) 2024 Fleeting Heartbeat Studios
+# Copyright (c) 2025 Fleeting Heartbeat Studios
 # Licensed under MPL 2.0 license.
 
 KDIALOG=$(which kdialog)
