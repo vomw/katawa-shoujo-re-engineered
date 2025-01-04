@@ -976,7 +976,7 @@ label a3_rin:
 
         show rin:
             center
-            ypos 1.17
+            alpha 1.0 ypos 1.17
 
         "She sits upright and yawns so excessively it looks like her jaw might dislocate."
 

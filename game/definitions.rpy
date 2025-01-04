@@ -234,6 +234,12 @@ python early:
 
     config.label_callback = set_current_scene
 
+    def hide_window_after_nvl(statement):
+        if statement == "nvl hide":
+            store._window = False
+    
+    config.statement_callbacks.append(hide_window_after_nvl)
+
     class RPCThread(threading.Thread):
         def __init__(self, store):
             threading.Thread.__init__(self, daemon=True)
