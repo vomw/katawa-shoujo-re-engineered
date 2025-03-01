@@ -768,7 +768,7 @@ translate pt_br a1_thursday_soap_6fb90337:
 translate pt_br a1_thursday_soap_5afb1140:
 
     # hi "What do you mean 'all over the place'?"
-    hi "O que quer dizer com 'por todo o lugar'?"
+    hi "O que quer dizer com “por todo o lugar”?"
 
 # game/script-a1-thursday.rpy:428
 translate pt_br a1_thursday_soap_3b86048e:
@@ -1104,13 +1104,13 @@ translate pt_br a1_thursday_soap_056ef2ab:
 translate pt_br a1_thursday_soap_43ae3571:
 
     # ke "And that day will come, when the feminists come out of their central top secret worldwide feminist headquarters, and say 'It's on now, motherfuckers!'"
-    ke "E esse dia chegará, quando as feministas saírem do seu quartel general central feminista mundial ultra secreto em todo o mundo, e dirão: 'É agora, seus filhos da puta.'"
+    ke "E esse dia chegará, quando as feministas saírem do seu quartel general central feminista mundial ultra secreto em todo o mundo, e dirão: “É agora, seus filhos da puta.”"
 
 # game/script-a1-thursday.rpy:589
 translate pt_br a1_thursday_soap_94c0fbd9:
 
     # hi "You're being ridiculous, there's no big worldwide feminist headquarters building, where would they even hide that? I mean, it'd have to be massive, you couldn't hide that on Earth, someone would notice a big fortress with women only in it."
-    hi "Está sendo ridículo. Não existe algo tão grande como 'quartel general feminista mundial', onde iriam esconder isso? Quero dizer, teria que ser enorme. Não poderiam esconder isso na Terra, alguém notaria uma fortaleza só com mulheres."
+    hi "Está sendo ridículo. Não existe algo tão grande como “quartel general feminista mundial”, onde iriam esconder isso? Quero dizer, teria que ser enorme. Não poderiam esconder isso na Terra, alguém notaria uma fortaleza só com mulheres."
 
 # game/script-a1-thursday.rpy:594
 translate pt_br a1_thursday_soap_cd2a19e8:
@@ -1151,7 +1151,7 @@ translate pt_br a1_thursday_soap_e6fa9020:
 # game/script-a1-thursday.rpy:609
 translate pt_br a1_thursday_soap_d9d604a9:
 
-    # ke "But then I realized that if I gave up, it would all be over, and I was like, 'whoa' and knew I had to get serious. Because I am the last sane man in an insane world. It's about duty."
+    # ke "But then I realized that if I gave up, it would all be over, and I was like, “whoa“ and knew I had to get serious. Because I am the last sane man in an insane world. It's about duty."
     ke "Mas depois eu me dei conta que se me entregasse, tudo acabaria. Foi como “Whoa” e soube que tinha que levar a sério. Pois sou o último homem sensato em um mundo de loucos. É sobre o dever."
 
 # game/script-a1-thursday.rpy:611
@@ -1470,7 +1470,7 @@ translate pt_br a1_thursday_cold_war_9c9662a0:
 translate pt_br a1_thursday_cold_war_9c79c319:
 
     # "Lilly smiles, probably amused by Misha's - or Shizune's - use of the word 'look.'"
-    "Lilly sorri, provavelmente entretida com o uso de Misha —ou o de Shizune— da palavra 'Olha'."
+    "Lilly sorri, provavelmente entretida com o uso de Misha —ou o de Shizune— da palavra “Olha”."
 
 # game/script-a1-thursday.rpy:807
 translate pt_br a1_thursday_cold_war_0cca57f0:
@@ -1514,7 +1514,7 @@ translate pt_br a1_thursday_cold_war_5249a022:
 translate pt_br a1_thursday_cold_war_68175c9d:
 
     # "For all she knows, she's talking to Misha, but knowing that she and Shizune are practically inseparable, she might expect Shizune being the one that actually 'talks.'"
-    "Pelo que ela sabe, está falando com Misha, mas sabendo que ela e Shizune são praticamente inseparáveis, ela pode achar que seja Shizune quem realmente 'fala'."
+    "Pelo que ela sabe, está falando com Misha, mas sabendo que ela e Shizune são praticamente inseparáveis, ela pode achar que seja Shizune quem realmente “fala”."
 
 # game/script-a1-thursday.rpy:830
 translate pt_br a1_thursday_cold_war_bc63d72b:
@@ -2246,7 +2246,7 @@ translate pt_br a1_thursday_proof_of_competency_1d0bf520_1:
 translate pt_br a1_thursday_proof_of_competency_135ae33b:
 
     # "The tone of Shizune's actions make me think she is 'speaking' with disdain, but Misha interprets it normally, replacing whatever intent may have been there with her own chipper twist on things. It's still disorienting, I don't think I'll ever get used to it."
-    "O tom das ações de Shizune me faz pensar que ela está 'falando' com desdém, mas Misha o interpreta normalmente, substituindo qualquer intenção que pudesse ter tido com seu próprio jeito alegre. Ainda é confuso, não acho que algum dia me acostumarei."
+    "O tom das ações de Shizune me faz pensar que ela está “falando” com desdém, mas Misha o interpreta normalmente, substituindo qualquer intenção que pudesse ter tido com seu próprio jeito alegre. Ainda é confuso, não acho que algum dia me acostumarei."
 
 # game/script-a1-thursday.rpy:1336
 translate pt_br a1_thursday_proof_of_competency_edc7b9f4:
@@ -6474,7 +6474,7 @@ translate pt_br a1c8o1_e0f50aa5:
 translate pt_br a1c8o1_0f37ba22:
 
     # mi "Class rep~! Shicchan says: 'Don't forget that report, please~!'"
-    mi "Representante~! Shizunezinha disse: 'Não se esqueça desse relatório, por favor~!'."
+    mi "Representante~! Shizunezinha disse: “Não se esqueça desse relatório, por favor~!”."
 
 # game/script-a1-thursday.rpy:4006
 translate pt_br a1c8o1_220f407b:
@@ -6647,5 +6647,6 @@ translate pt_br strings:
     # game/script-a1-thursday.rpy:1115
     old "Hey, come on. Cut me and Lilly some slack…"
     new "Hey, vamos. Não sejam tão duras com Lilly e comigo…"
+
 
 

@@ -7222,3 +7222,4 @@ translate pt_br strings:
     new "Você provavelmente não sabe como voltar para a escola a partir daqui.\n\nHaverá trabalho esperando por você. Vejo você depois~"
 
 
+

@@ -929,7 +929,7 @@ translate pt_br a1_monday_gateway_effect_96a709dc:
 translate pt_br a1_monday_gateway_effect_a2aa6b19:
 
     # "Words like 'clean' and 'hygienic' pop into my mind. It makes me shudder."
-    "Palavras como 'limpo' e 'higiênico' surgem em minha mente. Isso me faz tremer."
+    "Palavras como “limpo” e “higiênico” surgem em minha mente. Isso me faz tremer."
 
 # game/script-a1-monday.rpy:499
 translate pt_br a1_monday_gateway_effect_1f324b32:
@@ -1837,7 +1837,7 @@ translate pt_br a1_monday_enter_stage_left_ef2b123c_10:
 translate pt_br a1_monday_enter_stage_left_15488b74:
 
     # "Shizune glares at the two of us impatiently. I don't need to know sign language to understand that."
-    "Shizune nos encara impacientemente. Não preciso saber língua de sinais para entender isso."
+    "Shizune nos encara impacientemente. Não preciso saber a língua de sinais para entender isso."
 
 # game/script-a1-monday.rpy:1021
 translate pt_br a1_monday_enter_stage_left_b04afdfa:
@@ -1962,7 +1962,7 @@ translate pt_br a1_monday_in_the_nursery_ef2b123c:
 translate pt_br a1_monday_in_the_nursery_7639786c:
 
     # "I don't understand sign, so the point escapes me."
-    "Não entendo língua de sinais, então o assunto me escapa."
+    "Não entendo a língua de sinais, então o assunto me escapa."
 
 # game/script-a1-monday.rpy:1105
 translate pt_br a1_monday_in_the_nursery_bf364854:
@@ -3297,5 +3297,6 @@ translate pt_br strings:
     # game/script-a1-monday.rpy:1701
     old "Hisao Nakai\n\nTwo tablets daily to stay alive"
     new "Hisao Nakai\n\nDois comprimidos por dia para sobreviver"
+
 
 
