@@ -108,11 +108,11 @@ style doublespeak_text is say_dialogue
 
 style choice_vbox is vbox:
     align (0.5, 0.4)
-    spacing 20
+    spacing 20+5*(renpy.android or renpy.ios)
 
 style choice_button:
     background Frame("gui/button/choice.png")
-    xysize (1126, 65)
+    xysize (1126+230*(renpy.android or renpy.ios), 65+15*(renpy.android or renpy.ios))
 
 style choice_button_text is gui_button_text:
     xalign 0.5
