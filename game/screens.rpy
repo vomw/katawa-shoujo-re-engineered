@@ -9,14 +9,17 @@ screen skip_indicator():
 screen say(who, what):
     style_prefix "say"
 
-    if who and who.strip():
-        window id "namebox":
-            at colorblind(persistent.colorblind)
-            style_suffix "namebox"
-            text who id "who"
+    vbox:
+        style_suffix "vbox"
+        
+        if who and who.strip():
+            window id "namebox":
+                at colorblind(persistent.colorblind)
+                style_suffix "namebox"
+                text who id "who"
 
-    window id "window":
-        text what id "what"
+        window id "window":
+            text what id "what"
 
 screen doublespeak(c1, t1, c2, t2):
     style_prefix "doublespeak"
