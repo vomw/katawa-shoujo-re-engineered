@@ -17,6 +17,8 @@ screen say(who, what):
                 at colorblind(persistent.colorblind)
                 style_suffix "namebox"
                 text who id "who"
+        else:
+            null height 145
 
         window id "window":
             text what id "what"
