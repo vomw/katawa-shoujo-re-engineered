@@ -6196,49 +6196,49 @@ translate de a3_rin_boundless_76b2fe88:
 translate de a3_rin_boundless_20e4fe40:
 
     # n "{vspace=30}I hold true to my promise of honoring Rin's request, even if it's against my own will."
-    n "{vspace=30}Ich halte mein Versprechen ein und komme Rins bitte nach, auch wenn es gegen meinen eigenen Willen ist."
+    n "[nvl_text_size_start_mobile_de][nvl_text_vspace_mobile_de]Ich halte mein Versprechen ein und komme Rins bitte nach, auch wenn es gegen meinen eigenen Willen ist.[nvl_text_size_end_mobile_de]"
 
 # game/script-a3-rin.rpy:3750
 translate de a3_rin_boundless_b60f7ff8:
 
     # n "I try to redirect my focus into my studies, but end up zoning out during classes and doing only the minimum amount of work required."
-    n "Ich versuche, mich stattdessen aufs Lernen zu konzentrieren, drifte aber letztendlich im Unterricht ab und mache nur das Minimum an geforderter Mitarbeit."
+    n "[nvl_text_size_start_mobile_de]Ich versuche, mich stattdessen aufs Lernen zu konzentrieren, drifte aber letztendlich im Unterricht ab und mache nur das Minimum an geforderter Mitarbeit.[nvl_text_size_end_mobile_de]"
 
 # game/script-a3-rin.rpy:3752
 translate de a3_rin_boundless_207fb1c6:
 
     # n "Still, I start looking into my post-high school options a bit more seriously. I pore over university brochures and various career paths."
-    n "Trotzdem fange ich damit an, mir meine Optionen nach der Oberschule etwas genauer anzusehen. Ich wälze mich durch Universitätsbroschüren und mehrere Berufslaufbahnen."
+    n "[nvl_text_size_start_mobile_de]Trotzdem fange ich damit an, mir meine Optionen nach der Oberschule etwas genauer anzusehen. Ich wälze mich durch Universitätsbroschüren und mehrere Berufslaufbahnen.[nvl_text_size_end_mobile_de]"
 
 # game/script-a3-rin.rpy:3754
 translate de a3_rin_boundless_a344943e:
 
     # n "I'm good at studying, so I want to go to a university. I'm pretty sure I could get into a pretty decent one too. The only problem is deciding which subject would be the best."
-    n "Ich bin gut im Lernen, darum will ich an einer Universität studieren. Ich bin mir ziemlich sicher, dass ich auch in eine ziemlich gute kommen könnte. Das einzige Problem ist zu entscheiden, welches Fach das Beste wäre."
+    n "[nvl_text_size_start_mobile_de]Ich bin gut im Lernen, darum will ich an einer Universität studieren. Ich bin mir ziemlich sicher, dass ich auch in eine ziemlich gute kommen könnte. Das einzige Problem ist zu entscheiden, welches Fach das Beste wäre.[nvl_text_size_end_mobile_de]"
 
 # game/script-a3-rin.rpy:3756
 translate de a3_rin_boundless_30949762:
 
     # n "Kenji ridicules me about subjecting myself to the control of feminist teachers when I tell him about trying to get into a university. I don't ask him about what he wants to do in the future."
-    n "Kenji verhöhnt mich, als ich ihm von meinem Vorhaben mit der Universität erzähle, weil ich mich angeblich der Kontrolle der feministischen Lehrer unterworfen habe. Ich frage ihn nicht, was er nach der Schule vorhat."
+    n "[nvl_text_size_start_mobile_de]Kenji verhöhnt mich, als ich ihm von meinem Vorhaben mit der Universität erzähle, weil ich mich angeblich der Kontrolle der feministischen Lehrer unterworfen habe. Ich frage ihn nicht, was er nach der Schule vorhat.[nvl_text_size_end_mobile_de]"
 
 # game/script-a3-rin.rpy:3758
 translate de a3_rin_boundless_f8c4fc3d:
 
     # n "I wonder what Rin thinks of her own future. I bet she's not as lost as I am. And if she is, it's probably in some completely different way."
-    n "Was Rin wohl über ihre eigene Zukunft denkt. Ich wette, sie ist nicht so verloren wie ich. Und falls doch, ist sie es bestimmt auf eine ganze andere Weise."
+    n "[nvl_text_size_start_mobile_de]Was Rin wohl über ihre eigene Zukunft denkt. Ich wette, sie ist nicht so verloren wie ich. Und falls doch, ist sie es bestimmt auf eine ganze andere Weise.[nvl_text_size_end_mobile_de]"
 
 # game/script-a3-rin.rpy:3760
 translate de a3_rin_boundless_d24a787a:
 
     # n "I feel somewhat disappointed in finding out that I can't stop thinking about her."
-    n "Irgendwie bin ich enttäuscht darüber, dass ich wohl doch nicht aufhören kann, an sie zu denken."
+    n "[nvl_text_size_start_mobile_de]Irgendwie bin ich enttäuscht darüber, dass ich wohl doch nicht aufhören kann, an sie zu denken.[nvl_text_size_end_mobile_de]"
 
 # game/script-a3-rin.rpy:3762
 translate de a3_rin_boundless_c0029de4:
 
     # n "Her request makes me worry about her and think about her, more than I did when I could go and see her when I wanted. It bothers me that I can't."
-    n "Wegen ihrer Bitte denke ich an sie und mache mir Sorgen – noch mehr als zu der Zeit, in der ich sie besuchen konnte, wann ich wollte. Es nagt an mir, dass ich das nicht mehr kann."
+    n "[nvl_text_size_start_mobile_de]Wegen ihrer Bitte denke ich an sie und mache mir Sorgen – noch mehr als zu der Zeit, in der ich sie besuchen konnte, wann ich wollte. Es nagt an mir, dass ich das nicht mehr kann.[nvl_text_size_end_mobile_de]"
 
 # game/script-a3-rin.rpy:3764
 translate de a3_rin_boundless_76b2fe88_1:

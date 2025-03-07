@@ -344,55 +344,55 @@ translate de a1_monday_bundle_of_hisao_9651b812:
     # nvl clear
     # n "{vspace=30}Because of the late discovery of this… condition, I've had to stay at the hospital, to recuperate from the treatments."
     nvl clear
-    n "{vspace=30}Weil dieser… Befund erst so spät gemacht worden ist, musste ich im Krankenhaus bleiben, um mich von den Behandlungen zu erholen."
+    n "[nvl_text_vspace_mobile_de][nvl_text_size_start_mobile_de]Weil dieser… Befund erst so spät gemacht worden ist, musste ich im Krankenhaus bleiben, um mich von den Behandlungen zu erholen.[nvl_text_size_end_mobile_de]"
 
 # game/script-a1-monday.rpy:263
 translate de a1_monday_bundle_of_hisao_b8f7da43:
 
     # n "When I was first admitted, it felt as if I was missed…"
-    n "Als ich gerade erst ins Krankenhaus eingeliefert worden war, sah es noch ganz danach aus, als ob man mich vermissen würde…"
+    n "[nvl_text_size_start_mobile_de]Als ich gerade erst ins Krankenhaus eingeliefert worden war, sah es noch ganz danach aus, als ob man mich vermissen würde…[nvl_text_size_end_mobile_de]"
 
 # game/script-a1-monday.rpy:265
 translate de a1_monday_bundle_of_hisao_34e8419d:
 
     # n "For about a week, my room in the ward was full of flowers, balloons and cards."
-    n "Eine Woche lang war mein Krankenzimmer voller Blumen, Luftballons und Genesungskarten."
+    n "[nvl_text_size_start_mobile_de]Eine Woche lang war mein Krankenzimmer voller Blumen, Luftballons und Genesungskarten.[nvl_text_size_end_mobile_de]"
 
 # game/script-a1-monday.rpy:267
 translate de a1_monday_bundle_of_hisao_090f9328:
 
     # n "But, the visitors soon dwindled and all the get-well gifts began trickling down to nothing shortly after."
-    n "Doch es dauerte nicht lange, bis die Besucher seltener kamen. Der Strom an Geschenken wurde zu einem Rinnsal, bis er irgendwann ganz versiegte."
+    n "[nvl_text_size_start_mobile_de]Doch es dauerte nicht lange, bis die Besucher seltener kamen. Der Strom an Geschenken wurde zu einem Rinnsal, bis er irgendwann ganz versiegte.[nvl_text_size_end_mobile_de]"
 
 # game/script-a1-monday.rpy:269
 translate de a1_monday_bundle_of_hisao_909d8632:
 
     # n "I realized that the only reason I had gotten so many cards and flowers was because sending me their sympathy had been turned into a class project."
-    n "Ich fand heraus, dass die Geschenke Teil eines Klassenprojektes gewesen waren. Nur deswegen bekam ich so viele Karten und Blumen."
+    n "[nvl_text_size_start_mobile_de]Ich fand heraus, dass die Geschenke Teil eines Klassenprojektes gewesen waren. Nur deswegen bekam ich so viele Karten und Blumen.[nvl_text_size_end_mobile_de]"
 
 # game/script-a1-monday.rpy:271
 translate de a1_monday_bundle_of_hisao_b5c56144:
 
     # n "Maybe some people were genuinely concerned, but I doubt it. Even in the beginning, I barely had visitors. By the end of the first month, only my parents came by on a regular basis."
-    n "Einige waren vielleicht auch wirklich besorgt um mich, aber nicht sehr viele, glaube ich. Selbst am Anfang hatte ich nur wenige Besucher, zum Ende des ersten Monats kamen nur noch meine Eltern regelmäßig vorbei."
+    n "[nvl_text_size_start_mobile_de]Einige waren vielleicht auch wirklich besorgt um mich, aber nicht sehr viele, glaube ich. Selbst am Anfang hatte ich nur wenige Besucher, zum Ende des ersten Monats kamen nur noch meine Eltern regelmäßig vorbei.[nvl_text_size_end_mobile_de]"
 
 # game/script-a1-monday.rpy:273
 translate de a1_monday_bundle_of_hisao_928fd142:
 
     # n "Iwanako was the last to stop visiting."
-    n "Iwanako war diejenige, die noch am längsten durchhielt."
+    n "[nvl_text_size_start_mobile_de]Iwanako war diejenige, die noch am längsten durchhielt.[nvl_text_size_end_mobile_de]"
 
 # game/script-a1-monday.rpy:275
 translate de a1_monday_bundle_of_hisao_625ffaf6:
 
     # n "After six weeks, I never saw her again. We never had that much to talk about when she visited, anyway."
-    n "Nach sechs Wochen sah ich sie nicht mehr. Wir hatten sowieso nur wenig, worüber wir reden konnten, wenn sie mich besuchte."
+    n "[nvl_text_size_start_mobile_de]Nach sechs Wochen sah ich sie nicht mehr. Wir hatten sowieso nur wenig, worüber wir reden konnten, wenn sie mich besuchte.[nvl_text_size_end_mobile_de]"
 
 # game/script-a1-monday.rpy:277
 translate de a1_monday_bundle_of_hisao_22eef6f6:
 
     # n "We didn't touch the subject that was between us on that snowy day ever again."
-    n "Über das, was an diesem verschneiten Tag gesagt worden ist, sprachen wir nie."
+    n "[nvl_text_size_start_mobile_de]Über das, was an diesem verschneiten Tag gesagt worden ist, sprachen wir nie.[nvl_text_size_end_mobile_de]"
 
 # game/script-a1-monday.rpy:279
 translate de a1_monday_bundle_of_hisao_5a39979d:

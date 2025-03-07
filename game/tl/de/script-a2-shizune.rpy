@@ -4940,7 +4940,7 @@ translate de a2_shizune_interface_76b2fe88:
 translate de a2_shizune_interface_820ec817:
 
     # n "{vspace=30}Shizune knew I was taking sign language classes all day yesterday, and didn't make a big deal out of it."
-    n "{vspace=30}Shizune wusste, dass ich gestern den ganzen Tag den Kurs in Gebärdensprache besucht habe, und hat daraus keine große Sache gemacht."
+    n "[nvl_text_vspace_mobile_de]Shizune wusste, dass ich gestern den ganzen Tag den Kurs in Gebärdensprache besucht habe, und hat daraus keine große Sache gemacht."
 
 # game/script-a2-shizune.rpy:3219
 translate de a2_shizune_interface_ac8eb21f:

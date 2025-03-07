@@ -2412,61 +2412,61 @@ translate de a4_rin_wavelength_76b2fe88_6:
 translate de a4_rin_wavelength_86da4edd:
 
     # n "{vspace=30}I'm restless."
-    n "{vspace=30}Ich bin rastlos."
+    n "[nvl_text_size_start_mobile_de][nvl_text_vspace_mobile_de]Ich bin rastlos.[nvl_text_size_end_mobile_de]"
 
 # game/script-a4-rin.rpy:1441
 translate de a4_rin_wavelength_675b692c:
 
     # n "It's the summer vacation."
-    n "Es sind Sommerferien."
+    n "[nvl_text_size_start_mobile_de]Es sind Sommerferien.[nvl_text_size_end_mobile_de]"
 
 # game/script-a4-rin.rpy:1443
 translate de a4_rin_wavelength_411e7189:
 
     # n "No class, no homework, no art club meetings. Just free time to spend however I want."
-    n "Kein Unterricht, keine Hausaufgaben, keine Kunstklubtreffen. Nur Freizeit, die ich verbringen kann, wie ich will."
+    n "[nvl_text_size_start_mobile_de]Kein Unterricht, keine Hausaufgaben, keine Kunstklubtreffen. Nur Freizeit, die ich verbringen kann, wie ich will.[nvl_text_size_end_mobile_de]"
 
 # game/script-a4-rin.rpy:1445
 translate de a4_rin_wavelength_d7334c86:
 
     # n "It doesn't feel like anything."
-    n "Danach fühlt es sich aber nicht an."
+    n "[nvl_text_size_start_mobile_de]Danach fühlt es sich aber nicht an.[nvl_text_size_end_mobile_de]"
 
 # game/script-a4-rin.rpy:1447
 translate de a4_rin_wavelength_04741731:
 
     # n "I tried to cheer up Misha, but I'm not feeling too cheery myself."
-    n "Ich versuchte, Misha aufzumuntern, aber ich selbst fühle mich nicht allzu heiter."
+    n "[nvl_text_size_start_mobile_de]Ich versuchte, Misha aufzumuntern, aber ich selbst fühle mich nicht allzu heiter.[nvl_text_size_end_mobile_de]"
 
 # game/script-a4-rin.rpy:1449
 translate de a4_rin_wavelength_bc409793:
 
     # n "To be honest, the free time is intimidating. It reminds me of the hospital and the long, meaningless days that had to be filled somehow."
-    n "Um ehrlich zu sein, macht mir die Freizeit Angst. Sie erinnert mich an das Krankenhaus und die langen, bedeutungslosen Tage, die irgendwie verbracht werden mussten."
+    n "[nvl_text_size_start_mobile_de]Um ehrlich zu sein, macht mir die Freizeit Angst. Sie erinnert mich an das Krankenhaus und die langen, bedeutungslosen Tage, die irgendwie verbracht werden mussten.[nvl_text_size_end_mobile_de]"
 
 # game/script-a4-rin.rpy:1451
 translate de a4_rin_wavelength_965a7f41:
 
     # n "The only difference is that there I was bound to the ward, guarded by the Cerberus-like nurses."
-    n "Der einzige Unterschied ist, dass ich an die Station gefesselt war – bewacht von cerberusartigen Schwestern."
+    n "[nvl_text_size_start_mobile_de]Der einzige Unterschied ist, dass ich an die Station gefesselt war – bewacht von cerberusartigen Schwestern.[nvl_text_size_end_mobile_de]"
 
 # game/script-a4-rin.rpy:1453
 translate de a4_rin_wavelength_12f67585:
 
     # n "Reading was a good solution back then, but the thought of spending my summer vacation reading books feels… nerdy."
-    n "Damals war Lesen eine gute Lösung. Aber der Gedanke, meine Sommerferien mit Bücherlesen zu verbringen, kommt mir… streberhaft vor."
+    n "[nvl_text_size_start_mobile_de]Damals war Lesen eine gute Lösung. Aber der Gedanke, meine Sommerferien mit Bücherlesen zu verbringen, kommt mir… streberhaft vor.[nvl_text_size_end_mobile_de]"
 
 # game/script-a4-rin.rpy:1455
 translate de a4_rin_wavelength_a98c4e1c:
 
     # n "That has nothing to do with the fact that I'm reading even now… I'm just killing time and trying to fight my anxiety."
-    n "Das hat nichts mit der Tatsache zu tun, dass ich sogar jetzt gerade lese… Ich schlage nur etwas Zeit tot und versuche, meine Unruhe zu bekämpfen."
+    n "[nvl_text_size_start_mobile_de]Das hat nichts mit der Tatsache zu tun, dass ich sogar jetzt gerade lese… Ich schlage nur etwas Zeit tot und versuche, meine Unruhe zu bekämpfen.[nvl_text_size_end_mobile_de]"
 
 # game/script-a4-rin.rpy:1457
 translate de a4_rin_wavelength_ac10d3df:
 
     # n "Besides, my mind is on other matters, stretching in too many directions to make sense of any of them."
-    n "Außerdem bin ich mit dem Kopf woanders, aber ich denke an zu viele Sachen gleichzeitig, um auch nur eine davon zu ergründen."
+    n "[nvl_text_size_start_mobile_de]Außerdem bin ich mit dem Kopf woanders, aber ich denke an zu viele Sachen gleichzeitig, um auch nur eine davon zu ergründen.[nvl_text_size_end_mobile_de]"
 
 # game/script-a4-rin.rpy:1461
 translate de a4_rin_wavelength_76b2fe88_7:
@@ -6292,79 +6292,79 @@ translate de a4_rin_problems_of_self_referential_logic_76b2fe88:
 translate de a4_rin_problems_of_self_referential_logic_cafeb753:
 
     # n "I guess that's how it is."
-    n "Ich schätze, so ist es."
+    n "[nvl_text_size_start_mobile_de]Ich schätze, so ist es.[nvl_text_size_end_mobile_de]"
 
 # game/script-a4-rin.rpy:3442
 translate de a4_rin_problems_of_self_referential_logic_23323e1b:
 
     # n "But I always wanted to make sense of you, to find out who you are."
-    n "Aber ich wollte dich immer verstehen – herausfinden, wer du bist."
+    n "[nvl_text_size_start_mobile_de]Aber ich wollte dich immer verstehen – herausfinden, wer du bist.[nvl_text_size_end_mobile_de]"
 
 # game/script-a4-rin.rpy:3444
 translate de a4_rin_problems_of_self_referential_logic_c243b672:
 
     # n "I still want to, can't you see?"
-    n "Das will ich immer noch; siehst du das nicht?"
+    n "[nvl_text_size_start_mobile_de]Das will ich immer noch; siehst du das nicht?[nvl_text_size_end_mobile_de]"
 
 # game/script-a4-rin.rpy:3446
 translate de a4_rin_problems_of_self_referential_logic_eabec665:
 
     # n "…"
-    n "…"
+    n "[nvl_text_size_start_mobile_de]…[nvl_text_size_end_mobile_de]"
 
 # game/script-a4-rin.rpy:3448
 translate de a4_rin_problems_of_self_referential_logic_5256755c:
 
     # n "I know you can't."
-    n "Ich weiß, du kannst es nicht."
+    n "[nvl_text_size_start_mobile_de]Ich weiß, du kannst es nicht.[nvl_text_size_end_mobile_de]"
 
 # game/script-a4-rin.rpy:3450
 translate de a4_rin_problems_of_self_referential_logic_6625e57c:
 
     # n "But I do."
-    n "Aber ich kann es."
+    n "[nvl_text_size_start_mobile_de]Aber ich kann es.[nvl_text_size_end_mobile_de]"
 
 # game/script-a4-rin.rpy:3452
 translate de a4_rin_problems_of_self_referential_logic_545e50c4:
 
     # n "Is that why I keep this up? It pains you as much as it pains me. It's unlikely to be of any use to either."
-    n "Höre ich deswegen nicht damit auf? Es schmerzt dich genauso sehr wie mich. Es ist unwahrscheinlich, dass es einem von uns beiden etwas bringt."
+    n "[nvl_text_size_start_mobile_de]Höre ich deswegen nicht damit auf? Es schmerzt dich genauso sehr wie mich. Es ist unwahrscheinlich, dass es einem von uns beiden etwas bringt.[nvl_text_size_end_mobile_de]"
 
 # game/script-a4-rin.rpy:3454
 translate de a4_rin_problems_of_self_referential_logic_300fc010:
 
     # n "We did things and said things that can't be undone."
-    n "Wir haben Dinge getan und Dinge gesagt, die nicht rückgängig gemacht werden können."
+    n "[nvl_text_size_start_mobile_de]Wir haben Dinge getan und Dinge gesagt, die nicht rückgängig gemacht werden können.[nvl_text_size_end_mobile_de]"
 
 # game/script-a4-rin.rpy:3456
 translate de a4_rin_problems_of_self_referential_logic_5c30b55f:
 
     # n "It's as if… you and me being close to each other just hurts us both, but we still deliberately keep doing it."
-    n "Es ist, als ob… unsere Nähe uns nur gegenseitig verletzen würde, aber wir machen absichtlich damit weiter."
+    n "[nvl_text_size_start_mobile_de]Es ist, als ob… unsere Nähe uns nur gegenseitig verletzen würde, aber wir machen absichtlich damit weiter.[nvl_text_size_end_mobile_de]"
 
 # game/script-a4-rin.rpy:3458
 translate de a4_rin_problems_of_self_referential_logic_7d209e62:
 
     # n "Isn't that silly?"
-    n "Ist das nicht albern?"
+    n "[nvl_text_size_start_mobile_de]Ist das nicht albern?[nvl_text_size_end_mobile_de]"
 
 # game/script-a4-rin.rpy:3460
 translate de a4_rin_problems_of_self_referential_logic_2c4bc0a6:
 
     # n "Even now, I can see how you force yourself to respond even though you owe me nothing."
-    n "Sogar jetzt kann ich noch sehen, dass du dich zwingst, mir zu antworten, obwohl du mir nichts schuldest."
+    n "[nvl_text_size_start_mobile_de]Sogar jetzt kann ich noch sehen, dass du dich zwingst, mir zu antworten, obwohl du mir nichts schuldest.[nvl_text_size_end_mobile_de]"
 
 # game/script-a4-rin.rpy:3462
 translate de a4_rin_problems_of_self_referential_logic_2e0c4c6a:
 
     # n "Even if it's hard to talk about things like this."
-    n "Sogar wenn es schwierig ist, über solche Dinge zu reden."
+    n "[nvl_text_size_start_mobile_de]Sogar wenn es schwierig ist, über solche Dinge zu reden.[nvl_text_size_end_mobile_de]"
 
 # game/script-a4-rin.rpy:3464
 translate de a4_rin_problems_of_self_referential_logic_651e1241:
 
     # n "Why?"
-    n "Wieso?"
+    n "[nvl_text_size_start_mobile_de]Wieso?[nvl_text_size_end_mobile_de]"
 
 # game/script-a4-rin.rpy:3469
 translate de a4_rin_problems_of_self_referential_logic_28de4337:
@@ -6522,73 +6522,73 @@ translate de a4_rin_problems_of_self_referential_logic_76b2fe88_1:
 translate de a4_rin_problems_of_self_referential_logic_7a3f251e:
 
     # n "{vspace=30}I don't want to feel like this."
-    n "{vspace=30}Ich will mich nicht so fühlen."
+    n "[nvl_text_size_start_mobile_de][nvl_text_vspace_mobile_de]Ich will mich nicht so fühlen.[nvl_text_size_end_mobile_de]"
 
 # game/script-a4-rin.rpy:3550
 translate de a4_rin_problems_of_self_referential_logic_c0d056e5:
 
     # n "Looking at Rin makes me feel… exhausted. I really tried my best, she tried to… I have no idea."
-    n "Rin anzusehen… laugt mich aus. Ich habe wirklich mein Bestes gegeben, sie hat versucht, zu… Ich habe keine Ahnung."
+    n "[nvl_text_size_start_mobile_de]Rin anzusehen… laugt mich aus. Ich habe wirklich mein Bestes gegeben, sie hat versucht, zu… Ich habe keine Ahnung.[nvl_text_size_end_mobile_de]"
 
 # game/script-a4-rin.rpy:3552
 translate de a4_rin_problems_of_self_referential_logic_da93884c:
 
     # n "But we ended up like this, and she ended up screwing up her exhibition opening."
-    n "Doch nun stehen wir hier, und sie hat ihre Ausstellungseröffnung vergeigt."
+    n "[nvl_text_size_start_mobile_de]Doch nun stehen wir hier, und sie hat ihre Ausstellungseröffnung vergeigt.[nvl_text_size_end_mobile_de]"
 
 # game/script-a4-rin.rpy:3554
 translate de a4_rin_problems_of_self_referential_logic_fa1ac8c6:
 
     # n "It feels like we are at a dead end."
-    n "Es kommt mir vor, als wären wir in einer Sackgasse."
+    n "[nvl_text_size_start_mobile_de]Es kommt mir vor, als wären wir in einer Sackgasse.[nvl_text_size_end_mobile_de]"
 
 # game/script-a4-rin.rpy:3556
 translate de a4_rin_problems_of_self_referential_logic_4d95f641:
 
     # n "There is no direction to continue to."
-    n "Es gibt keine Richtung, in die wir gehen können."
+    n "[nvl_text_size_start_mobile_de]Es gibt keine Richtung, in die wir gehen können.[nvl_text_size_end_mobile_de]"
 
 # game/script-a4-rin.rpy:3558
 translate de a4_rin_problems_of_self_referential_logic_a609c6da:
 
     # n "I reached out for her yesterday, thinking it would be the last time."
-    n "Gestern habe ich versucht, zu ihr durchzudringen. Ich hatte befürchtet, es könnte meine letzte Chance sein."
+    n "[nvl_text_size_start_mobile_de]Gestern habe ich versucht, zu ihr durchzudringen. Ich hatte befürchtet, es könnte meine letzte Chance sein.[nvl_text_size_end_mobile_de]"
 
 # game/script-a4-rin.rpy:3560
 translate de a4_rin_problems_of_self_referential_logic_24374079:
 
     # n "She walked away."
-    n "Sie ging weg."
+    n "[nvl_text_size_start_mobile_de]Sie ging weg.[nvl_text_size_end_mobile_de]"
 
 # game/script-a4-rin.rpy:3562
 translate de a4_rin_problems_of_self_referential_logic_60bcbc14:
 
     # n "'I want to be me.'"
-    n "'Ich will ich sein.'"
+    n "[nvl_text_size_start_mobile_de]'Ich will ich sein.'[nvl_text_size_end_mobile_de]"
 
 # game/script-a4-rin.rpy:3564
 translate de a4_rin_problems_of_self_referential_logic_eebff0d0:
 
     # n "What the heck does that even mean? Rin, if anyone, is most definitely herself."
-    n "Was zur Hölle heißt das überhaupt? Rin ist definitiv sie selbst."
+    n "[nvl_text_size_start_mobile_de]Was zur Hölle heißt das überhaupt? Rin ist definitiv sie selbst.[nvl_text_size_end_mobile_de]"
 
 # game/script-a4-rin.rpy:3566
 translate de a4_rin_problems_of_self_referential_logic_e3a9b01f:
 
     # n "I feel kinda relieved that I am not the one to blame, but this still grates on my mind."
-    n "Ich bin irgendwie erleichtert, dass ich nicht der Schuldige bin, aber es nagt immer noch an mir."
+    n "[nvl_text_size_start_mobile_de]Ich bin irgendwie erleichtert, dass ich nicht der Schuldige bin, aber es nagt immer noch an mir.[nvl_text_size_end_mobile_de]"
 
 # game/script-a4-rin.rpy:3568
 translate de a4_rin_problems_of_self_referential_logic_7455413a:
 
     # n "Why did she run away? It didn't make sense yesterday. It doesn't make sense today."
-    n "Warum ist sie weggelaufen? Es hat gestern keinen Sinn ergeben. Und heute tut es das auch nicht."
+    n "[nvl_text_size_start_mobile_de]Warum ist sie weggelaufen? Es hat gestern keinen Sinn ergeben. Und heute tut es das auch nicht.[nvl_text_size_end_mobile_de]"
 
 # game/script-a4-rin.rpy:3570
 translate de a4_rin_problems_of_self_referential_logic_87aefa77:
 
     # n "The things she said feel like they should make sense but they just don't, to me."
-    n "Die Dinge, die sie gesagt hat, fühlen sich an, als sollten sie Sinn ergeben. Doch sie tun es einfach nicht. Nicht für mich."
+    n "[nvl_text_size_start_mobile_de]Die Dinge, die sie gesagt hat, fühlen sich an, als sollten sie Sinn ergeben. Doch sie tun es einfach nicht. Nicht für mich.[nvl_text_size_end_mobile_de]"
 
 # game/script-a4-rin.rpy:3575
 translate de a4_rin_problems_of_self_referential_logic_6dacf797:
