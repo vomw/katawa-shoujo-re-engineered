@@ -6504,55 +6504,55 @@ translate de a2_rin_in_her_own_image_76b2fe88:
 translate de a2_rin_in_her_own_image_227ca630:
 
     # n "Thus the languid days of mid-June pass by."
-    n "Und so gingen die trägen Junitage ins Land."
+    n "[nvl_text_size_start_mobile_de]Und so gingen die trägen Junitage ins Land.[nvl_text_size_end_mobile_de]"
 
 # game/script-a2-rin.rpy:4317
 translate de a2_rin_in_her_own_image_b26d5d13:
 
     # n "I mail my letter to Iwanako, and receive no reply."
-    n "Ich schicke meinen Brief an Iwanako und erhalte keine Antwort."
+    n "[nvl_text_size_start_mobile_de]Ich schicke meinen Brief an Iwanako und erhalte keine Antwort.[nvl_text_size_end_mobile_de]"
 
 # game/script-a2-rin.rpy:4319
 translate de a2_rin_in_her_own_image_316e9300:
 
     # n "Having decided to ditch the old me, I start observing my fellow students even closer than I did before, hoping to understand how other people cope with their own issues."
-    n "Seit ich mich entschlossen habe, mein altes Ich hinter mir zu lassen, beobachte ich meine Mitschüler noch genauer als zuvor, in der Hoffnung zu verstehen, wie andere mit ihren Problemen umgehen."
+    n "[nvl_text_size_start_mobile_de]Seit ich mich entschlossen habe, mein altes Ich hinter mir zu lassen, beobachte ich meine Mitschüler noch genauer als zuvor, in der Hoffnung zu verstehen, wie andere mit ihren Problemen umgehen.[nvl_text_size_end_mobile_de]"
 
 # game/script-a2-rin.rpy:4321
 translate de a2_rin_in_her_own_image_7a0e76ff:
 
     # n "I start seeing things I didn't before, and it makes me wonder if I've been wrong twice."
-    n "Mir fallen auf einmal Dinge auf, die mir früher entgangen sind, und ich frage mich, ob ich mich gleich zweimal geirrt habe."
+    n "[nvl_text_size_start_mobile_de]Mir fallen auf einmal Dinge auf, die mir früher entgangen sind, und ich frage mich, ob ich mich gleich zweimal geirrt habe.[nvl_text_size_end_mobile_de]"
 
 # game/script-a2-rin.rpy:4323
 translate de a2_rin_in_her_own_image_e1c9f223:
 
     # n "Superficially, everyone is abnormal yet so strikingly normal that it shocked me at first. I admired the way my new school mates turned my prejudices around just like that, simply by being themselves."
-    n "Oberflächlich betrachtet weichen alle hier von der Norm ab, sind dabei aber gleichzeitig so unglaublich normal, dass ich es erst gar nicht fassen konnte. Ich bewunderte die Art, wie meine neuen Mitschüler es geschafft haben, meine Vorurteile auszuräumen, indem sie einfach nur sie selbst waren."
+    n "[nvl_text_size_start_mobile_de]Oberflächlich betrachtet weichen alle hier von der Norm ab, sind dabei aber gleichzeitig so unglaublich normal, dass ich es erst gar nicht fassen konnte. Ich bewunderte die Art, wie meine neuen Mitschüler es geschafft haben, meine Vorurteile auszuräumen, indem sie einfach nur sie selbst waren.[nvl_text_size_end_mobile_de]"
 
 # game/script-a2-rin.rpy:4325
 translate de a2_rin_in_her_own_image_8975466e:
 
     # n "Now that I've gotten used to it, I begin noticing other kinds of tones in the people surrounding me every day."
-    n "Jetzt, da ich mich allmählich an sie gewöhnt habe, beginne ich neue Nuancen im Verhalten der Menschen zu entdecken, die mich täglich umgeben."
+    n "[nvl_text_size_start_mobile_de]Jetzt, da ich mich allmählich an sie gewöhnt habe, beginne ich neue Nuancen im Verhalten der Menschen zu entdecken, die mich täglich umgeben.[nvl_text_size_end_mobile_de]"
 
 # game/script-a2-rin.rpy:4327
 translate de a2_rin_in_her_own_image_3747762e:
 
     # n "{vspace=30}There is this soft, numb sadness all around me."
-    n "{vspace=30}Überall umgibt mich diese sanfte, betäubend traurige Atmosphäre."
+    n "[nvl_text_size_start_mobile_de][nvl_text_vspace_mobile_de]Überall umgibt mich diese sanfte, betäubend traurige Atmosphäre.[nvl_text_size_end_mobile_de]"
 
 # game/script-a2-rin.rpy:4329
 translate de a2_rin_in_her_own_image_db40dd2c:
 
     # n "I can see the effort everyone has to make just to get through the day, and how it weighs on their shoulders, like it weighs on mine."
-    n "Ich kann sehen, wie sehr sich alle anstrengen müssen, um auch nur halbwegs gut durch den Tag zu kommen, und dass es sie genauso sehr belastet wie mich."
+    n "[nvl_text_size_start_mobile_de]Ich kann sehen, wie sehr sich alle anstrengen müssen, um auch nur halbwegs gut durch den Tag zu kommen, und dass es sie genauso sehr belastet wie mich.[nvl_text_size_end_mobile_de]"
 
 # game/script-a2-rin.rpy:4331
 translate de a2_rin_in_her_own_image_63f098e4:
 
     # n "Even the brightest smile is just slightly subdued, every outburst of annoyance just slightly dampened. It's subtle, but it's definitely there."
-    n "Selbst das strahlendste Lächeln wirkt etwas verhalten, jeder Wutausbruch ein kleines bisschen gedämpft. Die Nuancen sind subtil, aber definitiv vorhanden."
+    n "[nvl_text_size_start_mobile_de]Selbst das strahlendste Lächeln wirkt etwas verhalten, jeder Wutausbruch ein kleines bisschen gedämpft. Die Nuancen sind subtil, aber definitiv vorhanden.[nvl_text_size_end_mobile_de]"
 
 # game/script-a2-rin.rpy:4333
 translate de a2_rin_in_her_own_image_4e9413b0:
@@ -11170,7 +11170,7 @@ translate de a2_rin_dandelions_1aff2323:
 translate de a2_rin_dandelions_ea32318a:
 
     # rinbabble "You just look so sad all the time and become upset so easily and it makes me confused and I really don't remember much about yesterday except that you came to my room and that's why it might be because of me so if it's because of me I think that I know why, it's because people don't really like talking to me and you might be the same and that would be sad I know that people and I'm talking about others than Emi too always say that I'm strange and that I talk strange things so I thought I'd try not to say strange things but that just makes me think more and new and strange and colorful that was not a good word but maybe you understand anyway and odd things so if I want to say something I don't really know how and then the words are not the same as the thoughts because something goes wrong on the way out but it's not like the thoughts are really the thing I should be saying it's more like the idea of the thought or the feeling of the idea or the idea of the feeling but it's not really any of those either because there is no word for it unless I invent a new one which is not really useful so I've been thinking if doing things is better than saying so maybe because yesterday I took those pills and I was feeling a little strange I might have done something that I shouldn't besides I don't even know if it would be any better if I just could say the thought there is no telepathy that's real telepathy isn't there I think it'd be terrible and useful at the same time but right now I wouldn't mind because misunderstanding is so easy but understanding is not and I thought—"
-    rinbabble "Du siehst nur immer so traurig aus und lässt dich leicht aus der Bahn werfen und es verwirrt mich und ich erinnere mich wirklich an nichts mehr von gestern außer dass du in mein Zimmer gekommen bist und dass deshalb ich der Grund dafür sein könnte und wenn ich der Grund war dann weiß ich glaube ich wieso, es ist weil Menschen nicht wirklich gerne mit mir sprechen und du könntest genauso sein und das wäre traurig ich kenne Leute und ich meine auch andere als Emi manchmal sagen dass ich seltsam bin und komisches Zeug rede also dachte ich ich könnte versuchen kein komisches Zeug zu sagen aber dadurch denke ich noch mehr und neue und komische und bunte Sachen das war kein gutes Wort aber vielleicht verstehst du es ja trotzdem und seltsame Sachen also wenn ich etwas sagen möchte weiß ich nicht wirklich wie und dann stimmen die Worte nicht mit den Gedanken überein weil etwas auf dem Weg schief geht aber es ist auch nicht so dass die Gedanken wirklich das sind was ich sagen sollte es ist mehr wie die Idee der Gedanken oder das Gefühl der Idee oder die Idee des Gefühls aber eigentlich ist es gar nichts davon weil es kein Wort dafür gibt solange ich kein neues erfinde was nicht wirklich hilfreich ist deshalb dachte ich ob es vielleicht besser ist Sachen zu machen als zu sagen weil ich gestern diese Pillen genommen habe und mich etwas komisch gefühlt habe und ich könnte etwas getan haben das ich nicht hätte tun sollen und davon abgesehen weiß ich nicht ob es besser gewesen wäre wenn ich den Gedanken hätte aussprechen können es gibt keine Telepathie die echte Telepathie ist nicht wahr ich glaube es wäre schrecklich und gleichzeitig nützlich aber jetzt würde es mir nichts ausmachen, weil Missverständnisse so einfach sind, aber Verstehen nicht und ich dachte—"
+    rinbabble "[nvl_text_size_start_mobile_de]Du siehst nur immer so traurig aus und lässt dich leicht aus der Bahn werfen und es verwirrt mich und ich erinnere mich wirklich an nichts mehr von gestern außer dass du in mein Zimmer gekommen bist und dass deshalb ich der Grund dafür sein könnte und wenn ich der Grund war dann weiß ich glaube ich wieso, es ist weil Menschen nicht wirklich gerne mit mir sprechen und du könntest genauso sein und das wäre traurig ich kenne Leute und ich meine auch andere als Emi manchmal sagen dass ich seltsam bin und komisches Zeug rede also dachte ich ich könnte versuchen kein komisches Zeug zu sagen aber dadurch denke ich noch mehr und neue und komische und bunte Sachen das war kein gutes Wort aber vielleicht verstehst du es ja trotzdem und seltsame Sachen also wenn ich etwas sagen möchte weiß ich nicht wirklich wie und dann stimmen die Worte nicht mit den Gedanken überein weil etwas auf dem Weg schief geht aber es ist auch nicht so dass die Gedanken wirklich das sind was ich sagen sollte es ist mehr wie die Idee der Gedanken oder das Gefühl der Idee oder die Idee des Gefühls aber eigentlich ist es gar nichts davon weil es kein Wort dafür gibt solange ich kein neues erfinde was nicht wirklich hilfreich ist deshalb dachte ich ob es vielleicht besser ist Sachen zu machen als zu sagen weil ich gestern diese Pillen genommen habe und mich etwas komisch gefühlt habe und ich könnte etwas getan haben das ich nicht hätte tun sollen und davon abgesehen weiß ich nicht ob es besser gewesen wäre wenn ich den Gedanken hätte aussprechen können es gibt keine Telepathie die echte Telepathie ist nicht wahr ich glaube es wäre schrecklich und gleichzeitig nützlich aber jetzt würde es mir nichts ausmachen, weil Missverständnisse so einfach sind, aber Verstehen nicht und ich dachte—[nvl_text_size_end_mobile_de]"
 
 # game/script-a2-rin.rpy:7435
 translate de a2_rin_dandelions_e10eda3e:

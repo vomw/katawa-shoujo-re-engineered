@@ -3776,7 +3776,7 @@ translate de a2_shizune_bread_scissors_paper_76b2fe88:
 translate de a2_shizune_bread_scissors_paper_d89583c8:
 
     # n "{vspace=60}Things have returned to normal. Well, I transferred in at a pretty unusual time, and I can hardly say that I had a normal first few weeks here. I guess it's more like things have calmed down, and reached normality."
-    n "{vspace=60}Es ist wieder alles beim Alten. Ich bin ja zu einem recht ungewöhnlichen Zeitpunkt hier hergewechselt und kann kaum behaupten, dass die ersten Wochen normal waren. Die Wogen haben sich geglättet und ein normales Level erreicht."
+    n "{vspace=30}Es ist wieder alles beim Alten. Ich bin ja zu einem recht ungewöhnlichen Zeitpunkt hier hergewechselt und kann kaum behaupten, dass die ersten Wochen normal waren. Die Wogen haben sich geglättet und ein normales Level erreicht."
 
 # game/script-a2-shizune.rpy:2454
 translate de a2_shizune_bread_scissors_paper_781827a4:
@@ -4940,7 +4940,7 @@ translate de a2_shizune_interface_76b2fe88:
 translate de a2_shizune_interface_820ec817:
 
     # n "{vspace=30}Shizune knew I was taking sign language classes all day yesterday, and didn't make a big deal out of it."
-    n "{vspace=30}Shizune wusste, dass ich gestern den ganzen Tag den Kurs in Gebärdensprache besucht habe, und hat daraus keine große Sache gemacht."
+    n "[nvl_text_vspace_mobile_de][nvl_text_vspace_mobile_de]Shizune wusste, dass ich gestern den ganzen Tag den Kurs in Gebärdensprache besucht habe, und hat daraus keine große Sache gemacht."
 
 # game/script-a2-shizune.rpy:3219
 translate de a2_shizune_interface_ac8eb21f:

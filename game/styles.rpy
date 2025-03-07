@@ -122,7 +122,7 @@ style choice_vbox is vbox:
 
 style choice_button:
     background Frame("gui/button/choice.png")
-    xysize (1126+230*is_mobile, 65+15*is_mobile)
+    xysize (1126+270*is_mobile, 65+15*is_mobile)
 
 style choice_button_text is gui_button_text:
     xalign 0.5
