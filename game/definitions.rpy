@@ -905,3 +905,7 @@ default selected = "Options"
 
 # Cached completion percentage
 default completion_percentage = "0%"
+
+# Mobile text size values for NVL mode
+default nvl_text_size_mobile_de = "{size=44}" if renpy.android or renpy.ios else ""
+default nvl_text_vspace_mobile_de = "" if renpy.android or renpy.ios else "{vspace=30}"

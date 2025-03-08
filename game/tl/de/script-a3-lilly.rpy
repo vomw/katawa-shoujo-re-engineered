@@ -6120,49 +6120,49 @@ translate de a3_lilly_rhapsody_in_blue_76b2fe88:
 translate de a3_lilly_rhapsody_in_blue_81de881d:
 
     # n "Maybe I'm giving the simple fact that for once I get to have a real bath more credit than it's due; the chance to just calm down, allow myself to unwind and have some time to myself is a welcome one."
-    n "Vielleicht messe ich der Tatsache, dass ich ausnahmsweise mal ein echtes Bad nehmen kann, mehr Wert bei als ich sollte; die Gelegenheit, einfach mal zur Ruhe zu kommen und mir selbst etwas Zeit zu gönnen, ist eine willkommene."
+    n "[nvl_text_size_mobile_de]Vielleicht messe ich der Tatsache, dass ich ausnahmsweise mal ein echtes Bad nehmen kann, mehr Wert bei als ich sollte; die Gelegenheit, einfach mal zur Ruhe zu kommen und mir selbst etwas Zeit zu gönnen, ist eine willkommene."
 
 # game/script-a3-lilly.rpy:3749
 translate de a3_lilly_rhapsody_in_blue_70632b1b:
 
     # n "Hanako, Lilly and I wandered about outside, exploring the extent of the surprisingly large tract of land surrounding the house. Then we spent the majority of the afternoon resting, watching television, reading, and playing cards."
-    n "Hanako, Lilly und ich sind draußen herumgewandert und haben das überraschend weitläufige Umfeld des Hauses erkundet. Dann haben wir den Großteil des Nachmittags mit Ausruhen, Fernsehgucken, Lesen und Kartenspielen verbracht."
+    n "[nvl_text_size_mobile_de]Hanako, Lilly und ich sind draußen herumgewandert und haben das überraschend weitläufige Umfeld des Hauses erkundet. Dann haben wir den Großteil des Nachmittags mit Ausruhen, Fernsehgucken, Lesen und Kartenspielen verbracht."
 
 # game/script-a3-lilly.rpy:3751
 translate de a3_lilly_rhapsody_in_blue_269ef718:
 
     # n "It may not have been the most exciting finale to the trip, but such tranquil peacefulness is something to savor. Even after we return to the school tomorrow, I think I'll remember this little house in Hokkaido for a long time."
-    n "Es mag nicht das aufregendste Finale für diesen Ausflug gewesen sein, aber diese ruhige Friedlichkeit sollte man auskosten. Auch nachdem wir zur Schule zurückgekehrt sind, werde ich mich wohl lange an dieses kleine Haus in Hokkaido erinnern."
+    n "[nvl_text_size_mobile_de]Es mag nicht das aufregendste Finale für diesen Ausflug gewesen sein, aber diese ruhige Friedlichkeit sollte man auskosten. Auch nachdem wir zur Schule zurückgekehrt sind, werde ich mich wohl lange an dieses kleine Haus in Hokkaido erinnern."
 
 # game/script-a3-lilly.rpy:3753
 translate de a3_lilly_rhapsody_in_blue_19baac3a:
 
     # n "It's a pity we only have a couple more hours to spend here before going to get the train back."
-    n "Schade, dass wir nur noch ein paar Stunden hier verbringen können, bis wir den Zug nach Hause nehmen."
+    n "[nvl_text_size_mobile_de]Schade, dass wir nur noch ein paar Stunden hier verbringen können, bis wir den Zug nach Hause nehmen."
 
 # game/script-a3-lilly.rpy:3755
 translate de a3_lilly_rhapsody_in_blue_fa347bf4:
 
     # n "All I can do is yawn contentedly while I watch the steam slowly rising from the clear water's placid surface, my eyes eventually locking onto the ceiling."
-    n "Ich kann einfach nur zufrieden gähnen, während ich den langsam von der stillen Wasseroberfläche aufsteigenden Dampf beobachte, bis meine Augen an der Decke haften bleiben."
+    n "[nvl_text_size_mobile_de]Ich kann einfach nur zufrieden gähnen, während ich den langsam von der stillen Wasseroberfläche aufsteigenden Dampf beobachte, bis meine Augen an der Decke haften bleiben."
 
 # game/script-a3-lilly.rpy:3757
 translate de a3_lilly_rhapsody_in_blue_68f552e1:
 
     # n "Our exams are imminent. I've barely studied at all for them."
-    n "Unsere Prüfungen stehen bevor. Ich habe kaum für alle gelernt."
+    n "[nvl_text_size_mobile_de]Unsere Prüfungen stehen bevor. Ich habe kaum für alle gelernt."
 
 # game/script-a3-lilly.rpy:3759
 translate de a3_lilly_rhapsody_in_blue_0dbd0fef:
 
     # n "On top of that, I don't even know what I'll do after graduation. Passing exams is all well and good, but to what end?"
-    n "Darüber hinaus weiß ich nicht einmal, was ich nach meinem Abschluss tun werde. Alle Prüfungen zu bestehen, ist schön und gut – aber zu welchem Zweck?"
+    n "[nvl_text_size_mobile_de]Darüber hinaus weiß ich nicht einmal, was ich nach meinem Abschluss tun werde. Alle Prüfungen zu bestehen, ist schön und gut – aber zu welchem Zweck?"
 
 # game/script-a3-lilly.rpy:3761
 translate de a3_lilly_rhapsody_in_blue_3553b764:
 
     # n "Also now, of all times, I'm getting into a relationship."
-    n "Und ausgerechnet jetzt fange ich eine Beziehung an."
+    n "[nvl_text_size_mobile_de]Und ausgerechnet jetzt fange ich eine Beziehung an."
 
 # game/script-a3-lilly.rpy:3763
 translate de a3_lilly_rhapsody_in_blue_76b2fe88_1:
