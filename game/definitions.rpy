@@ -905,3 +905,6 @@ default selected = "Options"
 
 # Cached completion percentage
 default completion_percentage = "0%"
+
+# Character transition adjustment variable
+default persistent.charachangelength = 1.0

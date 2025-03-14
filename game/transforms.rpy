@@ -2,6 +2,8 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
+
+
 init offset = -50
 
 init python:
@@ -426,8 +428,8 @@ define charadistant = dissolve
 
 define charachangealways = dissolve
 define charachangeev = dissolve
-define charachange = None # charachangealways (must be customizable)
-define charachangefast = None # Dissolve(0.2) (must be customizable)
+default persistent.charachange = Dissolve(0.5) # Default because customizable
+default persistent.charachangefast = Dissolve(0.2) # Default because customizable
 
 define charamovechange = Dissolvemove(2.0)
 

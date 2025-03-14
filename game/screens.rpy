@@ -272,6 +272,15 @@ screen prefs():
                 style_prefix "slider"
 
                 hbox:
+                    bar value FieldValue(persistent, "charachangelength", min=0.0, max=2.0, style="slider_slider") released [SetVariable('persistent.charachange',Dissolve(persistent.charachangelength*0.5)), SetVariable('persistent.charachangefast',Dissolve(persistent.charachangelength*0.2))]
+
+                    null width 15
+
+                    text _("Expression transition length")
+
+                null height 3
+
+                hbox:
                     bar value Preference("text speed")
 
                     null width 15
