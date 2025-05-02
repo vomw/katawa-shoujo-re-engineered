@@ -11966,23 +11966,23 @@ translate pt_br strings:
 
     # game/script-a2-rin.rpy:4243
     old "There are other things I want to say. I'm writing to you because I felt that there are things I should've said after the incident back in winter. I really regret that I wasn't able to say them in person, and I have no excuse for it.{vspace=150}"
-    new ""
+    new "Tem outras coisas que eu quero dizer. Eu estou escrevendo para você porque eu senti que tem coisas que eu deveria ter dito depois do acidente no inverno. Eu realmente me arrependo de não conseguir ter dito pessoalmente, e eu não tenho desculpas para isso.{vspace=150}"
 
     # game/script-a2-rin.rpy:4245
     old "The truth is, the times when I visited you at the hospital made me worried about you. I am not talking about your health. You seemed to become more distant and disheartened. It was natural after something like that happened, I'm sure, but somehow I got the feeling that you had given up on something back then. Happiness, maybe?{vspace=30}"
-    new ""
+    new "A verdade é, as vezes que eu te visitei no hospital fizeram com que eu me preocupasse com você. Não estou falando sobre sua saúde. Você parecia ter se tornado mais distante e desmotivado. Era natural depois de algo como aquilo acontecer, tenho certeza, mas de alguma forma me pareceu que você tinha desistido de algo lá atrás. Felicidade, talvez?{vspace=30}"
 
     # game/script-a2-rin.rpy:4247
     old "I wanted to somehow express my feelings, but the right words didn't come to me. I couldn't say anything to comfort you. I am really sorry for not being able to support you when it mattered the most, even though I like you so much. At least now, finally, I can be more honest.{vspace=120}"
-    new ""
+    new "Eu queria de alguma forma expressar meus sentimentos, mas as palavras certas não vinham até mim. Eu não podia dizer nada para te confortar. Eu sinto muito mesmo por não ter sido capaz de ter apoiar quando era mais necessário, apesar de eu gostar tanto de você. Pelo menos agora, finalmente, eu posso ser mais honesta.{vspace=120}"
 
     # game/script-a2-rin.rpy:4249
     old "If I could go back to those quiet days in February and March, I'd tell you to not give up on yourself. That's what I would say. Maybe you wouldn't have drifted so far away if I had just said something. I hope you've managed to get back on your feet on your own.{vspace=120}"
-    new ""
+    new "Se eu pudesse voltar para aqueles dias calmos de Fevereiro e Março, eu diria para você não desistir de si mesmo. Isso é o que eu diria. Talvez você não teria se isolado para tão longe se eu apenas tivesse dito algo. Eu espero que você tenha conseguido se erguer novamente por si próprio.{vspace=120}"
 
     # game/script-a2-rin.rpy:4251
     old "Now that the distance between us is also physical, it also feels more final, somehow. I wonder if we will meet again. Perhaps it's for the best if we don't? Still, if you would like to correspond with me, by all means write me back. I'd very much like to hear about your new school and how you are doing. I wish you all the best.\n\nSincerely, Iwanako"
-    new ""
+    new "Agora que a distância entre nós também é física, de alguma forma parece mais final. Eu imagino se nós nos encontraremos de novo. Talvez seja melhor se não ocorrer? Ainda assim, se você quiser trocar cartas comigo, por favor não hesite em me escrever. Eu gostaria muito de ouvir sobre sua nova escola e sobre como você está. Te desejo tudo de melhor.\n\nSinceramente, Iwanako."
 
     # game/script-a2-rin.rpy:4697
     old "I think you'd be a big hit."
