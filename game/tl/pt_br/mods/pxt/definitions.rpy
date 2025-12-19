@@ -1,4 +1,4 @@
-﻿# TODO: Translation updated at 2024-11-15 16:51
+﻿# TODO: Translation updated at 2025-12-18 21:32
 
 translate pt_br strings:
 

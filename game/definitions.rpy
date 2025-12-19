@@ -17,7 +17,114 @@ python early:
     mods_with_menus = {}
     scene_names = {}
 
+    renpy_menu = menu
+
     renpy.music.register_channel("ambient", "sfx", True, tight=True)
+
+    def menu(items):
+        items = list(items)
+
+        renpy.random.shuffle(items)
+
+        return renpy_menu(items)
+
+    def check_all_choices():
+        all_choices = {
+            "Ignore his insane ramblings.",
+            "Downplay the issue.",
+            "I want to be with her more.",
+            "Go after her.",
+            "Avoid the subject.",
+            "I've done enough work for the council already.",
+            "I can't leave her alone either.",
+            "I don't want to talk about it, okay?",
+            "I suppose I can spare a few minutes.",
+            "I want to understand her.",
+            "Ask about Hanako.",
+            "Agree with Lilly.",
+            "What do you think, Hanako?",
+            "Go for it.",
+            "I think you'd be a big hit.",
+            "Do you want to go into the city?",
+            "She was cute.",
+            "Talk about Hanako.",
+            "Humor him.",
+            "Because it would be exciting.",
+            "It isn't like you at all to hesitate like this.",
+            "Offer to run with Emi.",
+            "Maybe.",
+            "Tell the truth.",
+            "Let it rest.",
+            "Yeah, of course.",
+            "I just kinda stuck with her, I think.",
+            "Ask about Shizune's deafness.",
+            "Go for a walk into town.",
+            "It's a trap, it's smarter to play defensively here.",
+            "She wasn't cute.",
+            "Is that why you're being so supportive of Rin?",
+            "You won't get a chance like this again.",
+            "Address it.",
+            "I need to understand.",
+            "Mention the letter.",
+            "No, I have other things to worry about.",
+            "It doesn't matter.",
+            "Sure, why not?",
+            "Take it easy.",
+            "It's refreshing.",
+            "Wave her off.",
+            "Press Emi.",
+            "Wait for Shizune and Misha to come to a decision.",
+            "Go talk with Hanako.",
+            "Why did you turn away from being an artist?",
+            "Don't drag me into this! I've done my part!",
+            "Sorry, I'm not in very good condition.",
+            "Go to the library.",
+            "Ask about the library.",
+            "I want to be more like Rin.",
+            "I'll go to the lunch with Emi and her friend.",
+            "Hi! I'm new here. Hisao Nakai. We're in the same class.",
+            "Talk about school.",
+            "Try to dodge the subject.",
+            "Why?",
+            "I want to be more like Emi.",
+            "What about Emi?",
+            "I think I got everything I need to know.",
+            "Keep quiet.",
+            "I'll go with Shizune, after all I'm in the Student Council now.",
+            "Comfort Misha.",
+            "Hey, come on. Cut me and Lilly some slack…",
+            "Yes.",
+            "You'd be wasting your talents otherwise.",
+            "Kick them out of my room.",
+            "I'm interested in the art club.",
+            "But if you found someone like that, then what?",
+            "Keep it to myself.",
+            "Give in and let Misha know.",
+            "What about me?",
+            "But aren't you happy people are interested in your paintings?",
+            "Read my book.",
+            "No, this is my problem.",
+            "She has a point. Attack aggressively!",
+            "Admit it.",
+            "Drop the subject.",
+            "Deny it.",
+            "You're amazing!",
+            "I want to support her.",
+            "Then explain.",
+            "Trust my own judgment.",
+            "Refuse.",
+            "How about we call it a day?",
+            "I wish I was as good as you.",
+            "I don't really want to talk about it.",
+            "I'm sorry, I didn't mean to startle you.",
+            "Yeah, I sure was having fun fun fun at the nurse's office…",
+            "You should aim high.",
+            "It makes me feel like I'm stuck.",
+            "Talk to her mom."
+        }
+
+        if set(all_choices).issubset(persistent._seen_choices) and set(persistent._seen_choices).issubset(all_choices):
+            ach("choice_achieve")
 
     def format_time(t):
         t = int(t)
@@ -124,8 +231,34 @@ python early:
             global rpc
 
             rpc.data["is_watching"] = name == "act_op"
+    
+    def get_completion_amount():
+        if config.developer:
+            return 1
+        seen = 0
+        total = 0
+        for route in replays:
+            for act in route[1]:
+                for scene in act[1]:
+                    if renpy.seen_label(scene[1]):
+                        seen += 1
+                    total += 1
+        return seen / total
+
+    def get_completion_percentage():
+        return f"{math.floor(get_completion_amount() * 100)}%"
+
+    def unlock_completion_bonus():
+        if get_completion_amount() == 1:
+            renpy.mark_image_seen("completionbonus")
 
     config.label_callback = set_current_scene
+
+    def hide_window_after_nvl(statement):
+        if statement == "nvl hide":
+            store._window = False
+    
+    config.statement_callbacks.append(hide_window_after_nvl)
 
     class RPCThread(threading.Thread):
         def __init__(self, store):
@@ -519,7 +652,7 @@ define _gallery_images = (
     ("thumb/hanako_crayon.jpg", "ev hanako_crayon1", "ev hanako_crayon2"),
     ("thumb/hanako_breakdown.jpg", Trigger("evbg hanako_breakdown", "evul hanako_breakdown_down"), Trigger("evfg hanako_breakdown_up", "evul hanako_breakdown_up"), Trigger("evfg hanako_breakdown_closed", "evul hanako_breakdown_closed")),
     ("thumb/hanako_cry.jpg", "ev hanako_cry_closed", "ev hanako_cry_closed", "ev hanako_cry_open", "ev hanako_cry_away"),
-    ("thumb/hanako_billiards.jpg", "ev hanako_billiards_break", "ev hanako_billiards_distant", "ev hanako_billiards_serious", Trigger("ev hanako_billiards_timid_med", "ev hanako_billiards_timid"), "ev hanako_billiards_smile", "ev hanako_billiards_smile_close"),
+    ("thumb/hanako_billiards.jpg", "ev hanako_billiards_break", "ev hanako_billiards_distant", "ev hanako_billiards_serious", Trigger("ev hanako_billiards_timid_med", "ev hanako_billiards_timid"), "ev hanako_billiards_smile"),
     ("thumb/hanako_emptyclassroom.jpg", Trigger("evfg hanako_emptyclassroom", "evul hanako_emptyclassroom")),
     ("thumb/hanako_rage.jpg", "ev hanako_rage", "ev hanako_rage", "ev hanako_rage_sad"),
     ("thumb/hisao_scar.jpg", "ev hisao_scar"),
@@ -597,7 +730,7 @@ define _gallery_images = (
     ("thumb/completionbonus.jpg", "completionbonus")
 )
 
-define adv = ADVCharacter(ctc="ctc", ctc_position="fixed", what_prefix=_("“"), what_suffix=_("”"))
+define adv = ADVCharacter(ctc="icon_ctc", ctc_position="fixed", what_prefix=_("“"), what_suffix=_("”"))
 define name_only = Character(kind=adv, who_color="#FFFFFF")
 define narrator = Character(what_prefix="", what_suffix="")
 
@@ -645,19 +778,19 @@ define hx_  = Character(_("Huge man"), kind=hx)
 define hh_  = Character(_("Slim girl"), kind=hh)
 define emm_ = Character(_("Woman with braid"), kind=emm)
 
-define n = Character(kind=nvl, ctc=config.nvl_page_ctc, ctc_position="fixed", window_background="gui/bg/nvl.png", window_top_padding=60, window_left_padding=55, window_right_padding=70)
+define n = Character(kind=nvl, ctc=Transform("icon_ctc", rotate=90, ypos=0.9333), ctc_position="fixed", window_background="gui/bg/nvl.png", window_top_padding=60, window_left_padding=55, window_right_padding=70)
 
-define rinbabble = Character(kind=n, what_prefix="{color=#FF8D7C}{b}" + _("Rin") + "{/b}{/color}\n" + _("“"), what_suffix=_("”"))
+define rinbabble = Character(kind=n, what_prefix="{color=#B14343}{b}" + _("Rin") + "{/b}{/color}\n" + _("“"), what_suffix=_("”"))
 
 define nb = Character(kind=nvl, what_color="#666666", window_top_padding=210, window_xpadding=100)
-define centered_b = nb
-define centered_alive = nb
+define centered = Character(None, screen=None, what_style="centered_text", window_style="centered_window", what_prefix="", what_suffix="")
+define centered_b = Character(None, kind=centered, what_color="#666666", what_drop_shadow=None, what_style="alive_text")
 
 define _current_replay = None
 
 define current_scene = ""
 
-default credits_vid = None
+default credits_good_end = None
 
 # Act 1
 
@@ -769,3 +902,6 @@ default refuse_misha = None
 # Accessibility Dropdown
 default expanded = False
 default selected = "Options"
+
+# Cached completion percentage
+default completion_percentage = "0%"

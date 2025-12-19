@@ -1,4 +1,4 @@
-# TODO: Translation updated at 2024-04-21 11:41 CST
+# TODO: Translation updated at 2024-04-21 11:41
 
 translate zh_hans strings:
 
@@ -155,7 +155,7 @@ translate zh_hans strings:
     new "西班牙语"
 
     # game/screens.rpy:374
-    old "Deutsch"
+    old "German"
     new "荷兰语"
 
     # game/screens.rpy:375
@@ -168,6 +168,12 @@ translate zh_hans strings:
 
     old "Simplified Chinese"
     new "简体中文"
+
+    old "Italian"
+    new "意大利语"
+
+    old "Traditional Chinese"
+    new "繁体中文"
 
     # game/screens.rpy:439
     old "Are you sure you want to\nload this save?"
@@ -272,4 +278,16 @@ translate zh_hans strings:
     # game/screens.rpy:1155
     old "This question will not be shown again after you start playing."
     new "在游戏开始后，此问题不会再次显示。"
+
+# TODO: Translation updated at 2024-12-18 15:16
+
+translate zh_hans strings:
+
+    # game/screens.rpy:1061
+    old "Mental health"
+    new "心理健康"
+
+    # game/screens.rpy:1068
+    old "Skip hurtful adult scenes"
+    new "跳过伤害性的成人场景"
 

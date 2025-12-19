@@ -13,14 +13,17 @@ init python:
 
     class SoundTransition(renpy.display.transition.Transition):
         def __init__(self, sound, old_widget=None, new_widget=None, **properties):
-            super(SoundTransition, self).__init__(0, **properties)
+            super(SoundTransition, self).__init__(0.0001, **properties)
 
             self.sound = sound
+            self.played = False
             self.old_widget = old_widget
             self.new_widget = new_widget
 
         def render(self, width, height, st, at):
-            renpy.sound.play(self.sound)
+            if not self.played:
+                renpy.sound.play(self.sound)
+                self.played = True
             return renpy.display.transition.null_render(self, width, height, st, at)
 
     def GenericWhiteout(rise, hold, fall):
@@ -70,7 +73,7 @@ init python:
 
         n = scaled_runtime(30.0, at)
 
-        trans.zoom = (-acdc_warp(n) + 1.0) * 0.2 + 0.8
+        trans.zoom = (-acdc_warp(n) + 1.0) * 0.2 + 1.0
 
         return 0
 
@@ -80,7 +83,7 @@ init python:
 
         n = scaled_runtime(20.0, at)
 
-        trans.zoom = (-acdc_warp(n) + 1.0) * 0.266 + 0.834
+        trans.zoom = (-acdc_warp(n) + 1.0) * 0.266 + 1.0
 
         return 0
 
@@ -146,7 +149,7 @@ init python:
         trans.xalign = 0.5
         trans.yalign = 1.0
         n = scaled_runtime(60.0, at)
-        trans.zoom = 0.8 + (acdc_warp(n) * 0.2)
+        trans.zoom = 1.0 + (acdc_warp(n) * 0.2)
         return 0
 
     def tf_parallax(tf, st, tb):
@@ -157,6 +160,26 @@ init python:
         else:
             tf.zoom = 1.0
         return 0
+
+    def tf_blinking(tf, st, at):
+        if persistent.blinking_arrow:
+            if st >= 2.5:
+                tf.alpha = 1
+                return None
+            elif st >= 1.5:
+                tf.alpha = 0.25 + acdc_warp(st - 1.5) * 0.75
+            elif st >= 1.25:
+                tf.alpha = 0.25
+                return 0.25
+            elif st >= 0.25:
+                tf.alpha = 1 - acdc_warp(st - 0.25) * 0.75
+            else:
+                tf.alpha = 1
+                return 0.25
+            return 0
+        else:
+            tf.alpha = 1
+            return 1
 
     define.move_transitions("charamove", 1.0, _ease_time_warp, _ease_in_time_warp, _ease_out_time_warp)
 
@@ -269,7 +292,7 @@ transform hanako_fw_constructor(in_r, in_g, in_b):
         parallel:
             "fw_flash" with fw_dis_fast
             0.05
-            Transform("event/hanako_fw_flash.jpg", matrixcolor=TintMatrix((in_r, in_g, in_b))) with fw_dis_medium
+            Transform("event/hanako_fw_flash.png", matrixcolor=TintMatrix((in_r, in_g, in_b))) with fw_dis_medium
             8.0
     repeat
 
@@ -403,8 +426,8 @@ define charadistant = dissolve
 
 define charachangealways = dissolve
 define charachangeev = dissolve
-define charachange = None # charachangealways (must be customizable)
-define charachangefast = None # Dissolve(0.2) (must be customizable)
+default persistent.charachange = { 'master' : dissolve } # Default because customizable
+default persistent.charachangefast = { 'master' : Dissolve(0.2) } # Default because customizable
 
 define charamovechange = Dissolvemove(2.0)
 

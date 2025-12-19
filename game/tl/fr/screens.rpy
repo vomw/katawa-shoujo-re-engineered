@@ -143,7 +143,7 @@ translate fr strings:
     new "Espagnol"
 
     # game/screens.rpy:292
-    old "Deutsch"
+    old "German"
     new "Allemand"
 
     # game/screens.rpy:293
@@ -153,6 +153,12 @@ translate fr strings:
     # game/screens.rpy:294
     old "Japanese"
     new "Japonais"
+
+    old "Italian"
+    new "Italien"
+
+    old "Traditional Chinese"
+    new "Chinois traditionnel"
 
     # game/screens.rpy:364
     old "Scene"
@@ -287,4 +293,11 @@ translate fr strings:
 
     # game/screens.rpy:1066
     old "Skip hurtful adult scenes"
-    new "Sauter les scènes pour adultes potentiellement blessantes"
+    new "Sauter les scènes pour adultes potentiellement blessantes"# TODO: Translation updated at 2024-12-18 15:10
+
+translate fr strings:
+
+    # game/screens.rpy:376
+    old "Simplified Chinese"
+    new "Chinois simplifié"
+

@@ -139,7 +139,7 @@ translate ru strings:
     new "Испанский"
 
     # game/screens.rpy:292
-    old "Deutsch"
+    old "German"
     new "Немецкий"
 
     # game/screens.rpy:293
@@ -149,6 +149,12 @@ translate ru strings:
     # game/screens.rpy:294
     old "Japanese"
     new "Японский"
+
+    old "Italian"
+    new "Итальянский"
+
+    old "Traditional Chinese"
+    new "Традиционный китайский"
 
     # game/screens.rpy:401
     old "Playtime"
@@ -293,4 +299,12 @@ translate ru strings:
     # game/screens.rpy:1066
     old "Skip hurtful adult scenes"
     new "Пропуск сцен для взрослых, которые могут причинить боль"
+
+# TODO: Translation updated at 2024-12-18 15:22
+
+translate ru strings:
+
+    # game/screens.rpy:376
+    old "Simplified Chinese"
+    new "Упрощённый китайский"
 

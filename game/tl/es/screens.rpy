@@ -143,7 +143,7 @@ translate es strings:
     new "Español"
 
     # game/screens.rpy:337
-    old "Deutsch"
+    old "German"
     new "Alemán"
 
     # game/screens.rpy:338
@@ -154,9 +154,15 @@ translate es strings:
     old "Japanese"
     new "Japonés"
 
+    old "Italian"
+    new "Italiana"
+
     # game/screens.rpy:376
     old "Simplified Chinese"
     new "Chino Simplificado"
+
+    old "Traditional Chinese"
+    new "Chino Tradicional"
 
     # game/screens.rpy:414
     old "Scene"
@@ -261,12 +267,12 @@ translate es strings:
     new "Contenido para adultos activado."
 
     # game/screens.rpy:1050
-    old "Colorblind Filter"
-    new "Filtro Daltónico"
+    old "Colorblind filter"
+    new "Filtro daltónico"
 
     # game/screens.rpy:1061
     old "Mental health"
-    new "Salud Mental"
+    new "Salud mental"
 
     # game/screens.rpy:1068
     old "Skip hurtful adult scenes"
@@ -288,3 +294,12 @@ translate es strings:
     old "This question will not be shown again after you start playing."
     new "Esta pregunta no se mostrará nuevamente después de que comience a jugar."
 
+translate es strings:
+
+    # game/screens.rpy:271
+    old "Disable expression transitions"
+    new "Desactivar transiciones de expresión"
+
+    # game/screens.rpy:841
+    old "Completion: [completion_percentage]"
+    new "Completado: [completion_percentage]"

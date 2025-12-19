@@ -88,14 +88,14 @@ label a4_rin:
             "His voice is pretty loud and way too enthusiastic for it to be genuine."
 
             show nomiya smile
-            with charachange
+            with persistent.charachange
 
             no "The next meeting is after summer vacations, on the Monday of the first week of next term."
 
             no "I hope to see everyone there again!"
 
             show nomiya veryhappy
-            with charachange
+            with persistent.charachange
 
             no "Have a nice vacation!"
 
@@ -126,7 +126,7 @@ label a4_rin:
         hi "It's about Rin…"
 
         show nomiya frown
-        with charachange
+        with persistent.charachange
 
         no "Oh? Is something wrong with Tezuka?"
 
@@ -135,35 +135,35 @@ label a4_rin:
         "I hesitate for a split second, not certain how to say what I want to say, giving Nomiya enough time to start blabbering by himself."
 
         show nomiya smile
-        with charachange
+        with persistent.charachange
 
         no "I saw her a few days ago when I was passing by at Sae's gallery."
 
         no "She said she'd get one or two more paintings done for the exhibition."
 
         show nomiya talk
-        with charachange
+        with persistent.charachange
 
         no "I was quite pleased, she's a surprisingly hard worker. I'd always thought she was a bit lazy, doing what she wants instead of the assignments…"
 
         "He seems to notice my anxiety and realizes he is digressing, shutting up before finishing the thought."
 
         show nomiya smile
-        with charachange
+        with persistent.charachange
 
         no "Ah, but you had something to talk about. What is it?"
 
         hi "I don't know… she feels detached from everything, as if she can't think of anything but the exhibition."
 
         show nomiya frown
-        with charachange
+        with persistent.charachange
 
         no "Well, isn't that good? She is focused on her painting, as she should be."
 
         hi "Yeah, but this is different. It's like she's obsessed. I went to see her, and…"
 
         show nomiya serious
-        with charachange
+        with persistent.charachange
 
         no "Have you been bothering her?"
 
@@ -176,14 +176,14 @@ label a4_rin:
         hi "Stranger than usual, at the very least."
 
         show nomiya stern
-        with charachange
+        with persistent.charachange
 
         no "Humbug! This is much more important for her than some lousy math class, or physics, or whatever."
 
         no "This is exactly why this school is so flexible, to give every student a chance to fulfill themselves."
 
         show nomiya serious
-        with charachange
+        with persistent.charachange
 
         no "Tezuka is a painter, so she should paint, no? And have an exhibition. That's what artists do. She should be allowed to concentrate on that, not these other frivolous classes. She should be encouraged."
 
@@ -194,28 +194,28 @@ label a4_rin:
         "My grudging silence is interpreted as assent, and Nomiya turns to shuffle the stack of turned-in assignments on his desk like a deck of cards."
 
         show nomiya smile
-        with charachange
+        with persistent.charachange
 
         no "I have to say, while we're talking about Tezuka's exhibition…"
 
         no "I'm very excited to see how it turns out."
 
         show nomiya dreamy
-        with charachange
+        with persistent.charachange
 
         no "She's still so young, yet has such wonderful skill, and style!"
 
         "He's talking to the air, to relax the mood that got a bit too negative."
 
         show nomiya talk
-        with charachange
+        with persistent.charachange
 
         no "I take it that you will be attending?"
 
         hi "Yeah, I guess so."
 
         show nomiya smile
-        with charachange
+        with persistent.charachange
 
         no "Well, we'll meet there next."
 
@@ -306,14 +306,14 @@ label a4_rin:
         "This is not good. It's been six days, and the sight of her has me boiling. She hasn't even opened her mouth yet."
 
         show rin basic_deadpan
-        with charachange
+        with persistent.charachange
 
         rin "Finished painting."
 
         hi "Shouldn't you be at the gallery? Preparing?"
 
         show rin basic_awayabsent
-        with charachange
+        with persistent.charachange
 
         rin "They said no."
 
@@ -322,7 +322,7 @@ label a4_rin:
         hi "So, why are you here?"
 
         show rin basic_deadpannormal
-        with charachange
+        with persistent.charachange
 
         rin "Felt like it."
 
@@ -336,7 +336,8 @@ label a4_rin:
 
         play sound sfx_dooropen
 
-        scene bg school_dormhisao
+        scene bg school_dormhisao:
+            yalign 0.5 zoom 1.02
         with locationchange
 
         "When I walk into my room, I hear her footsteps following me in."
@@ -347,32 +348,30 @@ label a4_rin:
             center
             alpha 0.0
             ease 0.5 ypos 1.15 alpha 1.0
-
-        pause 0.5
-
-        show rin:
             parallel:
                 ease 0.3 center
             parallel:
                 "rin basic_absent" with Dissolve(0.3)
+        with Pause(0.5)
 
         stop music fadeout 6.0
 
         "She claims my bed without asking permission, making me wish that I had taken the time to make it before I left in the morning, then stands up again as though she sat on hot coals."
 
-        show rin basic_absent at center
+        show rin basic_absent at center:
+            alpha 1.0
 
         "I half-lean against the single corner of my desktop that isn't cluttered with stuff, to rest my legs at least a little bit."
 
         show rin basic_awayabsent
-        with charachange
+        with charachangealways
 
         "Rin spends a few moments glancing curiously around my room. It makes me realize that she's never seen it before."
 
         "For a moment, she actually looks like she's concentrating. Trying to get everything. This must be the eye for detail that makes her an artist."
 
         show rin basic_absent
-        with charachange
+        with charachangealways
 
         "Since the room is small, she quickly runs out of things to look at, but nothing else transpires, allowing the uncomfortable silence to take over the atmosphere."
 
@@ -400,12 +399,16 @@ label a4_rin:
 
         "And so, Rin simply takes a few steps to close the distance between us and rises on the tips of her toes to even out the height difference…"
 
+        window hide
+
         show rin basic_lucid_superclose
-        with charachange
+        with characlose
 
         centered "'It was a bad idea.'"
 
         centered "'Maybe you should forget about it, and I will too.'"
+
+        window auto True
 
         "It's a reflex, and almost as an afterthought, the words 'no,' 'yes' and 'maybe' simultaneously surface inside my mind."
 
@@ -414,7 +417,7 @@ label a4_rin:
         "Her breath feels warm against my fingers. The scent of her skin lingers about, the mysterious indescribable sensation that captures me and draws my eyes deep into hers."
 
         show rin basic_surprised_close
-        with charachange
+        with charachangealways
 
         play music music_moonlight fadein 0.5
 
@@ -425,18 +428,19 @@ label a4_rin:
         "Rin's half-open mouth makes her look even more confused, although the sensual way her lips are arching is signaling something completely different."
 
         show rin basic_upset_close
-        with charachange
+        with persistent.charachange
 
         rin "Please."
 
         show rin negative_angry_close
-        with charachange
+        with persistent.charachange
 
         rin "I need you."
 
         "The words come from her throat as a coarse whisper meant only for me, bypassing her tongue and teeth without giving them any chance to interrupt."
 
-        show rin negative_angry
+        show rin negative_angry:
+            ypos 1.02
         with Dissolve(0.15)
         with vpunch
 
@@ -451,17 +455,17 @@ label a4_rin:
         "All the unpleasant feelings emerge again, and I feel my heartbeat suddenly increasing at least tenfold."
 
         show rin basic_absent
-        with charachange
+        with persistent.charachange
 
         "Rin's eyes go out of focus and back again as her body relaxes from its tensed state, and she stands upright again."
 
         show rin basic_deadpanupset
-        with charachange
+        with persistent.charachange
 
         rin "I don't think I was thinking about anything. Why do you draw patterns in that dust on your night table?"
 
         show rin basic_awayabsent
-        with charachange
+        with persistent.charachange
 
         rin "There is a word for that kind of thing but I can't remember…"
 
@@ -486,12 +490,12 @@ label a4_rin:
         extend " Good."
 
         show rin basic_absent
-        with charachange
+        with persistent.charachange
 
         "Rin too finally catches the mood and her curious expression changes instantly to something more uncharacteristic."
 
         show rin negative_sad
-        with charachange
+        with persistent.charachange
 
         rin "No—"
 
@@ -500,7 +504,7 @@ label a4_rin:
         hi "Then what?"
 
         show rin negative_confused
-        with charachange
+        with persistent.charachange
 
         stop music fadeout 2.0
 
@@ -525,19 +529,19 @@ label a4_rin:
         "I'm yelling, but I'm way past the point of caring about things like that."
 
         show rin negative_sad
-        with charachange
+        with persistent.charachange
 
         "Rin looks down at her toes and wiggles them a little melancholically while she takes in my outburst without saying anything to defend herself."
 
         "Only after I have finished does she try to respond somehow."
 
         show rin basic_sad
-        with charachange
+        with persistent.charachange
 
         rin "I can't do anything else. Or I can do all sorts of things, but I… can't… do."
 
         show rin basic_upset
-        with charachange
+        with persistent.charachange
 
         rin "It's the only thing I sort of do properly. Most of the time."
 
@@ -550,21 +554,21 @@ label a4_rin:
         "The words rise like bile in my throat."
 
         show rin basic_surprised
-        with charachange
+        with persistent.charachange
 
         "She looks alarmed. And also completely uncomprehending, as if she just doesn't understand what I'm angry about."
 
         "I can't believe she could be so stupid."
 
         show rin negative_sad
-        with charachange
+        with persistent.charachange
 
         rin "I didn't want to—?"
 
         "This time it's Rin who interrupts herself in midsentence."
 
         show rin basic_upset
-        with charachange
+        with persistent.charachange
 
         rin "Don't you understand? I can't."
 
@@ -581,7 +585,7 @@ label a4_rin:
         "Venting my anger at her feels satisfying. It feels wrong to take so much satisfaction in it, but I can't stop."
 
         show rin negative_annoyed
-        with charachange
+        with persistent.charachange
 
         "Not wanting to face my anger head-on, Rin turns around to steadfastly look out of my window even though there is nothing to look at."
 
@@ -604,7 +608,7 @@ label a4_rin:
         hi "Look, I—"
 
         show rin negative_angry
-        with charachange
+        with persistent.charachange
 
         rin "Go away."
 
@@ -621,7 +625,7 @@ label a4_rin:
         "The blunt, hollow remark is a fitting conclusion for this unpleasant discussion that became an even more unpleasant and very one-sided yelling match."
 
         show rin basic_lucid
-        with charachange
+        with charachangealways
 
         "After a moment of collecting herself Rin just gives up, I can see it from the way she slumps her shoulders, and walks out."
 
@@ -793,9 +797,12 @@ label a4_rin:
 
         "Damn, it sounds like I do the things I do because some kind of instinctual properness compels me to, not because it would be sensible (or not)."
 
-        scene bg gallery_int at right
-        show sae smile at center
-        show crowd at right
+        scene bg gallery_int at right:
+            yalign 0.5 zoom 1.02
+        show sae smile at center:
+            ypos 1.02
+        show crowd at right:
+            ypos 1.02
         with locationchange
 
         "I sneak closer to Sae to wait for a lull in the conversation so I can chat her up too."
@@ -822,36 +829,40 @@ label a4_rin:
         $ renpy.music.set_volume(0.5, 1.0, channel="ambient")
 
         show emicas happy:
-            center xpos 0.15 alpha 0.0
-            ease 1.0 center alpha 1.0
-
-        show emicas
+            center
+            ypos 1.02 xpos 0.15 alpha 0.0
+            ease 1.0 xalign 0.5 alpha 1.0
 
         show sae:
             ease 1.0 xpos 0.75 alpha 0.0
         with None
 
-        show bg at left
-        show crowd at left
+        show bg at left:
+            yalign 0.5
+        show crowd at left:
+            ypos 1.02
         with charamovefaster
 
         hide sae
 
         emi "Hi! Are you like, a representative of the art club or something? I don't see anyone else from the school here…"
 
+        show emicas:
+            xalign 0.5 alpha 1.0
+
         hi "Umm… I don't know, really. I guess I am if that's the case."
 
         hi "What about you?"
 
         show emicas neutral
-        with charachange
+        with persistent.charachange
 
         emi "What about me?"
 
         hi "Err…"
 
         show emicas angry_up
-        with charachange
+        with persistent.charachange
 
         emi "You didn't think I'm interested in art? Is that it, Hisao?"
 
@@ -860,12 +871,12 @@ label a4_rin:
         hi "I mean, even though you hang out with Rin I've never heard you talk about art with her so…"
 
         show emicas awayfrown_up
-        with charachange
+        with persistent.charachange
 
         "Emi huffs and looks around her, looking discontented."
 
         show emicas closedsmile
-        with charachange
+        with persistent.charachange
 
         emi "It's true, I don't get it at all, but she came to my track meet so I thought it's only fair to return the favor."
 
@@ -881,38 +892,36 @@ label a4_rin:
         hi "At all."
 
         show emicas closedsmile_close
-        with charachange
+        with persistent.charachange
 
         "My emphasizing headshake draws a giggle and a cheery headshake of her own out of Emi."
 
         show emicas happy_close
-        with charachange
+        with persistent.charachange
 
         emi "Me neither!"
 
         show emicas wink_close
-        with charachange
+        with persistent.charachange
 
         emi "Hey, let's go talk with Rin! I bet you haven't yet, because I haven't either."
 
         show emicas happy_up_close
-        with charachange
+        with persistent.charachange
 
         emi "Come on!"
 
         show nomiya smile behind emicas:
-            center xpos 0.8 alpha 0.0
+            center
+            xpos 0.8 alpha 0.0
             ease 1.0 xpos 0.55 alpha 1.0
         show rin basic_awayabsent:
-            center xpos 1.1 alpha 0.0
+            center
+            xpos 1.1 alpha 0.0
             ease 1.0 xpos 0.85 alpha 1.0
         show emicas neutral_close:
             ease 1.0 xpos 0.15
         with None
-
-        show nomiya
-        show rin
-        show emicas
 
         show bg at center
         show crowd at center
@@ -920,73 +929,80 @@ label a4_rin:
 
         "Before she has a chance to forcefully drag me to Rin, Nomiya appears behind her with Rin in his tow."
 
+        show nomiya:
+            xpos 0.55 alpha 1.0
+        show rin:
+            xpos 0.85 alpha 1.0
+        show emicas:
+            xpos 0.15 alpha 1.0
+
         "She's not dressed for the occasion, instead opting for the usual school uniform and unkempt hair."
 
         "Maybe her natural look is what suits her the best."
 
         show emicas happy_close
-        with charachange
+        with persistent.charachange
 
         emi "Hello, teacher! Hi, Rin!"
 
         "Unfazed, Emi greets the teacher cheerfully, causing him to turn around and look down confusedly."
 
         show nomiya frown
-        with charachange
+        with persistent.charachange
 
         no "Who are you?"
 
         show emicas frown_up_close
-        with charachange
+        with persistent.charachange
 
         emi "I'm Emi, from school, class 3-4. Don't you remember?"
 
         "She looks positively shocked at the prospect that there could be a person who doesn't know her."
 
         show nomiya talk
-        with charachange
+        with persistent.charachange
 
         no "Oh, sorry. You are in the same class as Tezuka is, right?"
 
         show emicas wink_close
-        with charachange
+        with persistent.charachange
 
         emi "Yeah!"
 
         show nomiya smile
-        with charachange
+        with persistent.charachange
 
         no "You'll have to pardon me, I have trouble remembering students who don't take art."
 
         show emicas closedsmile_up_close
-        with charachange
+        with persistent.charachange
 
         emi "Don't mind, don't mind!"
 
         show emicas happy_close
-        with charachange
+        with persistent.charachange
 
         emi "Hi Rin!"
 
         show rin basic_deadpan
-        with charachange
+        with persistent.charachange
 
         rin "Hello."
 
         show emicas happy_up_close
-        with charachange
+        with persistent.charachange
 
         emi "Congratulations for your super cool art thing! I'm sure you'll be a big hit!"
 
         "She throws her arms into the air for boisterous emphasis, almost hitting me in the face."
 
         show emicas wink_up_close
-        with charachange
+        with persistent.charachange
 
         emi "And look, Hisao came too!"
 
         show rin relaxed_nonchalant
-        with charachange
+        with persistent.charachange
 
         "Rin doesn't look at me, nor does she greet me."
 
@@ -995,7 +1011,7 @@ label a4_rin:
         "She keeps averting her gaze, pointedly looking at her sandals."
 
         show emicas closedsmile_close
-        with charachange
+        with persistent.charachange
 
         "Oblivious to the tension between us and ignorant of what happened yesterday, Emi keeps on blabbering about this and that to an unresponsive Rin."
 
@@ -1005,7 +1021,8 @@ label a4_rin:
         $ renpy.music.set_volume(1.0, 3.0, channel="ambient")
 
         show sae neutral behind rin:
-            center xpos 1.25 alpha 0.0
+            center
+            xpos 1.25 alpha 0.0
             ease 1.0 xpos 0.8 alpha 1.0
         show emicas:
             ease 1.0 xpos -0.35 alpha 0.0
@@ -1028,7 +1045,7 @@ label a4_rin:
         "Expecting it, I catch the second of confusion when the guests see her arms."
 
         show sae smile
-        with charachange
+        with persistent.charachange
 
         "Sae is luckily on the ball and briefly explains about our school."
 
@@ -1045,7 +1062,7 @@ label a4_rin:
         "Man" "Oh, definitely! I assume you use your feet? Must've been a great trouble to learn it, you should be proud."
 
         show rin basic_surprised
-        with charachange
+        with persistent.charachange
 
         rin "I… ummm…"
 
@@ -1060,14 +1077,14 @@ label a4_rin:
         "Man" "So where do you get your ideas?"
 
         show rin relaxed_boredom
-        with charachange
+        with persistent.charachange
 
         rin "That's the fourth, I mean fifth worst…"
 
         "Rin keeps stumbling with her words, looking more and more vexed by the expectant inquiries."
 
         show rin negative_annoyed
-        with charachange
+        with persistent.charachange
 
         rin "Ah…"
 
@@ -1076,7 +1093,7 @@ label a4_rin:
         "Each question piling up just adds to her distress."
 
         show rin basic_sad
-        with charachange
+        with persistent.charachange
 
         "I fail to hear the question that is the proverbial one too many."
 
@@ -1134,10 +1151,6 @@ label a4_rin:
             xpos 0.8
         with locationchange
 
-        show rin:
-            center
-            xpos 0.55
-
         "Seeing that nobody does anything, I force myself to step to Rin and lift her up from the floor, letting her lean against me to keep standing."
 
         hi "Would you like some fresh air? OK, let's go outside for a bit."
@@ -1163,7 +1176,7 @@ label a4_rin:
         hi "Are you all right?"
 
         show rin negative_confused_close_ni
-        with charachange
+        with persistent.charachange
 
         rin "I couldn't say anything…"
 
@@ -1180,12 +1193,12 @@ label a4_rin:
         "Maybe both of us can imagine that we are talking to an invisible friend."
 
         show rin basic_sad_close_ni
-        with charachange
+        with persistent.charachange
 
         rin "I don't know."
 
         show rin negative_sad_close_ni
-        with charachange
+        with persistent.charachange
 
         rin "Something that would have meant something."
 
@@ -1202,7 +1215,7 @@ label a4_rin:
         hi "You know, ask you questions and stuff. About those paintings you worked so hard for."
 
         show rin negative_angry_close_ni
-        with charachange
+        with persistent.charachange
 
         rin "I don't want them to ask me questions like that. I can never say the right things."
 
@@ -1211,7 +1224,7 @@ label a4_rin:
         "…"
 
         show rin relaxed_doubt_close_ni
-        with charachange
+        with persistent.charachange
 
         menu:
             with menueffect
@@ -1300,14 +1313,15 @@ label a4_rin:
             "Mutou expects a lot from our class, even though he's not strict at all. I guess he'd like all of us to become scientists."
 
             show muto normal
-            with charachange
+            with persistent.charachange
 
             mu "Put down your pencils and turn in your papers please."
 
             "The biggest groan comes from the desk to my side."
 
             show misha perky_sad_close:
-                center xpos -0.2 ypos 1.13 alpha 0.0
+                center
+                xpos -0.2 ypos 1.13 alpha 0.0
                 ease 1.0 xpos 0.15 alpha 1.0
             with None
 
@@ -1322,7 +1336,7 @@ label a4_rin:
             "The dark aura of lost hope emanating from her seat makes me simultaneously frightened of and sympathetic to her."
 
             show muto smile
-            with charachange
+            with persistent.charachange
 
             mu "Now then, there should be homeroom before you are free, but I only have a few announcements to make so this should be over quickly…"
 
@@ -1337,24 +1351,24 @@ label a4_rin:
             hi "It's vacation! Don't worry about the test."
 
             show misha sign_smile_close
-            with charachange
+            with persistent.charachange
 
             mi "Thanks, Hicchan."
 
             "Her frown becomes a small smile, and a sparkle of excitement lights in her eyes."
 
             show misha perky_smile_close
-            with charachange
+            with persistent.charachange
 
             mi "What're you going to do over your summer vacation, Hicchan?"
 
             show misha hips_smile_close
-            with charachange
+            with persistent.charachange
 
             mi "I'm going to Shicchan's place, they have this awesome and super cool mansion! I'm so excited~!"
 
             show misha hips_grin_close
-            with charachange
+            with persistent.charachange
 
             mi "I'm sure it'll be the bestest summer vacation ever~!"
 
@@ -1363,22 +1377,22 @@ label a4_rin:
             hi "I don't really have any plans, I guess…"
 
             show misha sign_smile_close
-            with charachange
+            with persistent.charachange
 
             mi "Is that so~? Maybe you should—"
 
             show misha perky_confused_close
-            with charachange
+            with persistent.charachange
 
             "A finger tapping her shoulder steals Misha's attention away from me."
 
             show muto irritated
-            with charachange
+            with persistent.charachange
 
             "Shizune points to Mutou, who is expectantly looking back at the two of them."
 
             show misha sign_confused_close
-            with charachange
+            with persistent.charachange
 
             mi "Oops! Sorry, Shicchan, I didn't notice teacher finished already, ehehe~."
 
@@ -1551,20 +1565,19 @@ label a4_rin:
 
             "As expected, mom calls me and I end up promising to see if I can get a train ticket for tomorrow, or failing that, the day after."
 
+            window hide
             nvl clear
 
             show phone mobile:
                 easeout 1.0 ypos 0.7 alpha 0.0
-
-            scene bg school_dormhisao_ss
-            show phone mobile:
-                truecenter
-                easeout 1.0 ypos 0.7 alpha 0.0
+            with None
+            show bg school_dormhisao_ss
             with locationchange
 
             pause 0.5
 
             hide phone
+            with None
 
             $ renpy.music.set_volume(0.5, 1.0, channel="music")
 
@@ -1586,31 +1599,44 @@ label a4_rin:
 
             nvl hide dissolve
             nvl clear
+            window auto True
 
             scene bg school_dormhisao_ni
             with shorttimeskip
 
             "By eleven, the darkness bids me to sleep."
 
-            show pills:
+            window hide
+
+            show pills_ni:
                 truecenter
-                ypos 0.7 alpha 1.0
-                easein 1.0 truecenter alpha 1.0
+                ypos 0.7 alpha 0.0
+                easein 1.0 ypos 0.5 alpha 1.0
 
             pause 1.0
 
-            show pills at truecenter
+            show pills_ni:
+                truecenter
+                alpha 1.0
+            with None
+
+            window auto True
 
             "The medication bottles are innocuously arranged on my night table, not at all beckoning, rather pointedly reminding me of the reality instead."
 
             "It's evening so I have to open three bottles, extract one large oval-shaped one, two small round ones and one large flat that has to be cut into half, close the bottles and chug down the medications with a chaser of fresh tap water."
 
-            show pills:
+            window hide
+
+            show pills_ni:
                 easeout 1.0 ypos 0.7 alpha 0.0
 
             pause 1.0
 
-            hide pills
+            hide pills_ni
+            with None
+
+            window auto True
 
             "The water tastes metallic on my tongue."
 
@@ -1724,14 +1750,15 @@ label a4_rin:
 
             pause 1.0
 
-            show emicas at center
+            show emicas at center:
+                alpha 1.0
 
             play music music_emi fadein 0.5
 
             emi "Hisao? Hi!"
 
             show emicas awayfrown
-            with charachange
+            with persistent.charachange
 
             emi "Terrible weather. I even missed my morning jog."
 
@@ -1740,14 +1767,14 @@ label a4_rin:
             hi "Oh, hi, I was—"
 
             show emicas neutral
-            with charachange
+            with persistent.charachange
 
             emi "If you're looking for Rin, I don't think she is there."
 
             hi "Have you seen her recently?"
 
             show emicas grin_up
-            with charachange
+            with persistent.charachange
 
             emi "Yeah, just this morning when I woke her up."
 
@@ -1765,14 +1792,14 @@ label a4_rin:
                 "Why does it feel odd that she is so dutiful under that cheery grin of hers?"
 
             show emicas frown_up
-            with charachange
+            with persistent.charachange
 
             emi "She left for the gallery a few hours ago… hey, are you listening?"
 
             "Maybe I'm making a funny face or something, since Emi tilts her face quizzically, looking at me with her eyes round and inquisitive."
 
             show emicas neutral
-            with charachange
+            with persistent.charachange
 
             emi "Hmm?"
 
@@ -1781,48 +1808,48 @@ label a4_rin:
             hi "Yeah, I'm listening…"
 
             show emicas weaksmile
-            with charachange
+            with persistent.charachange
 
             emi "Can I ask you a question?"
 
             hi "Yeah, of course."
 
             show emicas awayfrown
-            with charachange
+            with persistent.charachange
 
             "She furrows her brow, licking her lips as if to prepare for something."
 
             show emicas frown
-            with charachange
+            with persistent.charachange
 
             emi "Why do you care so much about Rin?"
 
             show emicas neutral
-            with charachange
+            with persistent.charachange
 
             emi "I mean, you probably hang around her more than I do, and we even slept in the same bed sometimes until, er, lately."
 
             hi "After she banned you because you ravaged her hair?"
 
             show emicas blush
-            with charachange
+            with persistent.charachange
 
             "A shock of horror widens Emi's eyes at least twofold, making them seem even more saucer-like than usual, while a healthy blush rises on her cheeks and ears."
 
             show emicas angry_up
-            with charachange
+            with persistent.charachange
 
             emi "She told?! Ohhh… I'm going to strangle that Rin or something other horrible…"
 
             "I hold back my laughter, lest she direct her disdain at me."
 
             show emicas closedsmile
-            with charachange
+            with persistent.charachange
 
             "Emi recuperates quickly from the embarrassment and seems to forgive Rin in the same instant, getting her focus back on me."
 
             show emicas smile
-            with charachange
+            with persistent.charachange
 
             emi "Anyway, are you in love with her or something?"
 
@@ -1837,7 +1864,7 @@ label a4_rin:
             "I wonder whether I manage to fool even myself."
 
             show emicas evil
-            with charachange
+            with charachangealways
 
             "At least Emi is waggling her eyebrows dangerously, with a nasty smirk on her lips."
 
@@ -1846,24 +1873,24 @@ label a4_rin:
             hi "No, it's not a yes."
 
             show emicas neutral
-            with charachange
+            with persistent.charachange
 
             "Obviously unsatisfied at my refusal to answer her way-too-intimate question, she has enough sense to back off."
 
             show emicas wink
-            with charachange
+            with persistent.charachange
 
             "Doesn't stop her from sticking out her tongue at me like a kid, and giggling again."
 
             show emicas closedsmile
-            with charachange
+            with persistent.charachange
 
             emi "If that's your answer, I don't think I have to talk with you any more."
 
             "It's easy to see that she's not really angry."
 
             show emicas happy
-            with charachange
+            with persistent.charachange
 
             emi "Besides, I have to go pack now. Mom will be worried if I miss my bus."
 
@@ -1938,19 +1965,19 @@ label a4_rin:
             "There are no customers though, which figures, considering the bucketloads of water dropping on the neck of anyone daring to brave the weather today."
 
             show sae smile
-            with charachange
+            with persistent.charachange
 
             sa "Welcome."
 
             hi "Hello. Sorry to interrupt…"
 
             show nomiya talk
-            with charachange
+            with persistent.charachange
 
             no "Ah, good afternoon Nakai."
 
             show nomiya smile
-            with charachange
+            with persistent.charachange
 
             no "Came all the way here for a visit?"
 
@@ -1961,7 +1988,7 @@ label a4_rin:
             "Maybe I just don't want to say that I came specifically to see Rin, even though that much must be obvious."
 
             show sae doubt
-            with charachange
+            with persistent.charachange
 
             sa "My, you chose a bad day for shopping. Would you like some tea to warm you up?"
 
@@ -1971,7 +1998,7 @@ label a4_rin:
 
             show nomiya veryhappy
             show sae neutral
-            with charachange
+            with persistent.charachange
 
             no "Hahaha! Well, I'm sure it'll get better."
 
@@ -1980,17 +2007,17 @@ label a4_rin:
             hi "Rain doesn't get you down, teacher?"
 
             show nomiya smile
-            with charachange
+            with persistent.charachange
 
             no "Well, I do prefer clear weather as well. I was actually leaving just now to meet someone, and I'd prefer not getting my jacket soaked. It's very expensive."
 
             show nomiya talk
-            with charachange
+            with persistent.charachange
 
             no "But of course I'm in a good mood!"
 
             show nomiya smile
-            with charachange
+            with persistent.charachange
 
             no "What did you think about the exhibition? It was wonderful, wasn't it?"
 
@@ -2001,12 +2028,12 @@ label a4_rin:
             "He talks more and louder when he is moving. It's something I noticed at the club meetings too."
 
             show nomiya veryhappy
-            with charachange
+            with persistent.charachange
 
             no "We got to talk with many good people and make valuable contacts."
 
             show nomiya smile
-            with charachange
+            with persistent.charachange
 
             no "One of Tezuka's paintings even got sold, to a collector from Osaka."
 
@@ -2023,33 +2050,33 @@ label a4_rin:
 
             hide rin_exhibition_sold
             show nomiya talk
-            with charachange
+            with locationchange
 
             no "It was lucky that she was all right despite that dizzy spell."
 
             show nomiya smile
-            with charachange
+            with persistent.charachange
 
             no "She got a little quiet though, so I told her to rest well. Then again she's always been pretty shy."
 
             "Shy? Whatever, I just nod along with the teacher."
 
             show nomiya talktongue
-            with charachange
+            with persistent.charachange
 
             no "The reception was very positive in general. I might be able to get one of my friends to write a little article on a magazine to—"
 
             sa "Shinichi, your meeting. You're making Mr. Takahashi wait."
 
             show nomiya serious
-            with charachange
+            with persistent.charachange
 
             "Sae's remark makes him stop in his tracks and check his watch."
 
             "Nomiya frowns in displeasure at the interruption to his tirade."
 
             show nomiya smile
-            with charachange
+            with persistent.charachange
 
             no "Oh, right. Yes, well, I'll be off then. We'll meet in September, Nakai."
 
@@ -2096,7 +2123,7 @@ label a4_rin:
             nvl clear
 
             show sae smile
-            with charachange
+            with persistent.charachange
 
             sa "Something on your mind?"
 
@@ -2141,7 +2168,7 @@ label a4_rin:
             hi "How do you interpret art?"
 
             show sae doubt
-            with charachange
+            with persistent.charachange
 
             sa "What do you mean?"
 
@@ -2152,14 +2179,14 @@ label a4_rin:
             hi "I don't think I really understand art like the pros do."
 
             show sae smile
-            with charachange
+            with persistent.charachange
 
             sa "Oh, there's no trick to it."
 
             "Sae waves my question away with a simple but efficient flick of her wrist."
 
             show sae neutral
-            with charachange
+            with persistent.charachange
 
             sa "Everyone interprets art as they will, and interpretation is as much in the eye of the beholder as in the intentions of the creator."
 
@@ -2170,7 +2197,7 @@ label a4_rin:
             "Her voice is like a teacher's, lecturing and adding emphasis on random words to keep the listeners on their toes."
 
             show sae smile
-            with charachange
+            with persistent.charachange
 
             sa "In the end, I suppose it's pretty meaningless."
 
@@ -2183,7 +2210,7 @@ label a4_rin:
             hi "But…"
 
             show sae neutral
-            with charachange
+            with persistent.charachange
 
             sa "I'll tell you a story."
 
@@ -2212,14 +2239,14 @@ label a4_rin:
             "Like a half-baked Socrates, she thought she laid out all the tools for revelation in front of me."
 
             show sae doubt
-            with charachange
+            with persistent.charachange
 
             sa "Don't you see the point yet?"
 
             "Only, her student proved to be too dense to get it."
 
             show sae scowl
-            with charachange
+            with persistent.charachange
 
             "She looks discontent at my slowness."
 
@@ -2232,14 +2259,14 @@ label a4_rin:
             sa "If you now see one of his Blue Period paintings, you'd probably interpret it differently from before you knew about Picasso's friend Casagemas."
 
             show sae neutral
-            with charachange
+            with persistent.charachange
 
             sa "Experiencing art is always personal, only interactive by chance or circumstances."
 
             sa "There are a million explanations for any given piece of art, but it might be that none of them are what the creator intended."
 
             show sae smile
-            with charachange
+            with persistent.charachange
 
             sa "No man is an island, you know?"
 
@@ -2280,19 +2307,19 @@ label a4_rin:
             "I had almost forgotten that she was the reason why I came to the gallery in the first place."
 
             show rin relaxed_boredom
-            with charachange
+            with persistent.charachange
 
             rin "I think I'm ready—{w=0.3}{nw}"
 
             show rin relaxed_surprised
-            with charachange
+            with persistent.charachange
 
             "She pauses mid-sentence, noticing my presence."
 
             "The needle-dropping silence lasts for exactly one and a half seconds, not enough for either me or Sae to open our mouths, but enough for Rin to react."
 
             show rin negative_annoyed
-            with charachange
+            with persistent.charachange
 
             rin "I'm going for a walk."
 
@@ -2332,42 +2359,42 @@ label a4_rin:
             hi "Why do you keep running away?"
 
             show rin negative_annoyed_close_rn
-            with charachange
+            with persistent.charachange
 
             rin "I don't want to talk to you."
 
             hi "I want to talk to you."
 
             show rin negative_confused_close_rn
-            with charachange
+            with persistent.charachange
 
             rin "It hurts every time I do."
 
             hi "Sometimes it can't be helped."
 
             show rin negative_sad_close_rn
-            with charachange
+            with persistent.charachange
 
             rin "I don't want to hurt."
 
             hi "Fine. We don't have to talk."
 
             show rin relaxed_doubt_close_rn
-            with charachange
+            with persistent.charachange
 
             rin "What should we do?"
 
             hi "Let's just keep walking."
 
             show rin relaxed_surprised_close_rn
-            with charachange
+            with persistent.charachange
 
             rin "Just walking?"
 
             hi "Just walking."
 
             show rin basic_absent_close_rn
-            with charachange
+            with persistent.charachange
 
             rin "Okay."
 
@@ -2414,9 +2441,10 @@ label a4_rin:
 
             "It might be better to lose that illusion."
 
-            show ev rin_rain_away_close at topleft
+            show ev rin_rain_away_close at topleft:
+                yalign 0.0
             show ovl rin_rain_hisaotowards_close behind rain at topright
-            with charachange
+            with charachangeev
 
             hi "I'll be going back home for some time so I thought I'd come to see you before that."
 
@@ -2519,7 +2547,7 @@ label a4_rin:
 
             "Even though I want to say I'm sorry, even though I don't want us to break apart, I can't bring myself to say either of these things."
 
-            scene bg misc_sky_rn
+            show bg misc_sky_rn
             hide rin
             with locationchange
 
@@ -2568,19 +2596,19 @@ label a4_rin:
 
             hi "Yeah… but why is it so important?"
 
-            scene ev rin_trueend_sad at truecenter
+            show ev rin_trueend_sad at truecenter
             with locationchange
 
             rin "Because otherwise… I don't know if I can bear this."
 
             "I was still in the middle of folding my umbrella so I just answered something to get the conversation going, but what she says now freezes my blood."
 
-            scene ev rin_trueend_closed
+            show ev rin_trueend_closed
             with locationchange
 
             rin "If someone says a joke and laughs, you laugh with them, right? Because a joy doubled is a joy tripled, right?"
 
-            scene ev rin_trueend_smile
+            show ev rin_trueend_smile
             with locationchange
 
             rin "If someone is hurt and sad, you comfort and hug them, right? Because that way—"
@@ -2589,7 +2617,7 @@ label a4_rin:
 
             "She pauses, her mouth still halfway open, then remembers to close it."
 
-            scene ev rin_trueend_normal
+            show ev rin_trueend_normal
             with locationchange
 
             "A gloom sets on her face and simultaneously on my heart."
@@ -2636,7 +2664,7 @@ label a4_rin:
 
             "It feels like she articulated my thoughts in clear, simple words and that stupid story about Picasso."
 
-            scene ev rin_trueend_closed
+            show ev rin_trueend_closed
             with locationchange
 
             "Rin droops her head like a withering flower, letting her bangs fall in front of her eyes so that I can't see them."
@@ -2647,7 +2675,7 @@ label a4_rin:
 
             "The shaky voice that says those words does not belong to Rin."
 
-            scene ev rin_trueend_sad
+            show ev rin_trueend_sad
             with locationchange
 
             rin "I really thought you could be different. That I wouldn't have to be alone."
@@ -2668,7 +2696,7 @@ label a4_rin:
 
             hi "I say that, because saying otherwise would feel like lying."
 
-            scene ev rin_trueend_normal
+            show ev rin_trueend_normal
             with locationchange
 
             rin "Why?"
@@ -2687,12 +2715,12 @@ label a4_rin:
 
             rin "I just paint because it makes me feel like I can really feel something."
 
-            scene ev rin_trueend_weaksmile
+            show ev rin_trueend_weaksmile
             with locationchange
 
             "She holds her breath for a while before releasing it in a long, sigh-like flow."
 
-            scene ev rin_trueend_closed
+            show ev rin_trueend_closed
             with locationchange
 
             rin "That's why I'll do it."
@@ -2703,7 +2731,7 @@ label a4_rin:
 
             "Rin starting a little shows that she had regressed into talking to herself again, but I'm glad I can snap her back even now."
 
-            scene ev rin_trueend_normal
+            show ev rin_trueend_normal
             with locationchange
 
             rin "Teacher and Sae have talked with someone who is a very important person. I got a scholarship for a big art school in Tokyo."
@@ -2716,7 +2744,7 @@ label a4_rin:
 
             hi "Hold on, what? Why didn't you tell?"
 
-            scene ev rin_trueend_smile
+            show ev rin_trueend_smile
             with locationchange
 
             rin "I just did. You are the first one I told because I decided it just now."
@@ -2763,7 +2791,7 @@ label a4_rin:
 
             "Rin is so frustratingly absolute in her own judgment that it might make me hate her if I didn't love her, even though I don't know which way I am feeling any more."
 
-            scene ev rin_trueend_normal
+            show ev rin_trueend_normal
             with locationchange
 
             rin "Maybe I am that kind of a person. The kind that belongs only to herself."
@@ -2788,7 +2816,7 @@ label a4_rin:
 
             "I realize I would have the disadvantage because the sun is behind Rin, stinging my eyes."
 
-            scene ev rin_trueend_sad
+            show ev rin_trueend_sad
             with locationchange
 
             rin "Do you hate me?"
@@ -2807,12 +2835,12 @@ label a4_rin:
 
             hi "I think that is the most important thing. We could try to—"
 
-            scene ev rin_trueend_normal
+            show ev rin_trueend_normal
             with locationchange
 
             rin "Don't say it."
 
-            scene ev rin_trueend_hug
+            show ev rin_trueend_hug
             with locationchange
 
             play music music_friendship fadein 4.0
@@ -2825,7 +2853,7 @@ label a4_rin:
 
             "It's funny how all of those feel so familiar even though Rin, as a whole, does not."
 
-            scene ev rin_trueend_hugclosed
+            show ev rin_trueend_hugclosed
             with locationchange
 
             rin "Are you sure you can't hate me?"
@@ -2838,7 +2866,7 @@ label a4_rin:
 
             hi "Dunno. It's pretty hard when you are hugging me like that."
 
-            scene ev rin_trueend_sad
+            show ev rin_trueend_sad
             with locationchange
 
             "I wonder if it's because of my sullen voice, but she takes a step back, looking wistfully at her short arms."
@@ -2849,7 +2877,7 @@ label a4_rin:
 
             rin "I'm a bad person like that."
 
-            scene ev rin_trueend_normal
+            show ev rin_trueend_normal
             with locationchange
 
             rin "That's why I have to go."
@@ -2858,7 +2886,7 @@ label a4_rin:
 
             "And since I can't, Rin is free to continue as she wills, shifting her weight from one foot to the other before she does."
 
-            scene ev rin_trueend_smile
+            show ev rin_trueend_smile
             with locationchange
 
             rin "I will learn to hug people in my own way."
@@ -2877,7 +2905,7 @@ label a4_rin:
 
             rin "I'm sure that—{w=0.5}{nw}"
 
-            scene ev rin_trueend_sad
+            show ev rin_trueend_sad
             with locationchange
 
             "She chokes in the middle of saying something I would never come to hear."
@@ -2894,7 +2922,7 @@ label a4_rin:
 
             hi "How can you say such a thing?"
 
-            scene ev rin_trueend_normal
+            show ev rin_trueend_normal
             with locationchange
 
             "Rin raises her eyes to meet mine, they are serious and deep, a perfect image of the uncharted territory I always thought they were."
@@ -2919,7 +2947,7 @@ label a4_rin:
 
             stop music fadeout 12.0
 
-            scene ev rin_trueend_gone
+            show ev rin_trueend_gone
             with locationchange
 
             "She turned around and walked off without looking back."
@@ -2938,6 +2966,8 @@ label a4_rin:
             "The ripples on the puddles she stepped on expanded until they met the limits of their tiny existence and disappeared without a trace."
 
             "Her words stayed frozen deep inside my heart."
+
+            $ ach("rinneutral_achieve")
 
             if _in_replay:
                 return
@@ -2999,7 +3029,7 @@ label a4_rin:
 
             show muto irritated
             show nomiya stern
-            with charachange
+            with persistent.charachange
 
             "A frown spreads simultaneously on both of their faces as the men measure each other with their gazes."
 
@@ -3010,7 +3040,7 @@ label a4_rin:
             "A chilly atmosphere suddenly spreads in the middle of the summer afternoon as the two men try to stare each other down."
 
             show nomiya serious
-            with charachange
+            with persistent.charachange
 
             no "This is urgent, and it seems that Nakai has already finished."
 
@@ -3019,7 +3049,7 @@ label a4_rin:
             "It's true that I've been idle for a good while now, so Nomiya is right, but…"
 
             show muto normal
-            with charachange
+            with persistent.charachange
 
             mu "Nakai, would you like to check your answers one more time?"
 
@@ -3030,14 +3060,14 @@ label a4_rin:
             stop music fadeout 6.0
 
             show muto irritated
-            with charachange
+            with persistent.charachange
 
             mu "Very well. Nakai, go with Mr. Nomiya, if you please."
 
             mu "Take your bag with you and bring your test paper to my desk."
 
             show muto smile
-            with charachange
+            with persistent.charachange
 
             mu "You have a nice vacation."
 
@@ -3049,7 +3079,9 @@ label a4_rin:
 
             "I don't know what the teacher wants from me, but I can guess it probably is not detention and also that it probably has something to do with Rin again."
 
-            scene bg school_hallway3
+            scene bg school_hallway3:
+                truecenter
+                zoom 1.02
             with locationchange
 
             play sound sfx_doorslam
@@ -3073,14 +3105,14 @@ label a4_rin:
             hi "You have probably asked in her homeroom next door."
 
             show nomiya stern
-            with charachange
+            with persistent.charachange
 
             no "Of course I have! I have searched every nook and cranny of this blasted school and the girls' dorm."
 
             no "You are the last one to see her since yesterday and you are her friend."
 
             show nomiya serious
-            with charachange
+            with persistent.charachange
 
             no "Work with me here. Aren't you worried?"
 
@@ -3095,7 +3127,7 @@ label a4_rin:
             "Or something. She really didn't explain what was wrong."
 
             show nomiya frown
-            with charachange
+            with persistent.charachange
 
             no "What second thoughts?"
 
@@ -3106,7 +3138,7 @@ label a4_rin:
             "He came to me… yes, why? Maybe he thinks I'm some kind of confidant of Rin's, but I don't think I can help with this matter."
 
             show nomiya serious
-            with charachange
+            with persistent.charachange
 
             "The teacher huffs and scratches his head in confusion."
 
@@ -3119,26 +3151,26 @@ label a4_rin:
             hi "Er, I don't mean to be rude, but wasn't it you who pushed Rin to that direction in the first place?"
 
             show nomiya dreamy
-            with charachange
+            with persistent.charachange
 
             no "Her goal is my goal. That is a mentor's job."
 
             hi "I guess so. I just don't know if painting can make her happy."
 
             show nomiya stern
-            with charachange
+            with persistent.charachange
 
             no "That's pretty preposterous of you to say, Nakai."
 
             "He suddenly sounds pretty irate. Did I say something stupid?"
 
             show nomiya serious
-            with charachange
+            with persistent.charachange
 
             no "You don't understand, do you? It is not a question of happiness. For every gain there is a sacrifice to be made."
 
             show nomiya stern
-            with charachange
+            with persistent.charachange
 
             no "There is no free lunch, but could I… would I let that girl waste away her talent if she has a moment of doubt? Never!"
 
@@ -3149,7 +3181,7 @@ label a4_rin:
             "The more the teacher talks, the more I feel that Rin doesn't think like that, even though I have no idea how she thinks."
 
             show nomiya serious
-            with charachange
+            with persistent.charachange
 
             no "I can very well understand why she would sacrifice her summer vacation and make up for the lost classes and exams to get a chance at showing her art."
 
@@ -3162,7 +3194,7 @@ label a4_rin:
             hi "But—"
 
             show nomiya smile
-            with charachange
+            with persistent.charachange
 
             no "Do you have anything like what art is to Tezuka?"
 
@@ -3179,7 +3211,7 @@ label a4_rin:
             hi "No, I don't have a passion like that."
 
             show nomiya serious
-            with charachange
+            with persistent.charachange
 
             no "Then you can't understand."
 
@@ -3190,14 +3222,14 @@ label a4_rin:
             "Still, I carry on arguing, out of spite if for nothing else."
 
             show nomiya stern
-            with charachange
+            with persistent.charachange
 
             no "How could she not? She's been at it so hard for the past few weeks that she put off even coming to school, not to say anything about attending class. Don't be ridiculous."
 
             "I don't think I'm being ridiculous, but as I have no rebuttal, Nomiya seems to consider this one his win."
 
             show nomiya smile
-            with charachange
+            with persistent.charachange
 
             no "At any rate, the opening was quite successful despite Tezuka hardly showing up."
 
@@ -3206,14 +3238,14 @@ label a4_rin:
             hi "Well, that's nice isn't it?"
 
             show nomiya veryhappy
-            with charachange
+            with persistent.charachange
 
             no "Yes, it's fantastic news! I hoped that Tezuka would come to her senses when she heard about this, but…"
 
             "He sighs and takes off his glasses, cleaning them against his jacket before putting them on his nose again."
 
             show nomiya smile
-            with charachange
+            with persistent.charachange
 
             no "At any rate, I should be going. There is this mess to be settled with Sae and everyone."
 
@@ -3278,7 +3310,7 @@ label a4_rin:
             rin "Did you?"
 
             show rin negative_annoyed
-            with charachange
+            with persistent.charachange
 
             "She furrows her brow, looking so puzzled that it makes me wonder if the question was asked in all seriousness."
 
@@ -3287,12 +3319,12 @@ label a4_rin:
             hi "Are you talking metaphorically now?"
 
             show rin negative_spaciness
-            with charachange
+            with persistent.charachange
 
             rin "Do you mean like eels, caves and dark, stormy nights?"
 
             show rin negative_sad
-            with charachange
+            with persistent.charachange
 
             rin "I am bad at talking like that."
 
@@ -3303,7 +3335,7 @@ label a4_rin:
             "The abruptly-ended greetings give me the chance to close the door behind me and sit down on a dust-covered desktop."
 
             show rin basic_absent
-            with charachange
+            with charachangealways
 
             "Rin stays standing, but at least she turns around."
 
@@ -3336,7 +3368,7 @@ label a4_rin:
             "…"
 
             show rin relaxed_nonchalant
-            with charachange
+            with persistent.charachange
 
             rin "Nothing."
 
@@ -3345,14 +3377,14 @@ label a4_rin:
             hi "Rin, stop trying to dodge me or I'll leave."
 
             show rin relaxed_boredom
-            with charachange
+            with persistent.charachange
 
             rin "Okay."
 
             hi "Do you want me to leave?"
 
             show rin relaxed_doubt
-            with charachange
+            with persistent.charachange
 
             rin "Are you still angry?"
 
@@ -3365,7 +3397,7 @@ label a4_rin:
             hi "Let's put that aside for the time being, all right?"
 
             show rin basic_absent
-            with charachange
+            with persistent.charachange
 
             rin "If you say so."
 
@@ -3378,7 +3410,7 @@ label a4_rin:
             hi "It seemed like you just threw out everything you had worked for. And I don't get why."
 
             show rin basic_deadpanupset
-            with charachange
+            with persistent.charachange
 
             rin "Did I make a mistake?"
 
@@ -3397,19 +3429,19 @@ label a4_rin:
             hi "I don't know. I mean, it's not the end of the world but it probably was pretty stupid."
 
             show rin relaxed_nonchalant
-            with charachange
+            with persistent.charachange
 
             "She responds with a sigh of her own, although hers is not nearly as heavy as mine was."
 
             show rin relaxed_sleepy
-            with charachange
+            with persistent.charachange
 
             rin "I just couldn't do it."
 
             hi "But… why? What's wrong?"
 
             show rin negative_annoyed
-            with charachange
+            with persistent.charachange
 
             "A pause, a furrowed brow, a quiet voice."
 
@@ -3428,7 +3460,7 @@ label a4_rin:
             hi "You never explain {b}anything{/b} in a way that would make sense."
 
             show rin basic_absent
-            with charachange
+            with persistent.charachange
 
             rin "Nobody else has ever asked me to."
 
@@ -3471,14 +3503,14 @@ label a4_rin:
             hi "Why is it that you paint?"
 
             show rin basic_awayabsent
-            with charachange
+            with persistent.charachange
 
             rin "I… because I don't know what else I could do."
 
             rin "It's like this feeling that there is no choice, that it's the only possibility."
 
             show rin basic_sad
-            with charachange
+            with persistent.charachange
 
             rin "Like when there are only watermelon-flavored popsicles left in the store but you need to eat a popsicle."
 
@@ -3487,31 +3519,31 @@ label a4_rin:
             hi "But… if you don't want to paint…"
 
             show rin negative_spaciness
-            with charachange
+            with persistent.charachange
 
             rin "Not like that. You had to come to this school even though you probably didn't want to have a heart attack."
 
             show rin negative_annoyed
-            with charachange
+            with persistent.charachange
 
             "She pauses, frowning as if something in what she said didn't please her."
 
             show rin basic_lucid
-            with charachange
+            with persistent.charachange
 
             rin "At least I think you wouldn't."
 
             "Her careful follow-up is followed in turn by another, shorter pause with another, smaller frown."
 
             show rin basic_deadpanupset
-            with charachange
+            with persistent.charachange
 
             rin "Would you like to have a heart attack?"
 
             hi "No, I wouldn't and I didn't want to."
 
             show rin basic_deadpansurprised
-            with charachange
+            with persistent.charachange
 
             rin "But you're doing fine, aren't you? Or are you still sad about it?"
 
@@ -3524,7 +3556,7 @@ label a4_rin:
             hi "No… heh, I guess even I can't dwell on the past indefinitely."
 
             show rin basic_awayabsent
-            with charachange
+            with persistent.charachange
 
             rin "See? Even watermelon doesn't really taste bad if you have to eat it."
 
@@ -3577,7 +3609,7 @@ label a4_rin:
             hi "You know, about that thing you just said…"
 
             show rin basic_absent
-            with charachange
+            with persistent.charachange
 
             rin "Which one of them?"
 
@@ -3588,14 +3620,14 @@ label a4_rin:
             "My question is probably pretty stupid. At least Rin looks at me in the blank way that seems to say so."
 
             show rin basic_deadpannormal
-            with charachange
+            with persistent.charachange
 
             rin "I don't know. Am I an artist?"
 
             hi "Well, you paint stuff and you have an exhibition too. I'd say you qualify."
 
             show rin basic_deadpancontemplation
-            with charachange
+            with persistent.charachange
 
             rin "I think I still don't know, but okay."
 
@@ -3608,31 +3640,31 @@ label a4_rin:
             "Rin just… comes to a full stop while she is thinking. It's disconcerting, because reacting to people spacing out is always hard, but she comes off as less obnoxious."
 
             show rin basic_lucid
-            with charachange
+            with persistent.charachange
 
             rin "I think I want someone to see what's inside me. Not the way doctors and serial killers do."
 
             show rin basic_absent
-            with charachange
+            with persistent.charachange
 
             rin "The way that doesn't make me feel lonely."
 
             show rin relaxed_boredom
-            with charachange
+            with persistent.charachange
 
             rin "This is what you call metaphorical, you see."
 
             hi "Please don't lecture me about self-evident things."
 
             show rin basic_deadpansurprised
-            with charachange
+            with persistent.charachange
 
             rin "It's not self-evident that this is self-evident."
 
             hi "So, you present a painting to someone and expect him to magically see a glimpse of your soul?"
 
             show rin negative_angry
-            with charachange
+            with persistent.charachange
 
             rin "It's not like that. It's just a little like that but not really. Don't you understand?"
 
@@ -3641,7 +3673,7 @@ label a4_rin:
             hi "You know, I feel a little bit of despair every time you ask that question."
 
             show rin basic_absent
-            with charachange
+            with persistent.charachange
 
             rin "What question?"
 
@@ -3650,14 +3682,14 @@ label a4_rin:
             "She seems almost surprised at my clarification."
 
             show rin basic_lucid
-            with charachange
+            with persistent.charachange
 
             rin "Oh, it's not really a question. It's one of those kind that you don't have to answer."
 
             hi "Rhetorical."
 
             show rin basic_absent
-            with charachange
+            with persistent.charachange
 
             rin "Yeah, that's the word, a question that is not a question is a rhetorical question. How nice."
 
@@ -3670,22 +3702,22 @@ label a4_rin:
             hi "Is that a rhetorical question?"
 
             show rin basic_deadpanupset
-            with charachange
+            with persistent.charachange
 
             rin "You are not funny."
 
             show rin basic_awayabsent
-            with charachange
+            with persistent.charachange
 
             rin "But if you don't like it, would you like me to say something else instead?"
 
             show rin basic_lucid
-            with charachange
+            with persistent.charachange
 
             rin "I don't have any good ones though. How about… 'Your pants are on fire?'"
 
             show rin basic_absent
-            with charachange
+            with persistent.charachange
 
             rin "This can be our secret language."
 
@@ -3732,7 +3764,7 @@ label a4_rin:
             hi "And I'm pretty sure nobody really can."
 
             show rin relaxed_doubt
-            with charachange
+            with charachangealways
 
             "This seems to worry her slightly."
 
@@ -3741,7 +3773,7 @@ label a4_rin:
             hi "Yeah. I guess that art is meant to be interpreted, not understood. That's how I'd put it."
 
             show rin relaxed_sleepy
-            with charachange
+            with persistent.charachange
 
             rin "That's a sad thought."
 
@@ -3750,12 +3782,12 @@ label a4_rin:
             hi "Does it make you feel sad for yourself?"
 
             show rin basic_lucid
-            with charachange
+            with charachangealways
 
             "Rin thinks about this for a while, and then shakes her head surprisingly vehemently."
 
             show rin basic_deadpannormal
-            with charachange
+            with persistent.charachange
 
             "The first thing she focuses her eyes on afterward is me."
 
@@ -3768,7 +3800,7 @@ label a4_rin:
             hi "Can you do that?"
 
             show rin basic_absent
-            with charachange
+            with persistent.charachange
 
             "This time, she nods her head."
 
@@ -3780,7 +3812,8 @@ label a4_rin:
                 return
 
         label .measuring_shadows:
-            scene bg school_hallway3
+            scene bg school_hallway3:
+                truecenter zoom 1.02
             with locationchange
 
             "The hallway is empty, almost intimidating."
@@ -3801,12 +3834,11 @@ label a4_rin:
 
             pause 0.2
 
-            show rin:
-                ease 1.0 tworight alpha 0.0
-
-            pause 1.0
-
+            show rin at tworight:
+                ease 1.0 alpha 0.0
+            with charamove
             hide rin
+            with None
 
             "Nodding barely noticeably, Rin strides in without stopping, and naturally, without knocking."
 
@@ -3822,7 +3854,8 @@ label a4_rin:
 
             "…"
 
-            show bg at right
+            show bg at right:
+                yalign 0.5 zoom 1.02
             with charamove
 
             "Manners lose to curiosity, and so I stay close enough to listen in."
@@ -3955,7 +3988,7 @@ label a4_rin:
             "Rin is left standing there, in front of the teacher's desk."
 
             show rin negative_spaciness
-            with charachange
+            with persistent.charachange
 
             rin "I couldn't say I am sorry."
 
@@ -3987,7 +4020,7 @@ label a4_rin:
             hi "Rin?"
 
             show rin negative_annoyed_close
-            with charachange
+            with persistent.charachange
 
             rin "Go away."
 
@@ -4003,7 +4036,7 @@ label a4_rin:
             hi "Why… what are you saying?"
 
             show rin negative_angry_close
-            with charachange
+            with persistent.charachange
 
             rin "You're angry with me too, right?"
 
@@ -4016,7 +4049,7 @@ label a4_rin:
             hi "He wanted you to be something you are not. And…"
 
             show rin basic_surprised_close
-            with charachange
+            with persistent.charachange
 
             "I take a deep breath and finally catch her eyes in my own, locking our gazes."
 
@@ -4025,7 +4058,7 @@ label a4_rin:
             hi "Maybe that's why I couldn't contain myself and became so frustrated, just like the teacher did."
 
             show rin relaxed_doubt_close
-            with charachange
+            with persistent.charachange
 
             rin "What more? There is nothing more to me than me, that's all I am. I don't understand that."
 
@@ -4060,22 +4093,22 @@ label a4_rin:
             "…"
 
             show rin negative_confused_close
-            with charachange
+            with persistent.charachange
 
             rin "Why? Why does all this happen?"
 
             show rin negative_sad_close
-            with charachange
+            with persistent.charachange
 
             rin "People are doing things I don't ask for and don't want and everyone keeps getting angry at me, I have no idea what is going on any more and can't stop feeling like I want to run away from everything…"
 
             show rin basic_lucid_close
-            with charachange
+            with charachangealways
 
             "She shuts her eyes tight and breathes out deeply, calmly."
 
             show rin basic_upset_close
-            with charachange
+            with persistent.charachange
 
             "When the eyelids open, all I can see is dark green desperation."
 
@@ -4102,14 +4135,14 @@ label a4_rin:
             "I'm saying pretty cruel things but I can't stop myself, the words keep rolling off my tongue with slow, hard certainty."
 
             show rin basic_surprised_close
-            with charachange
+            with persistent.charachange
 
             "I can see them hitting Rin almost like physical blows."
 
             "As the wetness gathers into the corners of her eyes, they are still wide with the shock of rejection."
 
             show rin basic_crying_close
-            with charachange
+            with charachangealways
 
             "As the tears start rolling down her pale cheeks, she does nothing to stop them."
 
@@ -4119,7 +4152,12 @@ label a4_rin:
 
             "But reality catches up."
 
-            show rin negative_crying_superclose
+            show bg:
+                truecenter
+                zoom 1.02
+            show rin negative_crying_superclose:
+                truecenter
+                zoom 1.02
             with vpunch
 
             "Rin slumps forward as if she was deflating, and buries her face as deep in my shirt as she can."
@@ -4178,14 +4216,14 @@ label a4_rin:
             nvl clear
 
             show rin basic_crying_superclose_ss
-            with charachange
+            with charachangealways
 
             "Eventually Rin stirs a little and still smothering herself against my chest, mutters into my shirt."
 
             rin "Let me be here for a while."
 
             show rin negative_crying_superclose_ss
-            with charachange
+            with charachangealways
 
             rin "Please, Hisao."
 
@@ -4273,7 +4311,7 @@ label a4_rin:
             "Rin's bitter tears have dried up, and she looks a little more like herself again."
 
             show rin basic_sad_close_ss
-            with charachange
+            with charachangealways
 
             "The lost look in her eyes is still there though. Her gaze wanders around restlessly before stopping at me."
 
@@ -4284,7 +4322,7 @@ label a4_rin:
             hi "What? What do you mean?"
 
             show rin basic_upset_close_ss
-            with charachange
+            with persistent.charachange
 
             rin "I cried."
 
@@ -4299,7 +4337,7 @@ label a4_rin:
             "…"
 
             show rin basic_sad_close_ss
-            with charachange
+            with persistent.charachange
 
             rin "Why?"
 
@@ -4308,7 +4346,7 @@ label a4_rin:
             hi "Is that what you want me to say? But isn't that obvious?"
 
             show rin negative_confused_close_ss
-            with charachange
+            with persistent.charachange
 
             rin "I don't know. It feels weird to cry."
 
@@ -4319,7 +4357,7 @@ label a4_rin:
             "Norms do not apply to the person I'm talking to."
 
             show rin negative_worried_close_ss
-            with charachange
+            with persistent.charachange
 
             rin "It always felt so wrong, different from what is in me. Like I couldn't really tell what I felt."
 
@@ -4328,7 +4366,7 @@ label a4_rin:
             rin "I thought those kinds of things."
 
             show rin negative_sad_close_ss
-            with charachange
+            with persistent.charachange
 
             rin "I thought… that painting was enough because it felt that I did at least that right."
 
@@ -4337,7 +4375,7 @@ label a4_rin:
             rin "But it doesn't feel like it's enough any more. Because if nobody else can see that, I will still be alone."
 
             show rin basic_absent_close_ss
-            with charachange
+            with persistent.charachange
 
             rin "Was it wrong to try? Everyone got really angry at me for that."
 
@@ -4392,7 +4430,7 @@ label a4_rin:
             hi "It's because everything is so subjective. You see the world the way you do, but it's different from everyone else."
 
             show rin basic_sad_close_ss
-            with charachange
+            with persistent.charachange
 
             rin "But isn't that terrible?"
 
@@ -4401,7 +4439,7 @@ label a4_rin:
             "…"
 
             show rin relaxed_doubt_close_ss
-            with charachange
+            with persistent.charachange
 
             "She frowns, looking probably as stricken as she can. Which is not much, but it's enough for me to understand that Rin is not particularly happy."
 
@@ -4418,24 +4456,24 @@ label a4_rin:
             "…"
 
             show rin negative_worried_close_ss
-            with charachange
+            with charachangealways
 
             "She makes a difficult face, carefully trying to pick the words she wants to say."
 
             "So Rin has times when it's hard to say anything, too."
 
             show rin basic_sad_close_ss
-            with charachange
+            with persistent.charachange
 
             rin "It can't be helped, I think."
 
             show rin basic_absent_close_ss
-            with charachange
+            with persistent.charachange
 
             rin "…but… if you say that…"
 
             show rin basic_awayabsent_close_ss
-            with charachange
+            with persistent.charachange
 
             rin "It makes me feel a little better."
 
@@ -4448,7 +4486,7 @@ label a4_rin:
             "And how even her short bangs can cover her eyes when she looks downwards."
 
             show rin basic_blush_close_ss
-            with charachange
+            with persistent.charachange
 
             "And how they can't cover the deep red color rising on her cheeks and all the way to the tips of her ears."
 
@@ -4467,14 +4505,14 @@ label a4_rin:
             "Like we have some weird, wordless connection that would hold even so."
 
             show rin relaxed_nonchalant_close_ss
-            with charachange
+            with charachangealways
 
             "Rin keeps shifting her weight from one foot to the other restlessly, looking everywhere around the room except at me."
 
             "She is the one who finally breaks the spell."
 
             show rin basic_deadpan_close_ss
-            with charachange
+            with persistent.charachange
 
             rin "Can we go? I don't want to stay here."
 
@@ -4483,17 +4521,17 @@ label a4_rin:
             "My reply is covering my nervousness as badly as her question is covering hers."
 
             show rin relaxed_sleepy_close_ss
-            with charachange
+            with persistent.charachange
 
             rin "You can go wherever you like. I want to sleep. I haven't really slept for a few weeks."
 
             show rin basic_lucid_close_ss
-            with charachange
+            with persistent.charachange
 
             rin "It feels like there is a flock of light blue butterflies inside my head. It makes it hard to think properly."
 
             show rin basic_deadpannormal_close_ss
-            with charachange
+            with persistent.charachange
 
             rin "The kind that you think is too blue to really exist, like Emi's panties this morning."
 
@@ -4524,14 +4562,14 @@ label a4_rin:
             "She shakes her head, and I almost expect a couple of ultramarine-colored Morphos to pop out of her ears."
 
             show rin basic_deadpanamused_close_ss
-            with charachange
+            with persistent.charachange
 
             "A small smile tugs upwards the corners of her mouth."
 
             rin "That reminds me. The blue, not the panties."
 
             show rin basic_deadpandelight_close_ss
-            with charachange
+            with persistent.charachange
 
             rin "The word for a flock of butterflies is a swarm. I looked it up."
 
@@ -4540,7 +4578,7 @@ label a4_rin:
             hi "Why don't you use it then?"
 
             show rin basic_absent_close_ss
-            with charachange
+            with persistent.charachange
 
             rin "I like the other word better."
 
@@ -4549,7 +4587,7 @@ label a4_rin:
             hi "Then you should use it, right?"
 
             show rin basic_awayabsent_close_ss
-            with charachange
+            with persistent.charachange
 
             "She nods and falls silent, her gaze escaping mine to the side, attracted by the dark orange sunlight refracting from the windows."
 
@@ -4558,7 +4596,7 @@ label a4_rin:
             hi "Hey… you all right now?"
 
             show rin basic_absent_close_ss
-            with charachange
+            with persistent.charachange
 
             "She glances at me from the corner of her eye, looking wistful again. The sunlight's reflection doesn't betray any more of her inner feelings."
 
@@ -4567,7 +4605,7 @@ label a4_rin:
             "I want to continue this conversation, grasping at those straws that she finally revealed to even exist."
 
             show rin basic_awayabsent_close_ss
-            with charachange
+            with persistent.charachange
 
             "But Rin is looking out of the window so absentmindedly that I know she won't be responsive in any way that would make sense."
 
@@ -4586,12 +4624,12 @@ label a4_rin:
             hi "I'll walk you back to the dorms then."
 
             show rin basic_absent_close_ss
-            with charachange
+            with persistent.charachange
 
             rin "Thanks."
 
             show rin basic_lucid_close_ss
-            with charachange
+            with persistent.charachange
 
             rin "Really."
 
@@ -4640,7 +4678,7 @@ label a4_rin:
             play music music_dreamy fadein 2.0
 
             scene bg school_dormhisao_rn
-            with charachange
+            with locationchange
 
             $ renpy.music.set_volume(0.4, 0.0, channel="ambient")
             play ambient sfx_rain fadein 1.0
@@ -4669,7 +4707,7 @@ label a4_rin:
             $ renpy.music.set_volume(0.4, 1.0, channel="ambient")
 
             scene bg school_dormhisao_rn
-            with charachange
+            with locationchange
 
             "So I've been half-assedly cleaning up in between half-assedly reading a book, packing my stuff on the side when I get bored of the first two."
 
@@ -4708,7 +4746,7 @@ label a4_rin:
             hi "How are you feeling?"
 
             show rin basic_deadpannormal
-            with charachange
+            with persistent.charachange
 
             rin "Medium normal."
 
@@ -4719,47 +4757,47 @@ label a4_rin:
             hi "You're all wet."
 
             show rin basic_absent
-            with charachange
+            with persistent.charachange
 
             rin "It's because I come from the outside. Do you know it?"
 
             hi "Why'd you be outside? It's raining buckets out there, if you haven't noticed."
 
             show rin basic_deadpancontemplation
-            with charachange
+            with persistent.charachange
 
             rin "I haven't. It's raining pretty hard though. I was on a walk."
 
             hi "Is this what you call 'wallowing in self-pity?'"
 
             show rin basic_deadpanupset
-            with charachange
+            with persistent.charachange
 
             rin "Do you think I'm pitiful?"
 
             hi "No, I implied that you think you are."
 
             show rin basic_awayabsent
-            with charachange
+            with persistent.charachange
 
             rin "I'm not, and rain is not a sad thing."
 
             show rin basic_absent
-            with charachange
+            with persistent.charachange
 
             rin "Don't you ever walk in the rain?"
 
             hi "I do, but only with proper equipment, like an umbrella."
 
             show rin basic_lucid
-            with charachange
+            with persistent.charachange
 
             rin "You just need to imagine you have a blue umbrella with white stripes."
 
             hi "It might be tough when rain is falling on my head."
 
             show rin basic_deadpannormal
-            with charachange
+            with persistent.charachange
 
             rin "Just imagine harder."
 
@@ -4772,7 +4810,7 @@ label a4_rin:
             "It's so… very much like her."
 
             show rin basic_deadpan
-            with charachange
+            with persistent.charachange
 
             rin "I may need to come in. I need some help with this water and clothes I'm wearing."
 
@@ -4781,19 +4819,19 @@ label a4_rin:
             hi "But, Emi…"
 
             show rin basic_lucid
-            with charachange
+            with persistent.charachange
 
             "Rin shakes her head vehemently, causing water to sprinkle everywhere."
 
             rin "She left."
 
             show rin basic_awayabsent
-            with charachange
+            with persistent.charachange
 
             rin "Besides she would just worry and fuss until she could not worry or fuss any more, which always takes a troublesomely long time."
 
             show rin basic_absent
-            with charachange
+            with persistent.charachange
 
             rin "It's in fact longer than I want to hear her fussing, and I thought you probably are not the fussing kind."
 
@@ -4822,7 +4860,7 @@ label a4_rin:
             hi "I have a towel somewhere. Do you want dry clothes? Is a uniform fine? I'm taller than you, but…"
 
             show rin basic_lucid_close_rn
-            with charachange
+            with persistent.charachange
 
             rin "Everything is fine."
 
@@ -4839,7 +4877,7 @@ label a4_rin:
             "There is something wrong with me, a normal guy would just—{w=1.0}{nw}"
 
             show rin basic_absent_close_rn
-            with charachange
+            with persistent.charachange
 
             rin "Stop worrying. It is not a problem."
 
@@ -4880,7 +4918,7 @@ label a4_rin:
 
             "No, it's less than the bare minimum, I think with a passing pang of sadness and some guilt for thinking like that."
 
-            scene ev rin_wet_arms:
+            show ev rin_wet_arms:
                 center
                 xalign 0.0
                 linear 20.0 xalign 1.0
@@ -4898,7 +4936,7 @@ label a4_rin:
 
             "I feel like asking, and almost do, but Rin's miserable state requires a higher priority of my attention."
 
-            scene ev rin_wet_face_down:
+            show ev rin_wet_face_down:
                 center
                 yalign 0.0
             with flash
@@ -4907,12 +4945,12 @@ label a4_rin:
 
             "I guess there is no need for chitchat then."
 
-            scene ev rin_wet_towel_down
+            show ev rin_wet_towel_down
             with charachangeev
 
             "I pick up the towel from the bed and wrap it around her head, rumpling it all over her hair until most of the rainwater is hopefully soaked into the fabric."
 
-            scene ev rin_wet_towel_up
+            show ev rin_wet_towel_up
             with charachangeev
 
             "She peeks from below the towel at me, looking up with impassive eyes."
@@ -4935,7 +4973,7 @@ label a4_rin:
 
             "The contact is electric, a jolt of current surging through me."
 
-            scene ev rin_wet_towel_touch
+            show ev rin_wet_towel_touch
             with charachangeev
 
             "Whether she seeks comfort, warmth or just my touch I wouldn't know, but I can't help touching her back, caressing her soft cheek with my hand."
@@ -4974,7 +5012,7 @@ label a4_rin:
             nvl hide dissolve
             nvl clear
 
-            scene ev rin_wet_face_up
+            show ev rin_wet_face_up
             with charachangeev
 
             "I pet her head, trying to sort out the hair that refuses to be sorted out even when wet."
@@ -4983,7 +5021,7 @@ label a4_rin:
 
             hi "Pants too?"
 
-            scene ev rin_wet_face_down
+            show ev rin_wet_face_down
             with charachangeev
 
             "She nods an answer, leans back and spreads her legs, with a grotesquely inviting gesture that makes a nasty feeling crawl up and down my spine like a bad premonition."
@@ -5000,6 +5038,7 @@ label a4_rin:
 
             scene evh rin_h2_pan_surprise:
                 xalign 0.5 yalign 0.0
+                ease 10.0 yalign 0.15
             with whiteout
 
             "I kneel down uncomfortably and titillatingly between her legs so I can quickly dry her bare feet, remembering that they are as important to her as hands are to me."
@@ -5029,7 +5068,7 @@ label a4_rin:
             "…Is that what you want too? Would it be all right now? To take this step?"
 
             show evh:
-                acdc_warp 8.0 yalign 1.0
+                acdc_warp 8.0 yalign 0.8
 
             "…What if? Maybe if…"
 
@@ -5040,7 +5079,7 @@ label a4_rin:
             "But that's all right. It seems thinking is not something we need right now."
 
             show evh rin_h2_nopan_closed:
-                yalign 1.0
+                yalign 0.8
             with Dissolvemove(0.5)
 
             $ renpy.music.play(music_heart, fadein=0.5, if_changed=True)
@@ -5085,7 +5124,7 @@ label a4_rin:
             "My every action is met with a different reaction, but all of those are out of pure lust."
 
             show evh rin_h2_hisao_closed:
-                acdc_warp 16.0 yalign 0.0
+                acdc_warp 16.0 yalign 0.15
 
             "Rin is lost in desire, willing to let anything happen to her if I do it right now."
 
@@ -5117,7 +5156,7 @@ label a4_rin:
             "It makes me feel anxious, nervous. Bothered."
 
             show evh rin_h2_hisao_away:
-                yalign 0.0
+                yalign 0.15
             with Dissolvemove(0.5)
 
             "As her body relaxes, I try to kiss her down there again, but it startles her, causing her to jump."
@@ -5200,7 +5239,7 @@ label a4_rin:
 
             play sound sfx_rustling
 
-            scene ev rin_pair_base
+            show ev rin_pair_base
             with charachangeev
 
             "I comply, standing back to open the buttons of my shirt, much more quickly than when I undid Rin's buttons."
@@ -5346,7 +5385,7 @@ label a4_rin:
 
             "Yes."
 
-            scene evh rin_h_left
+            show evh rin_h_left
             with charachangeev
 
             rin "You should forget about stuff like future and past, it's not like you can change those kinds of things."
@@ -5361,14 +5400,14 @@ label a4_rin:
 
             hi "I am here."
 
-            scene evh rin_h_normal
+            show evh rin_h_normal
             with charachangeev
 
             rin "Come closer."
 
             "My entire body is thinking only in positives now so I do, hugging her more tightly."
 
-            scene evh rin_h_right
+            show evh rin_h_right
             with charachangeev
 
             rin "Closer."
@@ -5377,7 +5416,7 @@ label a4_rin:
 
             "She tenses a little. Just a little."
 
-            scene evh rin_h_closed_close
+            show evh rin_h_closed_close
             with characlose
 
             rin "Closer."
@@ -5388,12 +5427,12 @@ label a4_rin:
 
             "I reach down between us and guide myself, sinking myself into her."
 
-            scene evh rin_h_strain_close
+            show evh rin_h_strain_close
             with charachangeev
 
             "Every muscle in Rin's body stiffens at the same time."
 
-            scene evh rin_h_strain
+            show evh rin_h_strain
             with charadistant
 
             "She doesn't say anything, or wince, so I push deeper, eventually moving out."
@@ -5420,7 +5459,7 @@ label a4_rin:
 
             "That feeling is—{w=0.7}{nw}"
 
-            scene evh rin_h_normal_close
+            show evh rin_h_normal_close
             with characlose
 
             rin "Wait…"
@@ -5429,7 +5468,7 @@ label a4_rin:
 
             "Maybe it hurts, or…"
 
-            scene evh rin_h_right_close
+            show evh rin_h_right_close
             with charachangeev
 
             "She looks at me in a way that I can't really begin to interpret."
@@ -5440,7 +5479,7 @@ label a4_rin:
 
             rin "You said I don't have to be alone."
 
-            scene evh rin_h_left_close
+            show evh rin_h_left_close
             with charachangeev
 
             "Her eyes are full of an innocent, fuzzyheaded confusion that makes me chuckle a little and pet the back of her head."
@@ -5453,7 +5492,7 @@ label a4_rin:
 
             hi "If there is such a person for you."
 
-            scene evh rin_h_closed_close
+            show evh rin_h_closed_close
             with charachangeev
 
             "She answers with a kiss, reminding me that we have stopped moving for no real reason."
@@ -5462,9 +5501,9 @@ label a4_rin:
 
             "I move faster, faster in and out of her, my sweat mixing with hers, glistening on our shared skin like diamonds and pearls."
 
-            scene evh rin_h_strain:
+            show evh rin_h_strain:
                 truecenter
-                zoom 1.2
+                zoom 1.2 subpixel True
                 easein 20.0 zoom 1.0
             with charadistant
 
@@ -5497,6 +5536,7 @@ label a4_rin:
             $ renpy.music.set_volume(0.1, 0.0, channel="music")
             play music music_timeskip fadein 4.0
 
+            window hide
             centered_b "Present{fast}" with Dissolve(4.0)
 
             nvl clear
@@ -5517,12 +5557,10 @@ label a4_rin:
 
             nvl clear
 
-            centered_alive "That way… you can confirm that you are, in fact…"
+            centered_b "That way… you can confirm that you are, in fact… {color=#fff}alive.{/color}"
 
-            show alivetext _("That way… you can confirm that you are, in fact…")
-            with Dissolve(3.0)
-
-            pause
+            show alivetext _("That way… you can confirm that you are, in fact… {color=#fff}alive.{/color}")
+            with None
 
             show alivetext _("That way… you can confirm that you are, in fact… alive.")
             with Dissolve(3.0)
@@ -5536,6 +5574,8 @@ label a4_rin:
 
             $ renpy.music.set_volume(1.0, 0.0, channel="music")
             play music music_dreamy fadein 4.0
+
+            window auto True
 
             "I am pretty sure that the girl who is standing there half-naked, staring out of the window of my room, has a much better grasp of 'present' than I do."
 
@@ -5557,7 +5597,7 @@ label a4_rin:
             "Only after I'm almost finished with buttoning up my shirt does Rin say something, still without turning to look at me."
 
             show rinpan relaxed_boredom_close
-            with charachange
+            with persistent.charachange
 
             rin "Let's go somewhere."
 
@@ -5566,24 +5606,24 @@ label a4_rin:
             "I can only assume she is inviting me and not the windowsill, but it's a fair guess."
 
             show rinpan basic_lucid_close
-            with charachange
+            with persistent.charachange
 
             rin "I know."
 
             hi "What?"
 
             show rinpan basic_deadpan_close
-            with charachange
+            with persistent.charachange
 
             rin "Help me get dressed."
 
             show rinpan basic_awayabsent_close
-            with charachange
+            with persistent.charachange
 
             rin "I think today is the day."
 
             show rinpan basic_deadpanupset_close
-            with charachange
+            with persistent.charachange
 
             rin "Come on, clothes."
 
@@ -5596,12 +5636,12 @@ label a4_rin:
             "Is intimacy really something this difficult for me to handle?"
 
             show rinpan basic_deadpancontemplation_close
-            with charachange
+            with persistent.charachange
 
             rin "Come on, you got it off just fine. This is the same but the other way around. It's like talking backwards."
 
             show rinpan basic_deadpan_close
-            with charachange
+            with persistent.charachange
 
             rin "Ysae s'ti tub, drah smees."
 
@@ -5612,7 +5652,7 @@ label a4_rin:
             hi "Umm, could you repeat that?"
 
             show rinpan basic_lucid_close
-            with charachange
+            with persistent.charachange
 
             rin "Ysae s'ti tub, drah smees."
 
@@ -5625,35 +5665,35 @@ label a4_rin:
             hi "There."
 
             show rinpan basic_deadpandelight_close
-            with charachange
+            with persistent.charachange
 
             rin "Ti tsujda ot evah uoy won."
 
             hi "What? Please stop that, I don't speak backwardese."
 
             show rinpan basic_lucid_close
-            with charachange
+            with persistent.charachange
 
             "She shakes her head as if needing to banish the backwards way of thinking with a physical gesture."
 
             "I know a few people who could benefit from that kind of ability."
 
             show rinpan relaxed_nonchalant_close
-            with charachange
+            with persistent.charachange
 
             rin "I got stuck. Now you have to adjust it."
 
             hi "Adjust?"
 
             show rinpan basic_deadpan_close
-            with charachange
+            with persistent.charachange
 
             rin "That's what I said."
 
             hi "No, I asked what you meant."
 
             show rinpan basic_lucid_close
-            with charachange
+            with persistent.charachange
 
             rin "You know, so that they are… fine."
 
@@ -5666,7 +5706,7 @@ label a4_rin:
             "Not that I would complain, but Rin does."
 
             show rinpan basic_deadpanupset_close
-            with charachange
+            with persistent.charachange
 
             rin "Emi is better than you at this."
 
@@ -5675,7 +5715,7 @@ label a4_rin:
             hi "Yeah well excuse me, could that be because she is a {b}girl{/b} and can actually relate?"
 
             show rinpan basic_deadpanamused_close
-            with charachange
+            with persistent.charachange
 
             rin "I don't think so, she has just about as much chest as you do."
 
@@ -5809,14 +5849,14 @@ label a4_rin:
             "…"
 
             show rin basic_awayabsent
-            with charachange
+            with charachangealways
 
             rin "Hisao."
 
             hi "What is it?"
 
             show rin basic_absent
-            with charachange
+            with persistent.charachange
 
             rin "Do you love me?"
 
@@ -5831,24 +5871,24 @@ label a4_rin:
             "Maybe too rapidly."
 
             show rin basic_deadpannormal
-            with charachange
+            with persistent.charachange
 
             rin "What does that mean?"
 
             hi "…I don't know."
 
             show rin basic_lucid
-            with charachange
+            with persistent.charachange
 
             "Rin sighs, perhaps unhappy with my wishy-washy answer. I would be too."
 
             show rin relaxed_nonchalant
-            with charachange
+            with persistent.charachange
 
             rin "Me neither."
 
             show rin relaxed_boredom
-            with charachange
+            with persistent.charachange
 
             rin "I don't think I know much about love."
 
@@ -5857,21 +5897,21 @@ label a4_rin:
             hi "…It's fine, isn't it?"
 
             show rin basic_lucid
-            with charachange
+            with charachangealways
 
             "'How should I know?', the shrug of her shoulders seems to say, hesitating to give a firmer answer."
 
             "She stays silent for only a second too long, but even that second isn't long enough for me to think ahead…"
 
             show rin basic_absent
-            with charachange
+            with persistent.charachange
 
             rin "I love you."
 
             "Those three words freeze me in place like a rabbit staring into headlights, but I'm not a rabbit and I'm just staring into Rin's eyes that seem far, far too impassive for what she just let out of her mouth."
 
             show rin basic_deadpanupset
-            with charachange
+            with persistent.charachange
 
             "Rin looks pretty serious though, until she sticks out her tongue, frowns a little and confuses me even more than her words did."
 
@@ -5880,49 +5920,49 @@ label a4_rin:
             "Was it a confession of her deepest feelings, a test to see how I would react, a test to see how she would react?"
 
             show rin basic_awayabsent
-            with charachange
+            with persistent.charachange
 
             rin "It tastes weird."
 
             hi "…Tastes?"
 
             show rin basic_lucid
-            with charachange
+            with persistent.charachange
 
             rin "Yeah. So weird."
 
             "She laughs, maybe nervously or so I want to think, but stops midway when she notices how strange it sounds."
 
             show rin negative_spaciness
-            with charachange
+            with persistent.charachange
 
             rin "Like… I don't know what, I… don't think there is a word for this."
 
             "Rin keeps on talking as though there was no meaning behind her words, steady and careless words dropping from the same tongue that formed the more important ones."
 
             show rin negative_worried
-            with charachange
+            with persistent.charachange
 
             rin "A word for… ummm…"
 
             "Except."
 
             show rin negative_annoyed
-            with charachange
+            with persistent.charachange
 
             rin "…it's like…"
 
             "She can't."
 
             show rin basic_deadpanupset
-            with charachange
+            with persistent.charachange
 
             rin "…"
 
             "Find the words."
 
             show rin basic_sad
-            with charachange
+            with persistent.charachange
 
             rin "…"
 
@@ -5935,7 +5975,7 @@ label a4_rin:
             "Until I realize what they were fighting against."
 
             show rin basic_crying
-            with charachange
+            with charachangealways
 
             "It's those weird tears again, not associated with sadness or happiness, not pitiable sobbing nor laughter of joy."
 
@@ -5956,12 +5996,12 @@ label a4_rin:
             rin "I…"
 
             show rin negative_crying
-            with charachange
+            with charachangealways
 
             "She shakes her head in confusion, stumbling to get the words out of her mouth."
 
             show rin basic_crying
-            with charachange
+            with persistent.charachange
 
             rin "Sorry…"
 
@@ -5972,29 +6012,29 @@ label a4_rin:
             hi "What? Why?"
 
             show rin basic_sad
-            with charachange
+            with persistent.charachange
 
             rin "I don't know. Saying that just made me feel like that."
 
             show rin basic_absent
-            with charachange
+            with persistent.charachange
 
             rin "People cry when they are afraid, right?"
 
             show rin basic_awayabsent
-            with charachange
+            with persistent.charachange
 
             rin "See? I can do it too."
 
             "She's averting her gaze now, deliberately not looking at me. It bewilders me, at least as much as what she is saying."
 
             show rin negative_annoyed
-            with charachange
+            with persistent.charachange
 
             rin "I… I sometimes, with you, want to run away so badly but I can't move it's like my legs turn into lemon panna cotta pudding and my heart feels like it's going to explode and…"
 
             show rin negative_sad
-            with charachange
+            with persistent.charachange
 
             "She slumps her shoulders melancholically."
 
@@ -6009,7 +6049,7 @@ label a4_rin:
             hi "My heart hurt a lot back then, too."
 
             show rin basic_surprised
-            with charachange
+            with persistent.charachange
 
             rin "But I thought your thing was not contagious."
 
@@ -6020,19 +6060,19 @@ label a4_rin:
             hi "What are you afraid of? I never thought I was scary."
 
             show rin negative_confused
-            with charachange
+            with charachangealways
 
             "Rin shakes her head desperately, as if knowing that the tangle inside her mind won't be undone with just that."
 
             rin "You make me feel that I should be someone else than me."
 
             show rin negative_sad
-            with charachange
+            with persistent.charachange
 
             rin "It's a scary thing."
 
             show rin negative_worried
-            with charachange
+            with persistent.charachange
 
             rin "It happens when you are being nice to me. Like yesterday."
 
@@ -6043,7 +6083,7 @@ label a4_rin:
             "Rin has never been one to be embarrassed so she does utter it aloud, only timidly as if by instinct."
 
             show rin basic_upset
-            with charachange
+            with persistent.charachange
 
             rin "But I want to do something. But I don't know if this me can."
 
@@ -6051,7 +6091,7 @@ label a4_rin:
 
             "…"
 
-            show rin basic_upset_close
+            show rin basic_upset_close zorder 1
             with characlose
 
             hi "You are so stupid."
@@ -6062,7 +6102,7 @@ label a4_rin:
             "Rin's lips taste salty and scared against mine."
 
             play sound sfx_heartslow
-            show heartattack alpha
+            show heartattack alpha zorder 2
             with Dissolve (0.1)
 
             hide heartattack
@@ -6071,7 +6111,7 @@ label a4_rin:
             "As I grasp her into an embrace, I feel my heart thumping in my chest painfully."
 
             play sound sfx_heartslow
-            show heartattack alpha
+            show heartattack alpha zorder 2
             with Dissolve (0.1)
 
             hide heartattack
@@ -6112,19 +6152,19 @@ label a4_rin:
             "…"
 
             show rin basic_sad_close
-            with charachange
+            with persistent.charachange
 
             rin "See?"
 
             show rin relaxed_doubt_close
-            with charachange
+            with persistent.charachange
 
             rin "You are a really kind person, even when you are not."
 
             rin "It's the most scariest thing ever."
 
             show rin relaxed_sleepy_close
-            with charachange
+            with persistent.charachange
 
             rin "I think… that all I was ever afraid of is your kindness."
 
@@ -6133,12 +6173,12 @@ label a4_rin:
             hi "Is it bad? Even if you are afraid?"
 
             show rin basic_lucid_close
-            with charachange
+            with charachangealways
 
             "She thinks about this for a while, furrowing her brow as though this was some kind of hard math problem."
 
             show rin basic_deadpanamused_close
-            with charachange
+            with persistent.charachange
 
             rin "No. I'm all right with it. It's fine, if it's you."
 
@@ -6148,7 +6188,8 @@ label a4_rin:
 
             "This time my smile is genuine."
 
-            show rin basic_deadpanamused
+            $ renpy.change_zorder("master", "dandelionsfg", 1)
+            show rin basic_deadpanamused zorder 0
             with charadistant
 
             "Rin steps back, still smiling gently at me like I do at her."
@@ -6200,12 +6241,12 @@ label a4_rin:
             hi "What about you? Did you become a true artist? Or did you not, because you ran away?"
 
             show rin basic_deadpancontemplation
-            with charachange
+            with charachangealways
 
             "She pauses for a while to ponder my question…"
 
             show rin relaxed_nonchalant
-            with charachange
+            with charachangealways
 
             "…and shrugs her shoulders."
 
@@ -6218,31 +6259,30 @@ label a4_rin:
             "And I think I might love her for that."
 
             show rin basic_absent
-            with charachange
+            with persistent.charachange
 
             rin "I don't think it matters."
 
             show rin basic_deadpandelight
-            with charachange
+            with persistent.charachange
 
             rin "Let's just watch the clouds for today."
 
             play music music_twinkle fadein 2.0
 
-            scene evbg rin_goodend_base:
+            show evbg rin_goodend_base zorder -1:
                 xalign 0.0
                 1.0
                 easein 20.0 xalign 1.0
-            show dandelionsbg dense
             show rin goodend_1:
                 xalign -0.5
                 1.0
                 easein 20.0 xalign 1.0
-            show dandelionsfg dense
             show evfg rin_goodend:
                 xalign -1.0
                 1.0
                 easein 20.0 xalign 1.0
+            hide bg
             with whiteout
 
             "She takes five steps to climb on a large rock so she can rise as high as it's possible here, and stands on tiptoes."
@@ -6323,7 +6363,7 @@ label a4_rin:
             "To me it seems like the entire world really could fit there, between those small arms of hers, inside of her all-encompassing embrace."
 
             show rin goodend_2
-            with charachange
+            with charachangeev
 
             rin "Hisao?"
 
@@ -6333,10 +6373,10 @@ label a4_rin:
                 acdc_warp 12.0 zoom 1.15
             show rin goodend_2_hires:
                 zoom 0.769
-                acdc_warp 12.0 zoom 1.0
+                acdc_warp 12.0 yalign 0.0 zoom 1.0
             show evfg:
-                acdc_warp 12.0 zoom 1.45
-            with charachangealways
+                acdc_warp 12.0 yalign 0.0 zoom 1.45
+            with None
 
             "I gaze into those mysterious, dark eyes that are curiously twinkling from below her auburn hair."
 
@@ -6345,6 +6385,8 @@ label a4_rin:
             hi "What is it?"
 
             rin "What's the word for when it feels inside your heart that everything in the world is all right?"
+
+            $ ach("ringood_achieve")
 
             stop music fadeout 4.0
             stop ambient fadeout 4.0
@@ -6404,12 +6446,12 @@ label a4rc1o1:
     hi "Of course they would ask you questions, if they think it's interesting."
 
     show rin negative_annoyed_close_ni
-    with charachange
+    with persistent.charachange
 
     rin "It's like having sunrise twice in a row when you want to bathe naked in moonlight."
 
     show rin negative_angry_close_ni
-    with charachange
+    with persistent.charachange
 
     rin "Nice, but…"
 
@@ -6450,12 +6492,12 @@ label a4rc1o1:
     no "Ah, there you are! Feeling better? It can get pretty hot in here, a dizzy spell can catch you off guard."
 
     show nomiya veryhappy
-    with charachange
+    with persistent.charachange
 
     "He laughs brashly, almost obnoxiously."
 
     show nomiya talk
-    with charachange
+    with persistent.charachange
 
     no "You should drink something if you're feeling weak, Tezuka."
 
@@ -6477,7 +6519,7 @@ label a4rc1o1:
     "He pushes Rin a bit forward to introduce her to the person he was conversing with before."
 
     show nomiya smile
-    with charachange
+    with persistent.charachange
 
     no "So, about what we were talking about before…"
 
@@ -6518,48 +6560,48 @@ label a4rc1o2:
     hi "Do you really think that it would be some kind of be-all, end-all thing, star-crossed lovers and happily ever after?"
 
     show rin basic_absent_close_ni
-    with charachange
+    with charachangealways
 
     "My question is met with a blank stare, the darkness in her eyes unfazed by the thinly veiled bitterness."
 
     show rin negative_worried_close_ni
-    with charachange
+    with persistent.charachange
 
     rin "No, I don't think that."
 
     show rin negative_annoyed_close_ni
-    with charachange
+    with persistent.charachange
 
     rin "But at least then I wouldn't have to be alone."
 
     "She whispers the words to the lights of the town but I hear them anyway."
 
     show rin negative_sad_close_ni
-    with charachange
+    with persistent.charachange
 
     rin "I shouldn't have done this. Not yet."
 
     hi "The exhibition?"
 
     show rin basic_lucid_close_ni
-    with charachange
+    with persistent.charachange
 
     "She nods and closes her eyes, breathing calmly out as if to prove she can, and then continues talking to herself."
 
     hi "Why? Wrong conjunction of the planets?"
 
     show rin basic_sad_close_ni
-    with charachange
+    with persistent.charachange
 
     rin "No, not that. I double-checked, and I got up with the right, I mean left, foot and did everything else left, I mean right."
 
     show rin negative_sad_close_ni
-    with charachange
+    with persistent.charachange
 
     rin "It's me."
 
     show rin negative_worried_close_ni
-    with charachange
+    with persistent.charachange
 
     rin "I was wrong."
 
@@ -6576,14 +6618,14 @@ label a4rc1o2:
     "She stops on her tracks and turns around, looking at me quizzically."
 
     show rin basic_awayabsent_ni
-    with charachange
+    with persistent.charachange
 
     rin "School. I'm leaving."
 
     hi "What… why?"
 
     show rin basic_absent_ni
-    with charachange
+    with persistent.charachange
 
     rin "Because I want to be me."
 
@@ -6629,65 +6671,65 @@ label a4rc1o2:
     hi "She ran away."
 
     show nomiya stern
-    with charachange
+    with persistent.charachange
 
     no "What?"
 
     "The horrific realization spreads on his face like wildfire."
 
     show nomiya serious
-    with charachange
+    with persistent.charachange
 
     no "This is a fiasco! Catastrophe!"
 
     no "What is that girl thinking, the most important event of her life, and she just runs off?"
 
     show nomiya stern
-    with charachange
+    with persistent.charachange
 
     no "And you! Why didn't you stop her? I'm going to hold you personally responsible…"
 
     show sae neutral
-    with charachange
+    with persistent.charachange
 
     "Sae interrupts him, holding her hands up calmingly."
 
     "It's good she intervened; the teacher was starting to get a few weird looks from the nearby guests."
 
     show sae smile
-    with charachange
+    with persistent.charachange
 
     sa "Now, now, Shinichi. She probably just had stage fright. I don't know her as well as you people do, but I did get the image that she is somewhat peculiar."
 
     sa "This kind of thing can happen."
 
     show sae neutral
-    with charachange
+    with persistent.charachange
 
     sa "It'll be fine. I'll explain that she suddenly became ill. The guests will surely understand."
 
     show nomiya frown
-    with charachange
+    with persistent.charachange
 
     no "But…"
 
     show sae smile
-    with charachange
+    with persistent.charachange
 
     sa "Look around you, everyone seems to be rather happy with their free wine and chitchat."
 
     show nomiya serious
-    with charachange
+    with persistent.charachange
 
     no "The guests will be fine, but we are missing on opportunities here! Networking, making contacts and acquaintances!"
 
     show emicas frown_close:
-        center xpos -0.35 alpha 0.0
-        ease 1.0 xpos 0.15 alpha 1.0
+        center
+        xpos -0.35 alpha 0.0
     with None
 
-    show emicas
-
+    show emicas:
+        xpos 0.15 alpha 1.0
     show bg gallery_int at left
     show crowd at left
     show nomiya serious:
@@ -6701,21 +6743,21 @@ label a4rc1o2:
     "She doesn't look very happy either."
 
     show emicas awayfrown_close
-    with charachange
+    with persistent.charachange
 
     emi "Come on."
 
     hi "Where?"
 
     show emicas frown_up_close
-    with charachange
+    with persistent.charachange
 
     emi "We are going to find Rin and kick her ass."
 
     hi "What?"
 
     show emicas angry_close
-    with charachange
+    with persistent.charachange
 
     emi "I can't believe it, she is so stupid!"
 
@@ -6730,7 +6772,7 @@ label a4rc1o2:
     hi "It's probably best to leave her alone for tonight."
 
     show emicas angry_up_close
-    with charachange
+    with persistent.charachange
 
     emi "What? Are you a Rin expert now?"
 
@@ -6743,7 +6785,7 @@ label a4rc1o2:
     hi "I just don't think kicking her ass would do her any good."
 
     show emicas frown_close
-    with charachange
+    with persistent.charachange
 
     "My melancholic remark surprisingly works, as Emi slumps her shoulders a little and sighs."
 
@@ -6754,7 +6796,7 @@ label a4rc1o2:
     stop music fadeout 2.0
 
     show emicas awayfrown_close
-    with charachange
+    with persistent.charachange
 
     emi "The last time I did that, it changed nothing."
 
@@ -6789,7 +6831,7 @@ label a4rc1o2:
     hi "Promise me to not go scold her?"
 
     show emicas angry_up_ni
-    with charachange
+    with persistent.charachange
 
     "She looks up at me, her eyes again flaring with anger that I match with as calming a stare as I can."
 
@@ -6798,12 +6840,12 @@ label a4rc1o2:
     "After a minute of the mismatched staring contest, she sighs and shakes her head in defeat."
 
     show emicas closedsmile_ni
-    with charachange
+    with charachangealways
 
     emi "You are too nice, Hisao."
 
     show emicas weaksmile_ni
-    with charachange
+    with persistent.charachange
 
     emi "Did you know that?"
 
@@ -6818,7 +6860,7 @@ label a4rc1o2:
     hi "If I was, I would've let you have your way."
 
     show emicas wink_ni
-    with charachange
+    with persistent.charachange
 
     emi "Does that mean you are only nice to Rin?"
 
@@ -6829,7 +6871,7 @@ label a4rc1o2:
     hi "No, it just means I'm not nice only to you."
 
     show emicas angry_up_ni
-    with charachange
+    with persistent.charachange
 
     emi "HEY!"
 

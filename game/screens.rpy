@@ -6,71 +6,56 @@ screen skip_indicator():
     image "icon_skip":
         pos 1850, 35
 
-screen ctc(arg=None):
-    if not renpy.is_skipping():
-        frame:
-            at colorblind(persistent.colorblind)
-            pos 0.9635, 0.0325
-            xysize 42, 42
-
-            image Frame("icon_circle")
-
-            image "icon_ctc":
-                if persistent.blinking_arrow:
-                    at ctc_trans
-
-                align 0.5, 0.5
-
-transform ctc_trans():
-    alpha 0.25
-    ease 1.0 alpha 1.0
-    pause 0.25
-    ease 1.0 alpha 0.25
-    repeat
-
 screen say(who, what):
     style_prefix "say"
 
-    if who and who.strip():
-        frame:
-            at colorblind(persistent.colorblind)
-            style_suffix "namebox"
-            text who id "who":
-                size 40
-                bold True
+    vbox:
+        style_suffix "vbox"
 
-    frame:
-        style_suffix "window"
-        text what id "what"
+        if who and who.strip():
+            window id "namebox":
+                at colorblind(persistent.colorblind)
+                style_suffix "namebox"
+                text who id "who"
+        else:
+            null height 145
+
+        window id "window":
+            text what id "what"
+
+    key "K_UP" action ShowMenu("history")
 
 screen doublespeak(c1, t1, c2, t2):
     style_prefix "doublespeak"
 
-    frame:
+    frame id "namebox1":
         at colorblind(persistent.colorblind)
         style_suffix "namebox1"
         text ("{color=" + c1.who_args["color"] + "}" + renpy.translate_string(c1.name) + "{/color}") id "who1":
             size 40
             bold True
 
-    frame:
+    frame id "window1":
         at colorblind(persistent.colorblind)
         style_suffix "window1"
         text t1 id "what1"
 
-    frame:
+    frame id "namebox2":
         at colorblind(persistent.colorblind)
         style_suffix "namebox2"
         text ("{color=" + c2.who_args["color"] + "}" + renpy.translate_string(c2.name) + "{/color}") id "who2":
             size 40
             bold True
 
-    frame:
+    frame id "window2":
         at colorblind(persistent.colorblind)
         style_suffix "window2"
         text t2 id "what2"
 
-    use ctc
+    image "icon_ctc" as ctc1:
+        xpos 0.473
+    image "icon_ctc" as ctc2:
+        xpos 0.974
 
     key ["dismiss", "skip"] action Return()
 
@@ -90,7 +75,7 @@ screen choice(items):
                 else:
                     foreground "check_fg_op_cb"
                     hover_foreground "check_fg_cb"
-                    action [AddToSet(persistent._seen_choices, i.caption), i.action]
+                    action [AddToSet(persistent._seen_choices, i.caption), i.action, check_all_choices]
 
 screen nvl(dialogue, items=None):
     window id "window":
@@ -285,6 +270,8 @@ screen prefs():
 
                 textbutton _("Blinking arrow") action ToggleVariable("persistent.blinking_arrow", True, False)
 
+                textbutton _("Disable expression transitions") action [ToggleVariable("persistent.charachange", { 'master': None }, { 'master' : Dissolve(0.5) }), ToggleVariable("persistent.charachangefast", { 'master': None }, { 'master' : Dissolve(0.2) })]
+
             vbox:
                 style_prefix "slider"
 
@@ -306,7 +293,7 @@ screen prefs():
 
                 null height 3
 
-                if config.has_music and not renpy.android and not renpy.ios:
+                if config.has_music:
                     hbox:
                         bar value Preference("mixer music volume")
 
@@ -316,7 +303,7 @@ screen prefs():
 
                     null height 3
 
-                if config.has_sound and not renpy.android and not renpy.ios:
+                if config.has_sound:
                     hbox:
                         bar value Preference("mixer sfx volume")
 
@@ -370,11 +357,13 @@ screen language():
             textbutton _("English") action Language(None)
             textbutton _("Russian") action Language("ru")
             textbutton _("French") action Language("fr")
+            textbutton _("Italian") action Language("it")
             textbutton _("Spanish") action Language("es")
-            textbutton _("Português Brasileiro") action Language("pt_br")
-            textbutton _("Deutsch") action Language("de")
-            textbutton _("Japanese") # action Language("jp")
+            textbutton _("Brazilian Portuguese") action Language("pt_br")
+            textbutton _("German") action Language("de")
+            textbutton _("Japanese") action Language("jp")
             textbutton _("Simplified Chinese") action Language("zh_hans")
+            textbutton _("Traditional Chinese") action Language("zh_hant")
 
         textbutton _("Return"):
             style "return_button"
@@ -436,9 +425,19 @@ screen file_slots():
                             hovered Function(local_saves_items.add, i)
                             unhovered Function(local_saves_items.remove, i)
                             if main_menu:
-                                action Function(renpy.load, save[0])
+                                action [
+                                    Function(setattr, config, "skipping", False),
+                                    Function(setattr, config, "allow_skipping", True),
+                                    Function(renpy.load, save[0])
+                                ]
                             else:
-                                action Show("confirm", config.intra_transition, _("Are you sure you want to\nload this save?"), Function(renpy.load, save[0]))
+                                action Show("confirm", config.intra_transition, _("Are you sure you want to\nload this save?"),
+                                    [
+                                        Function(setattr, config, "skipping", False),
+                                        Function(setattr, config, "allow_skipping", True),
+                                        Function(renpy.load, save[0])
+                                    ]
+                                )
 
                             if i in local_saves_items:
                                 background "button_scribble"
@@ -543,7 +542,7 @@ screen extra():
                 yalign 1.0
                 hovered SetScreenVariable("gallery_hovered", True)
                 unhovered SetScreenVariable("gallery_hovered", False)
-                action ShowMenu("gallery")
+                action [Function(unlock_completion_bonus), ShowMenu("gallery")]
 
                 vbox:
                     if gallery_hovered:
@@ -564,7 +563,7 @@ screen extra():
                 yalign 1.0
                 hovered SetScreenVariable("library_hovered", True)
                 unhovered SetScreenVariable("library_hovered", False)
-                action ShowMenu("library")
+                action [SetVariable("completion_percentage", get_completion_percentage()), ShowMenu("library")]
 
                 vbox:
                     if library_hovered:
@@ -703,6 +702,8 @@ screen gallery(page=0):
     default return_hovered = False
     default local_items = set()
 
+    on "show" action SetVariable("_gallery_page", page)
+
     add "main_menu_bg" at colorblind(persistent.colorblind)
     add "blind"
 
@@ -738,7 +739,10 @@ screen gallery(page=0):
                         xysize 220, 170
                         hovered Function(local_items.add, i)
                         unhovered Function(local_items.remove, i)
-                        action Call("watch_gallery", img[1:] if img[0].startswith("thumb/") else img)
+                        if i is len(_gallery_images) - 1:
+                            action [SetVariable("_gallery_page", page), Function(ach, "fullcomplete_achieve"), Call("watch_gallery", img[1:] if img[0].startswith("thumb/") else img)]
+                        else:
+                            action [SetVariable("_gallery_page", page), Call("watch_gallery", img[1:] if img[0].startswith("thumb/") else img)]
 
                         if i in local_items:
                             image Composite((220, 170),
@@ -842,7 +846,7 @@ screen library(page=0):
                                 null height 1
                                 hbox:
                                     null width 30
-                                    image "button_cg_locked_op"
+                                    image "button_locked_track_op"
                                 null height 1
 
             null width 25
@@ -850,6 +854,8 @@ screen library(page=0):
             vbar value YScrollValue("library_vp_" + str(page)) style "vslider"
 
         null height 16
+
+        text __("Completion: [completion_percentage]")
 
         textbutton _("Return"):
             style "return_button"
@@ -946,6 +952,7 @@ screen history():
                 draggable True
                 xsize 730
                 ysize 500
+                yinitial 1.0
 
                 has vbox
 
@@ -1033,7 +1040,8 @@ screen accessibility():
 
                 textbutton _("Default") action Preference("font transform", "none")
 
-                textbutton "Deja Vu Sans" action Preference("font transform", "dejavusans")
+                # TODO: Do not allow "Deja Vu Sans" in current language is "jp"
+                textbutton "DejaVu Sans" action Preference("font transform", "dejavusans")
 
                 textbutton "OpenDyslexic" action Preference("font transform", "opendyslexic")
 
@@ -1068,7 +1076,7 @@ screen accessibility():
 
                 textbutton _("Skip hurtful adult scenes") action ToggleVariable("persistent.disable_disturbing_content", True, False)
 
-            text _("Colorblind Filter"):
+            text _("Colorblind filter"):
                 bold True
                 size bold_size
 
@@ -1090,9 +1098,14 @@ screen accessibility():
                     if expanded:
                             frame:
                                 background "config_bg" at colorblind(persistent.colorblind)
+                                if renpy.android or renpy.ios:
+                                    xoffset 55
+                                    yoffset -84
+                                else:
+                                    xoffset 43
+                                    yoffset -71
                                 xpadding 13
                                 ypadding 13
-                                yoffset -13
 
                                 vbox:
                                     spacing 6
