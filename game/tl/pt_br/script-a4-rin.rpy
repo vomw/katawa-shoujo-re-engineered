@@ -10652,7 +10652,7 @@ translate pt_br a4_rin_proof_of_existence_261964ab:
 translate pt_br a4_rin_proof_of_existence_7f3c8d99:
 
     # nb "That's why living through the present is always the best option."
-    nb "É por isso que viver o presente é sempre a melhor opção."
+    nb "É por isso que viver o presente é sempre a melhor opção. "
 
 # game/script-a4-rin.rpy:5514
 translate pt_br a4_rin_proof_of_existence_9eca2067:
@@ -10664,7 +10664,7 @@ translate pt_br a4_rin_proof_of_existence_9eca2067:
 translate pt_br a4_rin_proof_of_existence_a1f16ab2:
 
     # nb "Even though existence will go on even if you forget about it for a while, it's good to seize the day at least every once in a while."
-    extend "Ainda que a existência continuará mesmo que você esqueça dela por um tempo, é bom aproveitar o dia de vez em quando."
+    extend " Ainda que a existência continuará mesmo que você esqueça dela por um tempo, é bom aproveitar o dia de vez em quando."
 
 # game/script-a4-rin.rpy:5518
 translate pt_br a4_rin_proof_of_existence_0799c3cd:
@@ -12932,4 +12932,20 @@ translate pt_br strings:
     # game/script-a4-rin.rpy:5527
     old "That way… you can confirm that you are, in fact… alive."
     new "Dessa maneira… você pode confirmar que você está, de fato… viva."
+
+# TODO: Translation updated at 2025-12-20 12:54
+
+# game/script-a4-rin.rpy:5558
+translate pt_br a4_rin_proof_of_existence_115223a8:
+
+    # nvl clear
+    # centered_b "That way… you can confirm that you are, in fact… {color=#fff}alive.{/color}"
+    nvl clear
+    centered_b "Dessa maneira... você pode confirmar que está, de fato... {color=#fff}viva.{/color}"
+
+translate pt_br strings:
+
+    # game/script-a4-rin.rpy:5562
+    old "That way… you can confirm that you are, in fact… {color=#fff}alive.{/color}"
+    new "Dessa maneira... você pode confirmar que está, de fato... {color=#fff}viva.{/color}"
 

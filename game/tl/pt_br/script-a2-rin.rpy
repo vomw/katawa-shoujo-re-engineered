@@ -12025,3 +12025,17 @@ translate pt_br strings:
     old "What about Emi?"
     new "Mas e Emi?"
 
+# TODO: Translation updated at 2025-12-20 12:54
+
+# game/script-a2-rin.rpy:3448
+translate pt_br a2_rin_eternity_in_an_hour_3bd0996d:
+
+    # extend "\nAnd a heaven in a wild flower,"
+    extend "\nE um Céu numa flor silvestre,"
+
+# game/script-a2-rin.rpy:3452
+translate pt_br a2_rin_eternity_in_an_hour_83447599:
+
+    # extend "\nAnd eternity in an hour."
+    extend "\nE uma eternidade em uma hora."
+
