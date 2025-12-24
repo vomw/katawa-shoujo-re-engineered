@@ -23,6 +23,7 @@ The game currently supports the following languages:
 * Simplified Chinese
 * Traditional Chinese
 * Brazilian Portuguese
+
 ## Features
 The project offers several notable features:
 * Complete refactor of Katawa Shoujo using Ren'Py 8.
