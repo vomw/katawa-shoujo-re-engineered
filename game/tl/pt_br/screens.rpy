@@ -283,7 +283,6 @@ translate pt_br strings:
     old "Skip hurtful adult scenes"
     new "Pular cenas adultas desagradáveis"
 
-
     # game/screens.rpy:1078
     old "Colorblind filter"
     new "Filtro daltônico"
