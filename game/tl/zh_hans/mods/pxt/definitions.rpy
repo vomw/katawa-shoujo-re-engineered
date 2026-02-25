@@ -1,24 +1,22 @@
-﻿# TODO: Translation updated at 2026-02-25 00:03
-
-translate zh_hans strings:
+﻿translate zh_hans strings:
 
     # game/mods/pxt/definitions.rpy:21
     old "Act 5 Scene 1"
-    new "Act 5 Scene 1"
+    new "第五幕 第一场"
 
     # game/mods/pxt/definitions.rpy:22
     old "Close Your Eyes"
-    new "Close Your Eyes"
+    new "闭上你的眼睛"
 
     # game/mods/pxt/definitions.rpy:23
     old "Moon Drops"
-    new "Moon Drops"
+    new "月之泪"
 
     # game/mods/pxt/definitions.rpy:24
     old "Walking Path"
-    new "Walking Path"
+    new "小径"
 
     # game/mods/pxt/definitions.rpy:25
     old "Sunbathing"
-    new "Sunbathing"
+    new "日光浴"
 
