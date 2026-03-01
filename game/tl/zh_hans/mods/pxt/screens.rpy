@@ -22,7 +22,7 @@
 
     # game/mods/pxt/screens.rpy:63
     old "Tells the love story of Pyramus and Thisbe, which is a part of Roman mythology.\n"
-    new "讲述了皮拉摩斯与提斯柏的爱情故事，源自罗马神话。\n"
+    new "讲述了匹拉麦斯与雪丝佩的爱情故事，源自罗马神话。\n"
 
     # game/mods/pxt/screens.rpy:65
     old "Port by Ikariya.\n"
