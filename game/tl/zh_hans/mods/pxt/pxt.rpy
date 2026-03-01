@@ -369,7 +369,7 @@ translate zh_hans pxt_real_start_pxt_a5s1_d41d8cd9_2:
 translate zh_hans pxt_real_start_bfd151f7:
 
     # pr "This grisly beast, which by name Lion hight," id pxt_real_start_bfd151f7
-    pr "这一头可怕的畜生名叫狮子，"
+    pr "这一头可怕的野兽名叫狮子，"
 
 # game/mods/pxt/pxt.rpy:153
 translate zh_hans pxt_real_start_49331b1d:
