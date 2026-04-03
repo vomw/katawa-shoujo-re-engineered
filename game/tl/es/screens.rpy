@@ -325,7 +325,7 @@ translate es strings:
 
     # game/screens.rpy:1092
     old "Text size"
-    new "Tamaño del texto""
+    new "Tamaño del texto"
 
 # TODO: Translation updated at 2026-03-30 21:37
 
